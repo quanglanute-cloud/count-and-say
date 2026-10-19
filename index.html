@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Count and Say</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Count and Say">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Andika:wght@400;700&display=swap">
+<style>
+/* Layout: one-screen picture-book app. Home = lesson shelf; lesson = four game doors; each game fills the screen with big touch targets */
+:root{
+  --paper:#eef6fb;--card:#ffffff;--ink:#16324a;--ink-soft:#4f6b82;
+  --frame:#1f8fc4;--frame-soft:#cfe8f5;--tomato:#d6453d;--sun:#f5b82e;--leaf:#4caf50;--plum:#7b5cc4;
+  --display:'Fredoka','Baloo 2','Comic Sans MS',system-ui,sans-serif;
+  --body:'Andika','Trebuchet MS',system-ui,sans-serif;
+  color-scheme:light;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%;margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;
+  -webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none;overflow:hidden}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;touch-action:manipulation}
+button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
+.app{height:100%;display:flex;flex-direction:column;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:12px}
+.top{display:flex;align-items:center;gap:12px;min-height:60px}
+.back{width:56px;height:56px;border-radius:50%;background:var(--card);font-size:28px;font-family:var(--display);
+  box-shadow:0 3px 0 var(--frame-soft);display:grid;place-items:center;flex:none}
+.top h1{font-family:var(--display);font-weight:700;font-size:clamp(22px,4vw,36px);margin:0;flex:1;min-width:0;text-wrap:balance}
+.top h1 span{color:var(--frame)}
+.stars{font-family:var(--display);font-size:24px;background:var(--card);border-radius:999px;padding:8px 18px;flex:none;
+  display:flex;gap:8px;align-items:center;box-shadow:0 3px 0 var(--frame-soft);font-variant-numeric:tabular-nums}
+.stars b{color:var(--sun);font-size:28px;line-height:1}
+.screen{flex:1;min-height:0;display:flex;flex-direction:column;overflow-y:auto;-webkit-overflow-scrolling:touch;padding-block:8px 20px}
+
+/* Start overlay */
+.start{position:fixed;inset:0;z-index:20;background:var(--paper);display:grid;place-items:center;text-align:center;padding:16px}
+.start .big{font-family:var(--display);font-size:clamp(40px,8vw,72px);font-weight:700;margin:0;line-height:1.05}
+.start .big em{font-style:normal;color:var(--tomato)}
+.start p{color:var(--ink-soft);max-width:30ch;margin:12px auto 28px}
+.go{font-family:var(--display);font-weight:600;font-size:32px;background:var(--tomato);color:#fff;border-radius:999px;padding:18px 54px;box-shadow:0 6px 0 #9e2c26}
+.go:active{transform:translateY(4px);box-shadow:0 2px 0 #9e2c26}
+.strip{display:flex;gap:6px;justify-content:center;margin-bottom:22px;flex-wrap:wrap}
+.strip span{width:44px;height:44px;border:2px solid var(--frame);display:grid;place-items:center;font-family:var(--display);font-size:22px;font-weight:600;background:var(--card);border-radius:6px}
+
+/* Lesson shelf */
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;max-width:1000px;margin:0 auto;width:100%}
+.lesson{background:var(--card);border-radius:24px;padding:18px 20px;text-align:left;display:flex;gap:16px;align-items:center;box-shadow:0 5px 0 var(--frame-soft);position:relative}
+.lesson:active{transform:translateY(3px);box-shadow:0 2px 0 var(--frame-soft)}
+.lesson .ic{font-size:48px;line-height:1;width:72px;height:72px;border-radius:18px;background:var(--paper);display:grid;place-items:center;flex:none}
+.lesson .unit{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:700}
+.lesson strong{font-family:var(--display);font-size:24px;font-weight:600;display:block;line-height:1.15}
+.lesson small{color:var(--ink-soft);font-size:15px}
+.badge{position:absolute;top:-8px;right:14px;background:var(--tomato);color:#fff;font-family:var(--display);font-size:15px;font-weight:600;padding:3px 12px;border-radius:999px}
+.note{text-align:center;color:var(--ink-soft);margin:auto;max-width:34ch}
+
+/* Game doors */
+.doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;flex:1;align-content:center;max-width:900px;margin:0 auto;width:100%}
+.door{border-radius:28px;padding:22px;text-align:left;color:#fff;min-height:170px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.door:active{transform:scale(.97)}
+.door .pic{font-size:56px;line-height:1}
+.door strong{font-family:var(--display);font-size:clamp(24px,3.4vw,34px);font-weight:700;display:block}
+.door small{font-size:16px;opacity:.92;display:block;margin-top:2px}
+.door.words{background:var(--frame);box-shadow:0 7px 0 #136a93}
+.door.listen{background:var(--plum);box-shadow:0 7px 0 #56409a}
+.door.count{background:var(--leaf);box-shadow:0 7px 0 #357a38}
+.door.say{background:var(--tomato);box-shadow:0 7px 0 #9e2c26}
+.skill{position:absolute;top:18px;right:18px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.22);padding:4px 10px;border-radius:999px;font-weight:700}
+
+.tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+.tab{font-family:var(--display);font-size:20px;font-weight:600;padding:10px 22px;border-radius:999px;background:var(--card);color:var(--ink-soft)}
+.tab[aria-selected="true"]{background:var(--frame);color:#fff}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.wcard{background:var(--card);border-radius:22px;padding:14px 10px 12px;display:flex;flex-direction:column;align-items:center;gap:6px;box-shadow:0 4px 0 var(--frame-soft);min-height:170px;justify-content:center}
+.wcard .emo{font-size:30px;line-height:1.15;display:flex;flex-wrap:wrap;justify-content:center;max-width:140px;min-height:40px}
+.wcard .emo.one{font-size:56px}
+.wcard .num{font-family:var(--display);font-size:44px;font-weight:700;color:var(--frame);line-height:1}
+.wcard .word{font-family:var(--display);font-size:22px;font-weight:600;text-align:center}
+.wcard .hint{font-size:15px;color:var(--ink-soft);text-align:center}
+.wcard.talk{animation:pop .5s}
+@keyframes pop{40%{transform:scale(1.08)}}
+
+.q{text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px;flex:1;justify-content:center}
+.prompt{display:flex;align-items:center;gap:14px;background:var(--card);border-radius:999px;padding:10px 26px 10px 10px;box-shadow:0 4px 0 var(--frame-soft)}
+.speaker{width:64px;height:64px;border-radius:50%;background:var(--sun);font-size:30px;display:grid;place-items:center;flex:none}
+.speaker:active{transform:scale(.92)}
+.prompt p{font-family:var(--display);font-size:clamp(22px,3.4vw,32px);font-weight:600;margin:0;text-align:left}
+.choices{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+.choice{background:var(--card);border-radius:26px;min-width:150px;min-height:150px;padding:14px;display:grid;place-items:center;box-shadow:0 6px 0 var(--frame-soft);font-family:var(--display);font-size:72px;font-weight:700;color:var(--ink)}
+.choice.pic{font-size:84px}
+.choice.ok{background:#e3f4e3;box-shadow:0 6px 0 var(--leaf)}
+.choice.no{animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-10px)}75%{transform:translateX(10px)}}
+.dots{display:flex;gap:8px}
+.dots i{width:16px;height:16px;border-radius:50%;background:var(--frame-soft)}
+.dots i.done{background:var(--sun)}
+.cheer{font-family:var(--display);font-size:30px;font-weight:700;min-height:42px;color:var(--leaf);margin:0}
+
+.domino{display:flex;width:170px;height:90px;border:3px solid var(--ink);border-radius:12px;background:#f7f3ea;overflow:hidden}
+.domino .half{flex:1;display:grid;grid-template:repeat(3,1fr)/repeat(3,1fr);padding:8px;gap:2px}
+.domino .half+.half{border-left:3px solid var(--ink)}
+.domino .half i{width:15px;height:15px;border-radius:50%;background:var(--ink);place-self:center;visibility:hidden}
+.domino .half i.on{visibility:visible}
+
+.tray{position:relative;width:min(100%,720px);height:min(34vh,300px);background:var(--card);border-radius:26px;box-shadow:0 5px 0 var(--frame-soft)}
+.obj{position:absolute;font-size:clamp(46px,7vw,64px);width:1.3em;height:1.3em;display:grid;place-items:center;transition:opacity .3s,transform .2s}
+.obj.gone{opacity:0;transform:scale(.4);pointer-events:none}
+.frame10{display:grid;grid-template-columns:repeat(5,1fr);border:3px solid var(--frame);border-radius:10px;overflow:hidden;width:min(100%,440px);background:var(--card)}
+.frame10 div{aspect-ratio:1;border:1.5px solid var(--frame-soft);display:grid;place-items:center;font-size:clamp(30px,5vw,46px);position:relative}
+.frame10 div b{position:absolute;top:3px;left:6px;font-family:var(--display);font-size:16px;color:var(--frame)}
+.bubble{font-family:var(--display);font-size:clamp(28px,5vw,46px);font-weight:700;color:var(--frame);min-height:56px;margin:0}
+
+.saycard{background:var(--card);border-radius:30px;padding:24px 28px;box-shadow:0 6px 0 var(--frame-soft);display:flex;flex-direction:column;align-items:center;gap:8px;width:min(100%,560px)}
+.saycard .emo{font-size:52px;display:flex;flex-wrap:wrap;justify-content:center;gap:4px;max-width:420px}
+.saycard .line{font-family:var(--display);font-size:clamp(28px,4.6vw,42px);font-weight:700;text-wrap:balance}
+.saycard .line mark{background:none;color:var(--tomato)}
+.mic{width:110px;height:110px;border-radius:50%;background:var(--tomato);color:#fff;font-size:48px;display:grid;place-items:center;box-shadow:0 6px 0 #9e2c26}
+.mic.on{animation:pulse 1s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 18px rgba(214,69,61,.2),0 6px 0 #9e2c26}}
+.row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;align-items:center}
+.pill{font-family:var(--display);font-size:22px;font-weight:600;border-radius:999px;padding:14px 26px;background:var(--card);box-shadow:0 4px 0 var(--frame-soft)}
+.pill.good{background:var(--leaf);color:#fff;box-shadow:0 4px 0 #357a38}
+.grownup{background:#fff7e3;border-radius:20px;padding:12px 18px;display:flex;flex-direction:column;gap:10px;align-items:center}
+.grownup p{margin:0;font-size:16px;color:var(--ink-soft)}
+.heard{font-size:17px;color:var(--ink-soft);min-height:24px;margin:0}
+.level{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+
+@media (max-width:560px){
+  .doors{grid-template-columns:1fr}
+  .door{min-height:120px}
+  .choice{min-width:96px;min-height:96px;font-size:52px}
+  .choice.pic{font-size:58px}
+  .domino{width:130px;height:70px}.domino .half i{width:11px;height:11px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="start" id="start">
+  <div>
+    <div class="strip" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span></div>
+    <h2 class="big">Count <em>and</em> Say</h2>
+    <p>Turn the sound on, then tap Start.</p>
+    <button class="go" id="goBtn">Start</button>
+  </div>
+</div>
+
+<div class="app">
+  <header class="top">
+    <button class="back" id="backBtn" aria-label="Back" hidden>‹</button>
+    <h1 id="title">Count <span>and</span> Say</h1>
+    <div class="stars" aria-label="Stars"><b>★</b><span id="starCount">0</span></div>
+  </header>
+  <main class="screen" id="screen"></main>
+</div>
+
+<script>
+// ============================================================
+// Count and Say — game engine. Lesson content lives in lessons.json.
+// ============================================================
+const WORDS=['zero','one','two','three','four','five','six','seven','eight','nine','ten'];
+const PRAISE=['Well done!','Great job!','Super!','Yes! Good job!','Brilliant!','You got it!'];
+
+const $=s=>document.querySelector(s);
+const screen=$('#screen');
+const rnd=n=>Math.floor(Math.random()*n);
+const pick=a=>a[rnd(a.length)];
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=rnd(i+1);[a[i],a[j]]=[a[j],a[i]]}return a};
+function el(tag,attrs={},kids=[]){const e=document.createElement(tag);for(const k in attrs){if(k==='class')e.className=attrs[k];else if(k==='text')e.textContent=attrs[k];else if(k.startsWith('on'))e.addEventListener(k.slice(2),attrs[k]);else e.setAttribute(k,attrs[k])}(Array.isArray(kids)?kids:[kids]).forEach(c=>c!=null&&e.append(c));return e}
+function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+const art=w=>/^[aeiou]/i.test(w)?'an':'a';
+
+// ---------- Lesson data ----------
+let LESSONS=[],L=null;
+async function loadLessons(){
+  try{
+    const r=await fetch('lessons.json?t='+Date.now(),{cache:'no-store'});
+    if(!r.ok)throw new Error(r.status);
+    const j=await r.json();LESSONS=j.lessons||[];store('cs-lessons',JSON.stringify(j));
+  }catch(e){
+    try{const c=store('cs-lessons');if(c)LESSONS=JSON.parse(c).lessons||[]}catch(_){}
+  }
+}
+const items=l=>l.tabs.flatMap(t=>t.items);
+const quizItems=l=>items(l).filter(i=>i.pic&&i.quiz!==false);
+// things that can be counted: need a singular and a plural
+const countables=l=>{const seen=new Set();return items(l).filter(i=>i.plural&&i.pic&&i.quiz!==false).map(i=>({s:i.thing||i.word,p:i.plural,e:i.pic}))
+  .filter(t=>!seen.has(t.s)&&seen.add(t.s))};
+const noun=(t,n)=>n===1?t.s:t.p;
+const hintOf=i=>i.hint??(i.count?`${i.count} ${i.count===1?(i.thing||''):(i.plural||'')}`.trim():(i.plural?`two ${i.plural}`:''));
+const sayOf=i=>i.say||(i.count&&i.thing?`${i.word}. ${i.word} ${i.count===1?i.thing:i.plural}.`:(i.plural?`${i.word}. Two ${i.plural}.`:`${i.word}.`));
+const sentenceOf=i=>i.sentence||`I can see ${art(i.word)} ${i.word}.`;
+const findOf=i=>i.find||`Find the ${i.word}.`;
+
+// ---------- Stars ----------
+let stars=parseInt(store('cs-stars')||'0',10)||0;
+function addStar(n=1){stars+=n;$('#starCount').textContent=stars;store('cs-stars',String(stars))}
+$('#starCount').textContent=stars;
+
+// ---------- Voice ----------
+let voice=null;
+function chooseVoice(){
+  const vs=speechSynthesis.getVoices().filter(v=>/^en/i.test(v.lang));
+  const pref=['Samantha','Karen','Moira','Google US English','Daniel','Serena'];
+  voice=vs.find(v=>pref.some(p=>v.name.includes(p)))||vs.find(v=>/en-US|en-GB/i.test(v.lang))||vs[0]||null;
+}
+if('speechSynthesis' in window){chooseVoice();speechSynthesis.onvoiceschanged=chooseVoice}
+function say(text,rate=0.82){
+  return new Promise(res=>{
+    if(!('speechSynthesis' in window))return res();
+    speechSynthesis.cancel();
+    const u=new SpeechSynthesisUtterance(text);
+    if(voice){u.voice=voice;u.lang=voice.lang}else u.lang='en-US';
+    u.rate=rate;u.pitch=1.1;u.onend=res;u.onerror=res;
+    speechSynthesis.speak(u);
+    setTimeout(res,Math.max(2500,text.length*120));
+  });
+}
+
+// ---------- Navigation ----------
+let backTo=null;
+function setTitle(html,back){$('#title').innerHTML=html;backTo=back||null;$('#backBtn').hidden=!back}
+$('#backBtn').addEventListener('click',()=>{stopListening();if('speechSynthesis' in window)speechSynthesis.cancel();backTo&&backTo()});
+$('#goBtn').addEventListener('click',()=>{$('#start').hidden=true;say("Hello! Let's learn English!");loading.then(shelf)});
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function shelf(){
+  L=null;setTitle('Count <span>and</span> Say',null);
+  if(!LESSONS.length){screen.replaceChildren(el('p',{class:'note',text:'The lessons could not load. Check the internet connection, then close and open the app again.'}));return}
+  const today=new Date();
+  const list=LESSONS.map((l,i)=>({l,i})).sort((a,b)=>(b.l.added||'').localeCompare(a.l.added||'')||b.i-a.i);
+  screen.replaceChildren(el('div',{class:'shelf'},list.map(({l})=>{
+    const days=l.added?(today-new Date(l.added+'T00:00:00'))/864e5:99;
+    const n=items(l).length;
+    return el('button',{class:'lesson',onclick:()=>lessonHome(l)},[
+      days<3?el('span',{class:'badge',text:'NEW'}):null,
+      el('span',{class:'ic',text:l.icon||'📗'}),
+      el('span',{},[el('span',{class:'unit',text:l.unit||''}),el('strong',{text:l.title}),el('small',{text:n+' words'})])]);
+  })));
+}
+
+function lessonHome(l){
+  L=l||L;stopListening();
+  setTitle(esc(L.title),shelf);
+  const canCount=L.mode==='numbers'||L.count===true;
+  const canQuiz=L.mode==='numbers'||quizItems(L).length>=3;
+  screen.replaceChildren(el('div',{class:'doors'},[
+    door('words','Words','Vocabulary','📖','Tap a card to hear it',wordsGame),
+    canQuiz?door('listen','Listen & Find','Listening','👂','Hear it, then tap it',listenGame):null,
+    canCount&&countables(L).length?door('count','Count with Me','Counting','👆','Tap each one and count',countGame):null,
+    canQuiz?door('say','Say It!','Speaking','🎤','Listen, then say it out loud',sayGame):null]));
+}
+function door(cls,name,skill,pic,sub,fn){
+  return el('button',{class:'door '+cls,onclick:fn},[el('span',{class:'skill',text:skill}),el('span',{class:'pic',text:pic}),
+    el('span',{},[el('strong',{text:name}),el('small',{text:sub})])]);
+}
+const back=()=>lessonHome();
+
+// ---------- 1. Words ----------
+function wordsGame(){
+  setTitle(esc(L.title)+' · <span>Words</span>',back);
+  const key='cs-tab-'+L.id;let cur=Math.min(parseInt(store(key)||'0',10)||0,L.tabs.length-1);
+  const bar=el('div',{class:'tabs',role:'tablist'});const grid=el('div',{class:'cards'});
+  function show(i){cur=i;store(key,String(i));[...bar.children].forEach((b,j)=>b.setAttribute('aria-selected',j===i));grid.replaceChildren(...L.tabs[i].items.map(card))}
+  if(L.tabs.length>1)L.tabs.forEach((t,i)=>bar.append(el('button',{class:'tab',role:'tab',text:t.name,onclick:()=>show(i)})));
+  screen.replaceChildren(bar,grid);show(cur);
+}
+function card(i){
+  const pic=i.count?i.pic.repeat(i.count):(i.pic||'');
+  const big=!i.count&&[...pic].length<=2;
+  const c=el('button',{class:'wcard'},[i.count?el('div',{class:'num',text:i.count}):null,
+    el('div',{class:'emo'+(big||i.count===1?' one':''),text:pic}),el('div',{class:'word',text:i.word}),el('div',{class:'hint',text:hintOf(i)})]);
+  c.addEventListener('click',()=>{c.classList.remove('talk');void c.offsetWidth;c.classList.add('talk');say(sayOf(i))});
+  return c;
+}
+
+// ---------- 2. Listen & Find ----------
+function domino(n){
+  const P={1:[4],2:[0,8],3:[0,4,8],4:[0,2,6,8],5:[0,2,4,6,8],6:[0,2,3,5,6,8],7:[0,2,3,4,5,6,8],8:[0,1,2,3,5,6,7,8],9:[0,1,2,3,4,5,6,7,8]};
+  const half=s=>el('div',{class:'half'},[...Array(9)].map((_,i)=>el('i',{class:s.includes(i)?'on':''})));
+  return el('div',{class:'domino','aria-label':n+' spots'},[half(P[n]),half([])]);
+}
+function wordQ(){
+  const t=shuffle(quizItems(L)).slice(0,3);const a=t[0];
+  return {text:findOf(a),show:'Find the …',opts:shuffle(t).map(o=>({key:o.word,node:o.pic,cls:'pic'})),ans:a.word};
+}
+function numbersQ(){
+  const things=countables(L);
+  const type=pick(['num','num','thing','domino','howmany']);
+  if(type==='num'){const a=1+rnd(10);const opts=shuffle([a,...shuffle([1,2,3,4,5,6,7,8,9,10].filter(x=>x!==a)).slice(0,2)]);
+    return {text:`Find the number ${WORDS[a]}.`,show:'Find number …',opts:opts.map(o=>({key:o,node:String(o),cls:''})),ans:a}}
+  if(type==='thing'){const t=shuffle(things).slice(0,3);const a=t[0];
+    return {text:`Find the ${a.s}.`,show:'Find the …',opts:shuffle(t).map(o=>({key:o.s,node:o.e,cls:'pic'})),ans:a.s}}
+  if(type==='domino'){const a=1+rnd(9);const o=shuffle([a,...shuffle([1,2,3,4,5,6,7,8,9].filter(x=>x!==a)).slice(0,2)]);
+    return {text:`Which domino has ${WORDS[a]} spots?`,show:'Which domino has … spots?',opts:o.map(x=>({key:x,node:domino(x),cls:''})),ans:a}}
+  const t=pick(things);const ns=shuffle([1,2,3,4,5,6]).slice(0,3);const a=ns[0];
+  return {text:`Find ${WORDS[a]} ${noun(t,a)}.`,show:'Find …',opts:shuffle(ns).map(x=>({key:x,node:el('span',{style:'font-size:34px;line-height:1.1;display:flex;flex-wrap:wrap;justify-content:center;max-width:150px',text:t.e.repeat(x)}),cls:''})),ans:a};
+}
+function listenGame(){
+  setTitle('Listen <span>&amp;</span> Find',back);
+  let i=0;const total=5;
+  function round(){
+    if(i>=total)return finish(listenGame);
+    const q=(L.mode==='numbers'&&countables(L).length>=3)?numbersQ():wordQ();let firstTry=true;
+    const cheer=el('p',{class:'cheer'});
+    const dots=el('div',{class:'dots'},[...Array(total)].map((_,j)=>el('i',{class:j<i?'done':''})));
+    const choices=el('div',{class:'choices'});
+    q.opts.forEach(o=>{const b=el('button',{class:'choice '+o.cls},o.node);
+      b.addEventListener('click',async()=>{
+        if(o.key===q.ans){b.classList.add('ok');[...choices.children].forEach(x=>x.disabled=true);
+          if(firstTry)addStar();cheer.textContent=pick(PRAISE);await say(cheer.textContent);i++;setTimeout(round,500)}
+        else{firstTry=false;b.classList.remove('no');void b.offsetWidth;b.classList.add('no');cheer.textContent='Try again!';say('Try again. '+q.text)}});
+      choices.append(b)});
+    screen.replaceChildren(el('div',{class:'q'},[dots,
+      el('div',{class:'prompt'},[el('button',{class:'speaker','aria-label':'Hear it again',text:'🔊',onclick:()=>say(q.text)}),el('p',{text:q.show})]),
+      choices,cheer]));
+    setTimeout(()=>say(q.text),300);
+  }
+  round();
+}
+
+// ---------- 3. Count with Me ----------
+function countGame(){
+  setTitle('Count <span>with</span> Me',back);
+  const t=pick(countables(L));const n=2+rnd(9);let counted=0;
+  const tray=el('div',{class:'tray'});
+  const frame=el('div',{class:'frame10'},[...Array(10)].map(()=>el('div')));
+  const bubble=el('p',{class:'bubble',text:`How many ${t.p}?`});
+  const answer=el('div',{class:'q',style:'flex:none'});
+  shuffle([...Array(15).keys()]).slice(0,n).forEach(c=>{
+    const col=c%5,row=Math.floor(c/5);
+    const o=el('button',{class:'obj','aria-label':t.s,text:t.e,style:`left:calc(${col*20+3}% + ${rnd(8)}px);top:calc(${row*33+4}% + ${rnd(8)}px)`});
+    o.addEventListener('click',()=>{
+      if(o.classList.contains('gone'))return;
+      o.classList.add('gone');counted++;
+      frame.children[counted-1].replaceChildren(el('b',{text:counted}),t.e);
+      bubble.textContent=[...Array(counted)].map((_,k)=>k+1).join(', ')+(counted<n?', …':'');
+      say(WORDS[counted],0.9);
+      if(counted===n)setTimeout(ask,900);
+    });
+    tray.append(o)});
+  function ask(){
+    bubble.textContent=`How many ${t.p}?`;
+    say(`The last number you said tells you how many. How many ${t.p}?`);
+    const opts=shuffle([n,...shuffle([1,2,3,4,5,6,7,8,9,10].filter(x=>x!==n&&Math.abs(x-n)<=3)).slice(0,2)]);
+    const ch=el('div',{class:'choices'});let first=true;
+    opts.forEach(x=>{const b=el('button',{class:'choice',text:x});b.addEventListener('click',async()=>{
+      if(x===n){b.classList.add('ok');[...ch.children].forEach(c=>c.disabled=true);if(first)addStar(2);
+        bubble.textContent=`${n} ${t.p}!`;await say(`Yes! There are ${WORDS[n]} ${t.p}. ${pick(PRAISE)}`);
+        answer.replaceChildren(el('button',{class:'pill good',text:'Next ›',onclick:countGame}))}
+      else{first=false;b.classList.remove('no');void b.offsetWidth;b.classList.add('no');say('Look at your ten frame. Try again.')}});ch.append(b)});
+    answer.replaceChildren(ch);
+  }
+  screen.replaceChildren(el('div',{class:'q',style:'justify-content:flex-start'},[
+    el('div',{class:'prompt'},[el('button',{class:'speaker','aria-label':'Hear it again',text:'🔊',onclick:()=>say(`Tap each ${t.s} and count. Start with one.`)}),el('p',{text:'Tap each one and count!'})]),
+    tray,bubble,frame,answer]));
+  setTimeout(()=>say(`How many ${t.p}? Tap each ${t.s} and count. Start with one.`),300);
+}
+
+// ---------- 4. Say It! ----------
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+let rec=null,micBroken=!SR;
+function stopListening(){try{rec&&rec.abort()}catch(e){}rec=null}
+const key4=w=>w.toLowerCase().replace(/[^a-z ]/g,'').trim().slice(0,4);
+function sayItem(level){
+  if(L.mode==='numbers'){
+    const t=pick(countables(L));const n=1+rnd(6);const w=WORDS[n];const nn=noun(t,n);const pic=t.e.repeat(n);
+    if(level===0)return {pic,html:`<mark>${w}</mark>`,text:w,need:[w],digit:n};
+    if(level===1)return {pic,html:`<mark>${w}</mark> ${esc(nn)}`,text:`${w} ${nn}`,need:[w,key4(t.s)],digit:n};
+    return {pic,html:`I can see <mark>${w}</mark> ${esc(nn)}.`,text:`I can see ${w} ${nn}.`,need:[w,key4(t.s)],digit:n};
+  }
+  const i=pick(quizItems(L));
+  if(level===0)return {pic:i.pic,html:`<mark>${esc(i.word)}</mark>`,text:i.word,need:[key4(i.word)]};
+  const s=sentenceOf(i);
+  return {pic:i.pic,html:esc(s).replace(new RegExp('\\b('+i.word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')\\b','i'),'<mark>$1</mark>'),text:s,need:[key4(i.word)]};
+}
+function sayGame(){
+  setTitle('Say <span>It!</span>',back);
+  const names=L.mode==='numbers'?['Word','Two words','Sentence']:['Word','Sentence'];
+  const key='cs-level-'+L.id;let level=Math.min(parseInt(store(key)||'0',10)||0,names.length-1);
+  let item=sayItem(level);
+  const next=()=>{item=sayItem(level);render();setTimeout(()=>say(item.text),200)};
+  function render(){
+    const heard=el('p',{class:'heard'});const cheer=el('p',{class:'cheer'});
+    const levelBar=el('div',{class:'level'},names.map((nm,i)=>el('button',{class:'tab','aria-selected':String(i===level),text:nm,onclick:()=>{level=i;store(key,String(i));next()}})));
+    const cardEl=el('div',{class:'saycard'},[el('div',{class:'emo',text:item.pic}),el('div',{class:'line'})]);
+    cardEl.querySelector('.line').innerHTML=item.html;
+    const success=async()=>{cheer.textContent=pick(PRAISE);addStar();await say(cheer.textContent);setTimeout(next,600)};
+    const grown=el('div',{class:'grownup'},[el('p',{text:'Grown-up: did they say it clearly?'}),
+      el('div',{class:'row'},[el('button',{class:'pill good',text:'✓ Yes',onclick:success}),
+        el('button',{class:'pill',text:'Again',onclick:()=>{cheer.textContent='Listen and try again!';say('Listen. '+item.text,0.75)}})])]);
+    const mic=el('button',{class:'mic','aria-label':'Your turn to speak',text:'🎤'});
+    mic.addEventListener('click',()=>{
+      if(micBroken){cheer.textContent='Your turn! Say it now.';say('Your turn!');return}
+      stopListening();
+      try{
+        rec=new SR();rec.lang='en-US';rec.interimResults=false;rec.maxAlternatives=5;
+        mic.classList.add('on');heard.textContent='Listening…';
+        rec.onresult=e=>{
+          const alts=[...e.results[0]].map(a=>a.transcript.toLowerCase());
+          heard.textContent='I heard: "'+alts[0]+'"';
+          const ok=alts.some(a=>item.need.every((w,k)=>a.includes(w)||(k===0&&item.digit&&a.split(/\D+/).includes(String(item.digit)))));
+          if(ok)success();else{cheer.textContent='Nearly! Listen and try again.';say('Nearly! Listen. '+item.text,0.75)}
+        };
+        rec.onerror=e=>{mic.classList.remove('on');if(['not-allowed','service-not-allowed','audio-capture'].includes(e.error)){micBroken=true;heard.textContent='The microphone is off, so a grown-up can check instead.'}else heard.textContent="I didn't hear you. Tap the microphone and try again."};
+        rec.onend=()=>mic.classList.remove('on');
+        rec.start();
+      }catch(err){micBroken=true;mic.classList.remove('on');heard.textContent='The microphone is off, so a grown-up can check instead.'}
+    });
+    screen.replaceChildren(el('div',{class:'q'},[levelBar,cardEl,
+      el('div',{class:'row'},[el('button',{class:'speaker','aria-label':'Listen',text:'🔊',style:'width:88px;height:88px;font-size:40px',onclick:()=>say(item.text,0.75)}),mic,
+        el('button',{class:'pill',text:'Next ›',onclick:next})]),
+      heard,cheer,grown]));
+  }
+  render();
+  setTimeout(()=>say('Listen, then say it. '+item.text),300);
+}
+
+function finish(again){
+  say('Fantastic! You finished! Here is a big star.');addStar(2);
+  screen.replaceChildren(el('div',{class:'q'},[el('div',{style:'font-size:120px;line-height:1',text:'⭐'}),
+    el('p',{class:'bubble',text:'You finished!'}),
+    el('div',{class:'row'},[el('button',{class:'pill good',text:'Play again',onclick:again}),el('button',{class:'pill',text:'Lesson menu',onclick:back})])]));
+}
+
+var loading=loadLessons();
+</script>
+</body>
+</html>

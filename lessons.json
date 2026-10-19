@@ -1,0 +1,64 @@
+{
+  "lessons": [
+    {
+      "id": "u1-numbers",
+      "unit": "Unit 1",
+      "title": "Numbers to 10",
+      "icon": "🔢",
+      "added": "2026-10-17",
+      "mode": "numbers",
+      "tabs": [
+        {
+          "name": "Numbers",
+          "items": [
+            { "count": 1, "word": "one", "pic": "🍌", "thing": "banana", "plural": "bananas" },
+            { "count": 2, "word": "two", "pic": "🐘", "thing": "elephant", "plural": "elephants" },
+            { "count": 3, "word": "three", "pic": "🥚", "thing": "egg", "plural": "eggs" },
+            { "count": 4, "word": "four", "pic": "🐈", "thing": "cat", "plural": "cats" },
+            { "count": 5, "word": "five", "pic": "🥁", "thing": "drum", "plural": "drums" },
+            { "count": 6, "word": "six", "pic": "👒", "thing": "hat", "plural": "hats" },
+            { "count": 7, "word": "seven", "pic": "🦋", "thing": "butterfly", "plural": "butterflies" },
+            { "count": 8, "word": "eight", "pic": "👟", "thing": "shoe", "plural": "shoes" },
+            { "count": 9, "word": "nine", "pic": "🧸", "thing": "toy", "plural": "toys" },
+            { "count": 10, "word": "ten", "pic": "⚽", "thing": "ball", "plural": "balls" }
+          ]
+        },
+        {
+          "name": "Things",
+          "items": [
+            { "word": "hippo", "plural": "hippos", "pic": "🦛" },
+            { "word": "robot", "plural": "robots", "pic": "🤖" },
+            { "word": "elephant", "plural": "elephants", "pic": "🐘" },
+            { "word": "pencil", "plural": "pencils", "pic": "✏️" },
+            { "word": "cookie", "plural": "cookies", "pic": "🍪" },
+            { "word": "bus", "plural": "buses", "pic": "🚌" },
+            { "word": "sunflower", "plural": "sunflowers", "pic": "🌻" },
+            { "word": "rabbit", "plural": "rabbits", "pic": "🐇" },
+            { "word": "frog", "plural": "frogs", "pic": "🐸" },
+            { "word": "tree", "plural": "trees", "pic": "🌳" },
+            { "word": "bird", "plural": "birds", "pic": "🐦" },
+            { "word": "butterfly", "plural": "butterflies", "pic": "🦋" },
+            { "word": "car", "plural": "cars", "pic": "🚗" },
+            { "word": "sweet", "plural": "sweets", "pic": "🍬" },
+            { "word": "apple", "plural": "apples", "pic": "🍎" },
+            { "word": "flower", "plural": "flowers", "pic": "🌸" },
+            { "word": "book", "plural": "books", "pic": "📘" }
+          ]
+        },
+        {
+          "name": "Maths words",
+          "items": [
+            { "word": "count", "pic": "👆", "hint": "one, two, three…", "say": "Count. Say one number for each thing. One, two, three.", "quiz": false },
+            { "word": "how many", "pic": "❓", "hint": "How many cats?", "say": "How many cats? Four cats.", "quiz": false },
+            { "word": "set", "pic": "🐈🐈🐈", "hint": "a group of things", "say": "A set is a group of things. A set of three cats.", "quiz": false },
+            { "word": "line", "pic": "✏️✏️✏️✏️", "hint": "things in a row", "say": "Put the pencils in a line.", "quiz": false },
+            { "word": "estimate", "pic": "🤔", "hint": "a good guess", "say": "Estimate. An estimate is a good guess. I estimate there are three sunflowers.", "quiz": false },
+            { "word": "total", "pic": "🟰", "hint": "how many altogether", "say": "Total. How many altogether? The total is five.", "quiz": false },
+            { "word": "spots", "pic": "🁫", "hint": "dots on a domino", "say": "Spots. This domino has four spots.", "quiz": false },
+            { "word": "zero", "pic": "⬜", "hint": "none at all", "say": "Zero. Zero means none. There are zero counters.", "quiz": false }
+          ]
+        }
+      ]
+    }
+  ]
+}
