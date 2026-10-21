@@ -1,0 +1,690 @@
+{
+ "after": {
+  "ipa": "ˈæftɚ",
+  "vi": "sau"
+ },
+ "alive": {
+  "ipa": "əˈlaɪv",
+  "vi": "còn sống"
+ },
+ "animal": {
+  "ipa": "ˈænəməl",
+  "vi": "động vật"
+ },
+ "answer": {
+  "ipa": "ˈænsɚ",
+  "vi": "câu trả lời"
+ },
+ "apple": {
+  "ipa": "ˈæpəl",
+  "vi": "quả táo"
+ },
+ "apples": {
+  "ipa": "ˈæpəlz",
+  "vi": "quả táo"
+ },
+ "ball": {
+  "ipa": "bɔl",
+  "vi": "quả bóng"
+ },
+ "balls": {
+  "ipa": "bɔlz",
+  "vi": "quả bóng"
+ },
+ "banana": {
+  "ipa": "bəˈnænə",
+  "vi": "quả chuối"
+ },
+ "bananas": {
+  "ipa": "bəˈnænəz",
+  "vi": "quả chuối"
+ },
+ "basket": {
+  "ipa": "ˈbæskɪt",
+  "vi": "cái giỏ"
+ },
+ "bee": {
+  "ipa": "bi",
+  "vi": "con ong"
+ },
+ "before": {
+  "ipa": "bɪˈfɔr",
+  "vi": "trước"
+ },
+ "between": {
+  "ipa": "bɪˈtwin",
+  "vi": "ở giữa"
+ },
+ "bird": {
+  "ipa": "bɝd",
+  "vi": "con chim"
+ },
+ "birds": {
+  "ipa": "bɝdz",
+  "vi": "con chim"
+ },
+ "book": {
+  "ipa": "bʊk",
+  "vi": "quyển sách"
+ },
+ "books": {
+  "ipa": "bʊks",
+  "vi": "quyển sách"
+ },
+ "boot": {
+  "ipa": "but",
+  "vi": "chiếc ủng"
+ },
+ "boots": {
+  "ipa": "buts",
+  "vi": "chiếc ủng"
+ },
+ "box": {
+  "ipa": "bɑks",
+  "vi": "cái hộp"
+ },
+ "bus": {
+  "ipa": "bʌs",
+  "vi": "xe buýt"
+ },
+ "buses": {
+  "ipa": "ˈbʌsɪz",
+  "vi": "xe buýt"
+ },
+ "butterfly": {
+  "ipa": "ˈbʌtɚˌflaɪ",
+  "vi": "con bướm"
+ },
+ "butterflies": {
+  "ipa": "ˈbʌtɚˌflaɪz",
+  "vi": "con bướm"
+ },
+ "cactus": {
+  "ipa": "ˈkæktəs",
+  "vi": "cây xương rồng"
+ },
+ "car": {
+  "ipa": "kɑr",
+  "vi": "xe ô tô"
+ },
+ "cars": {
+  "ipa": "kɑrz",
+  "vi": "xe ô tô"
+ },
+ "cat": {
+  "ipa": "kæt",
+  "vi": "con mèo"
+ },
+ "cats": {
+  "ipa": "kæts",
+  "vi": "con mèo"
+ },
+ "caterpillar": {
+  "ipa": "ˈkætɚˌpɪlɚ",
+  "vi": "con sâu bướm"
+ },
+ "cave": {
+  "ipa": "keɪv",
+  "vi": "hang động"
+ },
+ "chopsticks": {
+  "ipa": "ˈtʃɑpˌstɪks",
+  "vi": "đôi đũa"
+ },
+ "coin": {
+  "ipa": "kɔɪn",
+  "vi": "đồng xu"
+ },
+ "coins": {
+  "ipa": "kɔɪnz",
+  "vi": "đồng xu"
+ },
+ "compare": {
+  "ipa": "kəmˈpɛr",
+  "vi": "so sánh"
+ },
+ "cookie": {
+  "ipa": "ˈkʊki",
+  "vi": "bánh quy"
+ },
+ "cookies": {
+  "ipa": "ˈkʊkiz",
+  "vi": "bánh quy"
+ },
+ "count": {
+  "ipa": "kaʊnt",
+  "vi": "đếm"
+ },
+ "different": {
+  "ipa": "ˈdɪfrənt",
+  "vi": "khác nhau"
+ },
+ "drum": {
+  "ipa": "drʌm",
+  "vi": "cái trống"
+ },
+ "drums": {
+  "ipa": "drʌmz",
+  "vi": "cái trống"
+ },
+ "dry plant": {
+  "ipa": "ˌdraɪ ˈplænt",
+  "vi": "cây bị khô héo"
+ },
+ "egg": {
+  "ipa": "ɛɡ",
+  "vi": "quả trứng"
+ },
+ "eggs": {
+  "ipa": "ɛɡz",
+  "vi": "quả trứng"
+ },
+ "elephant": {
+  "ipa": "ˈɛləfənt",
+  "vi": "con voi"
+ },
+ "elephants": {
+  "ipa": "ˈɛləfənts",
+  "vi": "con voi"
+ },
+ "equal": {
+  "ipa": "ˈikwəl",
+  "vi": "bằng nhau"
+ },
+ "estimate": {
+  "ipa": "ˈɛstəmət",
+  "vi": "ước lượng"
+ },
+ "even": {
+  "ipa": "ˈivən",
+  "vi": "số chẵn"
+ },
+ "explain": {
+  "ipa": "ɪkˈspleɪn",
+  "vi": "giải thích"
+ },
+ "fewer": {
+  "ipa": "ˈfjuɚ",
+  "vi": "ít hơn"
+ },
+ "finger": {
+  "ipa": "ˈfɪŋɡɚ",
+  "vi": "ngón tay"
+ },
+ "fingers": {
+  "ipa": "ˈfɪŋɡɚz",
+  "vi": "ngón tay"
+ },
+ "fish": {
+  "ipa": "fɪʃ",
+  "vi": "con cá"
+ },
+ "flower": {
+  "ipa": "ˈflaʊɚ",
+  "vi": "bông hoa"
+ },
+ "flowers": {
+  "ipa": "ˈflaʊɚz",
+  "vi": "bông hoa"
+ },
+ "frog": {
+  "ipa": "frɔɡ",
+  "vi": "con ếch"
+ },
+ "frogs": {
+  "ipa": "frɔɡz",
+  "vi": "con ếch"
+ },
+ "garden": {
+  "ipa": "ˈɡɑrdən",
+  "vi": "khu vườn"
+ },
+ "gardener": {
+  "ipa": "ˈɡɑrdnɚ",
+  "vi": "người làm vườn"
+ },
+ "glove": {
+  "ipa": "ɡlʌv",
+  "vi": "chiếc găng tay"
+ },
+ "gloves": {
+  "ipa": "ɡlʌvz",
+  "vi": "chiếc găng tay"
+ },
+ "goat": {
+  "ipa": "ɡoʊt",
+  "vi": "con dê"
+ },
+ "goats": {
+  "ipa": "ɡoʊts",
+  "vi": "con dê"
+ },
+ "grapes": {
+  "ipa": "ɡreɪps",
+  "vi": "chùm nho"
+ },
+ "group": {
+  "ipa": "ɡrup",
+  "vi": "nhóm"
+ },
+ "grow": {
+  "ipa": "ɡroʊ",
+  "vi": "lớn lên"
+ },
+ "hat": {
+  "ipa": "hæt",
+  "vi": "cái mũ"
+ },
+ "hats": {
+  "ipa": "hæts",
+  "vi": "cái mũ"
+ },
+ "hippo": {
+  "ipa": "ˈhɪpoʊ",
+  "vi": "con hà mã"
+ },
+ "hippos": {
+  "ipa": "ˈhɪpoʊz",
+  "vi": "con hà mã"
+ },
+ "how many": {
+  "ipa": "ˌhaʊ ˈmɛni",
+  "vi": "bao nhiêu"
+ },
+ "investigation": {
+  "ipa": "ɪnˌvɛstəˈɡeɪʃən",
+  "vi": "thí nghiệm khám phá"
+ },
+ "kiwi": {
+  "ipa": "ˈkiwi",
+  "vi": "quả kiwi"
+ },
+ "kiwis": {
+  "ipa": "ˈkiwiz",
+  "vi": "quả kiwi"
+ },
+ "leaf": {
+  "ipa": "lif",
+  "vi": "chiếc lá"
+ },
+ "leaves": {
+  "ipa": "livz",
+  "vi": "chiếc lá"
+ },
+ "lemon": {
+  "ipa": "ˈlɛmən",
+  "vi": "quả chanh vàng"
+ },
+ "lemons": {
+  "ipa": "ˈlɛmənz",
+  "vi": "quả chanh vàng"
+ },
+ "less": {
+  "ipa": "lɛs",
+  "vi": "ít hơn"
+ },
+ "light": {
+  "ipa": "laɪt",
+  "vi": "ánh sáng"
+ },
+ "line": {
+  "ipa": "laɪn",
+  "vi": "hàng"
+ },
+ "living": {
+  "ipa": "ˈlɪvɪŋ",
+  "vi": "có sự sống"
+ },
+ "look": {
+  "ipa": "lʊk",
+  "vi": "nhìn"
+ },
+ "magnifying glass": {
+  "ipa": "ˈmæɡnəˌfaɪɪŋ ˌɡlæs",
+  "vi": "kính lúp"
+ },
+ "missing": {
+  "ipa": "ˈmɪsɪŋ",
+  "vi": "bị thiếu"
+ },
+ "model": {
+  "ipa": "ˈmɑdəl",
+  "vi": "mô hình"
+ },
+ "more": {
+  "ipa": "mɔr",
+  "vi": "nhiều hơn"
+ },
+ "name": {
+  "ipa": "neɪm",
+  "vi": "gọi tên"
+ },
+ "next": {
+  "ipa": "nɛkst",
+  "vi": "tiếp theo"
+ },
+ "non-living": {
+  "ipa": "ˌnɑnˈlɪvɪŋ",
+  "vi": "không có sự sống"
+ },
+ "number track": {
+  "ipa": "ˈnʌmbɚ ˌtræk",
+  "vi": "dãy số"
+ },
+ "observe": {
+  "ipa": "əbˈzɝv",
+  "vi": "quan sát"
+ },
+ "odd": {
+  "ipa": "ɑd",
+  "vi": "số lẻ"
+ },
+ "orange": {
+  "ipa": "ˈɔrɪndʒ",
+  "vi": "quả cam"
+ },
+ "oranges": {
+  "ipa": "ˈɔrɪndʒɪz",
+  "vi": "quả cam"
+ },
+ "order": {
+  "ipa": "ˈɔrdɚ",
+  "vi": "thứ tự"
+ },
+ "pair": {
+  "ipa": "pɛr",
+  "vi": "một đôi"
+ },
+ "parts": {
+  "ipa": "pɑrts",
+  "vi": "các bộ phận"
+ },
+ "pattern": {
+  "ipa": "ˈpætɚn",
+  "vi": "quy luật"
+ },
+ "pear": {
+  "ipa": "pɛr",
+  "vi": "quả lê"
+ },
+ "pears": {
+  "ipa": "pɛrz",
+  "vi": "quả lê"
+ },
+ "pencil": {
+  "ipa": "ˈpɛnsəl",
+  "vi": "bút chì"
+ },
+ "pencils": {
+  "ipa": "ˈpɛnsəlz",
+  "vi": "bút chì"
+ },
+ "pineapple": {
+  "ipa": "ˈpaɪˌnæpəl",
+  "vi": "quả dứa"
+ },
+ "pineapples": {
+  "ipa": "ˈpaɪˌnæpəlz",
+  "vi": "quả dứa"
+ },
+ "plant": {
+  "ipa": "plænt",
+  "vi": "thực vật, cái cây"
+ },
+ "point": {
+  "ipa": "pɔɪnt",
+  "vi": "chỉ tay"
+ },
+ "predict": {
+  "ipa": "prɪˈdɪkt",
+  "vi": "dự đoán"
+ },
+ "question": {
+  "ipa": "ˈkwɛstʃən",
+  "vi": "câu hỏi"
+ },
+ "rabbit": {
+  "ipa": "ˈræbɪt",
+  "vi": "con thỏ"
+ },
+ "rabbits": {
+  "ipa": "ˈræbɪts",
+  "vi": "con thỏ"
+ },
+ "record": {
+  "ipa": "rɪˈkɔrd",
+  "vi": "ghi lại"
+ },
+ "robot": {
+  "ipa": "ˈroʊˌbɑt",
+  "vi": "người máy"
+ },
+ "robots": {
+  "ipa": "ˈroʊˌbɑts",
+  "vi": "người máy"
+ },
+ "roots": {
+  "ipa": "ruts",
+  "vi": "rễ cây"
+ },
+ "same": {
+  "ipa": "seɪm",
+  "vi": "giống nhau"
+ },
+ "seeds": {
+  "ipa": "sidz",
+  "vi": "hạt giống"
+ },
+ "set": {
+  "ipa": "sɛt",
+  "vi": "nhóm đồ vật"
+ },
+ "shoe": {
+  "ipa": "ʃu",
+  "vi": "chiếc giày"
+ },
+ "shoes": {
+  "ipa": "ʃuz",
+  "vi": "chiếc giày"
+ },
+ "similar": {
+  "ipa": "ˈsɪmələr",
+  "vi": "gần giống nhau"
+ },
+ "snail": {
+  "ipa": "sneɪl",
+  "vi": "con ốc sên"
+ },
+ "snails": {
+  "ipa": "sneɪlz",
+  "vi": "con ốc sên"
+ },
+ "sock": {
+  "ipa": "sɑk",
+  "vi": "chiếc tất"
+ },
+ "socks": {
+  "ipa": "sɑks",
+  "vi": "chiếc tất"
+ },
+ "spider": {
+  "ipa": "ˈspaɪdɚ",
+  "vi": "con nhện"
+ },
+ "spiders": {
+  "ipa": "ˈspaɪdɚz",
+  "vi": "con nhện"
+ },
+ "spot": {
+  "ipa": "spɑt",
+  "vi": "chấm"
+ },
+ "spots": {
+  "ipa": "spɑts",
+  "vi": "chấm"
+ },
+ "star": {
+  "ipa": "stɑr",
+  "vi": "ngôi sao"
+ },
+ "stars": {
+  "ipa": "stɑrz",
+  "vi": "ngôi sao"
+ },
+ "stem": {
+  "ipa": "stɛm",
+  "vi": "thân cây"
+ },
+ "strawberry": {
+  "ipa": "ˈstrɔˌbɛri",
+  "vi": "quả dâu tây"
+ },
+ "strawberries": {
+  "ipa": "ˈstrɔˌbɛriz",
+  "vi": "quả dâu tây"
+ },
+ "sunflower": {
+  "ipa": "ˈsʌnˌflaʊɚ",
+  "vi": "hoa hướng dương"
+ },
+ "sunflowers": {
+  "ipa": "ˈsʌnˌflaʊɚz",
+  "vi": "hoa hướng dương"
+ },
+ "sweet": {
+  "ipa": "swit",
+  "vi": "cái kẹo"
+ },
+ "sweets": {
+  "ipa": "swits",
+  "vi": "cái kẹo"
+ },
+ "table": {
+  "ipa": "ˈteɪbəl",
+  "vi": "bảng"
+ },
+ "teddy bear": {
+  "ipa": "ˈtɛdi ˌbɛr",
+  "vi": "gấu bông"
+ },
+ "teddy bears": {
+  "ipa": "ˈtɛdi ˌbɛrz",
+  "vi": "gấu bông"
+ },
+ "tomato": {
+  "ipa": "təˈmeɪtoʊ",
+  "vi": "quả cà chua"
+ },
+ "total": {
+  "ipa": "ˈtoʊtəl",
+  "vi": "tổng cộng"
+ },
+ "toy": {
+  "ipa": "tɔɪ",
+  "vi": "đồ chơi"
+ },
+ "toys": {
+  "ipa": "tɔɪz",
+  "vi": "đồ chơi"
+ },
+ "tree": {
+  "ipa": "tri",
+  "vi": "cây to"
+ },
+ "trees": {
+  "ipa": "triz",
+  "vi": "cây to"
+ },
+ "water": {
+  "ipa": "ˈwɔtɚ",
+  "vi": "nước"
+ },
+ "watermelon": {
+  "ipa": "ˈwɔtɚˌmɛlən",
+  "vi": "quả dưa hấu"
+ },
+ "watermelons": {
+  "ipa": "ˈwɔtɚˌmɛlənz",
+  "vi": "quả dưa hấu"
+ },
+ "zero": {
+  "ipa": "ˈzɪroʊ",
+  "vi": "số không"
+ },
+ "one": {
+  "ipa": "wʌn",
+  "vi": "một"
+ },
+ "two": {
+  "ipa": "tu",
+  "vi": "hai"
+ },
+ "three": {
+  "ipa": "θri",
+  "vi": "ba"
+ },
+ "four": {
+  "ipa": "fɔr",
+  "vi": "bốn"
+ },
+ "five": {
+  "ipa": "faɪv",
+  "vi": "năm"
+ },
+ "six": {
+  "ipa": "sɪks",
+  "vi": "sáu"
+ },
+ "seven": {
+  "ipa": "ˈsɛvən",
+  "vi": "bảy"
+ },
+ "eight": {
+  "ipa": "eɪt",
+  "vi": "tám"
+ },
+ "nine": {
+  "ipa": "naɪn",
+  "vi": "chín"
+ },
+ "ten": {
+  "ipa": "tɛn",
+  "vi": "mười"
+ },
+ "say the whole rhyme": {
+  "ipa": "ˈseɪ ðə ˈhoʊl ˈraɪm",
+  "vi": "đọc cả bài vè"
+ },
+ "1, 2, 3, 4, 5,": {
+  "ipa": "ˈwʌn ˈtu ˈθri ˈfɔr ˈfaɪv",
+  "vi": "một, hai, ba, bốn, năm"
+ },
+ "once i caught a fish alive!": {
+  "ipa": "ˈwʌns aɪ ˈkɔt ə ˈfɪʃ əˈlaɪv",
+  "vi": "Có lần tớ bắt được một con cá còn sống!"
+ },
+ "6, 7, 8, 9, 10,": {
+  "ipa": "ˈsɪks ˈsɛvən ˈeɪt ˈnaɪn ˈtɛn",
+  "vi": "sáu, bảy, tám, chín, mười"
+ },
+ "then i let it go again!": {
+  "ipa": "ˈðɛn aɪ ˈlɛt ɪt ˈɡoʊ əˈɡɛn",
+  "vi": "Rồi tớ lại thả nó đi!"
+ },
+ "why did you let it go?": {
+  "ipa": "ˈwaɪ dɪd ju ˈlɛt ɪt ˈɡoʊ",
+  "vi": "Sao cậu lại thả nó đi?"
+ },
+ "because it bit my finger so.": {
+  "ipa": "bɪˈkɔz ɪt ˈbɪt maɪ ˈfɪŋɡɚ ˈsoʊ",
+  "vi": "Vì nó cắn ngón tay tớ đau quá."
+ },
+ "which finger did it bite?": {
+  "ipa": "ˈwɪtʃ ˈfɪŋɡɚ dɪd ɪt ˈbaɪt",
+  "vi": "Nó cắn ngón tay nào?"
+ },
+ "this little finger on the right.": {
+  "ipa": "ˈðɪs ˈlɪtəl ˈfɪŋɡɚ ɑn ðə ˈraɪt",
+  "vi": "Ngón út bên phải này này."
+ }
+}

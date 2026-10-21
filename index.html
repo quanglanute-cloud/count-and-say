@@ -137,6 +137,12 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
 .choice.pic{font-size:84px}
 .choice.ok{background:#e3f4e3;box-shadow:0 6px 0 var(--leaf)}
 .choice.wrong{background:#fde3e1;box-shadow:0 6px 0 #e9a29c}
+.gl{display:flex;flex-direction:column;align-items:center;gap:1px;line-height:1.2;text-align:center}
+.gl .ipa{font-family:'Andika','Lucida Sans Unicode','Segoe UI',system-ui,sans-serif;font-size:14px;color:var(--frame);letter-spacing:.01em}
+.gl .vi{font-family:var(--body);font-size:14px;color:var(--ink-soft);font-style:italic}
+.lab .gl{margin-top:3px}
+.lab .gl .ipa,.lab .gl .vi{font-size:clamp(13px,1.6vw,16px);font-weight:400}
+.saycard .gl .ipa,.saycard .gl .vi{font-size:18px}
 .choice .lab{display:none;font-family:var(--display);font-size:clamp(18px,2.6vw,26px);font-weight:600;line-height:1.1;color:var(--ink);margin-top:6px;text-align:center}
 .choices.reveal .lab{display:block;animation:pop .4s}
 .choice.ok .lab{color:#2e7d32}
@@ -278,6 +284,24 @@ async function loadLessons(){
     try{const c=store('cs-lessons');if(c)j=JSON.parse(c)}catch(_){}
   }
   if(j){LESSONS=j.lessons||[];if(j.books&&j.books.length)BOOKS=j.books}
+  try{
+    const r=await fetch('dictionary.json?t='+Date.now(),{cache:'no-store'});
+    if(!r.ok)throw new Error(r.status);
+    DICT=await r.json();store('cs-dict',JSON.stringify(DICT));
+  }catch(e){try{const c=store('cs-dict');if(c)DICT=JSON.parse(c)}catch(_){}}
+}
+// American pronunciation (IPA) + Vietnamese meaning, from dictionary.json
+let DICT={};
+function gloss(text){
+  const k=String(text||'').toLowerCase().trim();
+  if(DICT[k])return DICT[k];
+  const sp=k.indexOf(' ');
+  if(sp>0){const a=DICT[k.slice(0,sp)],b=DICT[k.slice(sp+1)];if(a&&b)return {ipa:a.ipa+' '+b.ipa,vi:a.vi+' '+b.vi}}
+  return null;
+}
+function glossEl(text){
+  const g=gloss(text);if(!g)return null;
+  return el('span',{class:'gl'},[el('span',{class:'ipa',text:'/'+g.ipa+'/'}),el('span',{class:'vi',text:g.vi})]);
 }
 const bookOf=l=>l.book||'maths';
 const isNew=l=>l.added&&(Date.now()-new Date(l.added+'T00:00:00'))/864e5<3;
@@ -390,7 +414,7 @@ function card(i){
   const pic=i.count?i.pic.repeat(i.count):(i.pic||'');
   const big=!i.count&&[...pic].length<=2;
   const c=el('button',{class:'wcard'},[i.count?el('div',{class:'num',text:i.count}):null,
-    el('div',{class:'emo'+(big||i.count===1?' one':''),text:pic}),el('div',{class:'word',text:i.word}),el('div',{class:'hint',text:hintOf(i)})]);
+    el('div',{class:'emo'+(big||i.count===1?' one':''),text:pic}),el('div',{class:'word',text:i.word}),glossEl(i.word),el('div',{class:'hint',text:hintOf(i)})]);
   c.addEventListener('click',()=>{c.classList.remove('talk');void c.offsetWidth;c.classList.add('talk');say(sayOf(i))});
   return c;
 }
@@ -430,7 +454,7 @@ function quizGame(titleHtml,total,make,again){
     const promptP=el('p',{text:q.show});
     // After the first tap (right or wrong) every picture shows its word, and the question shows the target word.
     const reveal=()=>{choices.classList.add('reveal');if(q.full)promptP.innerHTML=esc(q.full).replace(esc(q.target||''),`<mark>${esc(q.target||'')}</mark>`)};
-    q.opts.forEach(o=>{const b=el('button',{class:'choice '+(o.cls||'')},[o.node,o.label?el('span',{class:'lab',text:o.label}):null]);
+    q.opts.forEach(o=>{const b=el('button',{class:'choice '+(o.cls||'')},[o.node,o.label?el('span',{class:'lab'},[el('span',{text:o.label}),glossEl(o.label)]):null]);
       b.addEventListener('click',async()=>{
         reveal();
         if(o.key===q.ans){b.classList.add('ok');[...choices.children].forEach(x=>x.disabled=true);
@@ -576,6 +600,7 @@ function sayGame(){
     const levelBar=el('div',{class:'level'},names.map((nm,i)=>el('button',{class:'tab','aria-selected':String(i===level),text:nm,onclick:()=>{level=i;store(key,String(i));next()}})));
     const cardEl=el('div',{class:'saycard'},[el('div',{class:'emo',text:item.pic}),el('div',{class:'line'})]);
     cardEl.querySelector('.line').innerHTML=item.html;
+    const g=glossEl(item.text.replace(/[.?!]$/,''));if(g)cardEl.append(g);
     const success=async()=>{cheer.textContent=pick(PRAISE);addStar();await say(cheer.textContent);setTimeout(next,600)};
     const grown=el('div',{class:'grownup'},[el('p',{text:'Grown-up: did they say it clearly?'}),
       el('div',{class:'row'},[el('button',{class:'pill good',text:'✓ Yes',onclick:success}),

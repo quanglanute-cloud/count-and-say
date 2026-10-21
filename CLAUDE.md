@@ -8,11 +8,17 @@ The owner sends photos or a PDF of textbook pages and asks for them to be added.
 
 1. Read the pages and pick the vocabulary a 3–6 year old can learn from them: concrete nouns with a clear emoji, plus a few key phrases.
 2. Decide which book the pages come from (`maths`, `science` or `english`; ask if unclear), then append one lesson object to the END of the `lessons` array in `lessons.json` with that `book`. Never change or remove an existing lesson unless asked.
-3. Check that the JSON is valid: `python3 -m json.tool lessons.json > /dev/null`.
-4. Commit with a message like `Add Unit 2: Shapes`, then push to `main`.
-5. Tell the owner in one line what was added. The new lesson shows a NEW badge for 3 days.
+3. Add every new `word`, `plural` and `thing` (lower-case) to `dictionary.json` with its American pronunciation in IPA (no slashes) and a short Vietnamese meaning, e.g. `"elephant": {"ipa": "ˈɛləfənt", "vi": "con voi"}`. For countable nouns include the Vietnamese classifier (con, quả, cái, chiếc…) so "three cats" becomes "ba con mèo". Never remove existing entries.
+4. Check both files are valid JSON and every word has a dictionary entry:
+   `python3 -c "import json;d=json.load(open('dictionary.json'));L=json.load(open('lessons.json'));m={i[k].lower() for l in L['lessons'] for t in l['tabs'] for i in t['items'] for k in ('word','plural','thing') if i.get(k)}-set(d);print('missing:',m or 'none')"`
+5. Commit with a message like `Add Unit 2: Shapes`, then push to `main`.
+6. Tell the owner in one line what was added. The new lesson shows a NEW badge for 3 days.
 
 Do not edit `index.html` just to add content. Change it only when the owner asks for a new feature or game.
+
+## Pronunciation and Vietnamese
+
+`dictionary.json` maps each lower-case word or phrase to `{"ipa", "vi"}`. The app shows them under the word on Words cards, under each picture in Listen & Find after the first tap, and on the Say It! card. Two-word labels such as "three cats" are built from the two entries.
 
 ## Books
 
