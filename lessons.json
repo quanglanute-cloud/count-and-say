@@ -237,15 +237,15 @@
             },
             {
               "word": "total",
-              "pic": "🟰",
+              "pic": "➕",
               "hint": "how many altogether",
               "say": "Total. How many altogether? The total is five.",
               "quiz": false
             },
             {
               "word": "spots",
-              "pic": "🁫",
-              "hint": "dots on a domino",
+              "pic": "🎲",
+              "hint": "dots on a domino or dice",
               "say": "Spots. This domino has four spots.",
               "quiz": false
             },
@@ -449,7 +449,7 @@
             {
               "word": "coin",
               "plural": "coins",
-              "pic": "🪙"
+              "pic": "💰"
             },
             {
               "word": "finger",
@@ -498,7 +498,7 @@
             },
             {
               "word": "number track",
-              "pic": "🟩🟧🟦🟥🟦",
+              "pic": "1️⃣2️⃣3️⃣4️⃣5️⃣",
               "say": "A number track. One, two, three, four, five, six, seven, eight, nine, ten.",
               "hint": "1 to 10 in a row",
               "quiz": false
@@ -622,11 +622,11 @@
               "sentence": "A snail is living."
             },
             {
-              "word": "worm",
-              "pic": "🪱",
+              "word": "caterpillar",
+              "pic": "🐛",
               "hint": "living",
-              "say": "Worm. A worm is living.",
-              "sentence": "A worm is living."
+              "say": "Caterpillar. A caterpillar is living.",
+              "sentence": "A caterpillar is living."
             },
             {
               "word": "fish",
@@ -664,11 +664,11 @@
               "sentence": "A cactus is living."
             },
             {
-              "word": "rock",
-              "pic": "🪨",
+              "word": "ball",
+              "pic": "⚽",
               "hint": "non-living",
-              "say": "Rock. A rock is non-living.",
-              "sentence": "A rock is non-living."
+              "say": "Ball. A ball is non-living.",
+              "sentence": "A ball is non-living."
             },
             {
               "word": "teddy bear",
@@ -692,18 +692,19 @@
               "sentence": "A pencil is non-living."
             },
             {
-              "word": "chair",
-              "pic": "🪑",
+              "word": "car",
+              "pic": "🚗",
               "hint": "non-living",
-              "say": "Chair. A chair is non-living.",
-              "sentence": "A chair is non-living."
+              "say": "Car. A car moves, but it is non-living.",
+              "sentence": "A car is non-living."
             },
             {
-              "word": "stick",
-              "pic": "🪵",
-              "hint": "used to be alive",
-              "say": "Stick. A stick is non-living. It used to be alive, on a tree.",
-              "sentence": "A stick used to be alive."
+              "word": "chopsticks",
+              "pic": "🥢",
+              "hint": "wood: used to be alive",
+              "say": "Chopsticks. Chopsticks are made of wood. Wood used to be alive, in a tree.",
+              "sentence": "Wood used to be alive.",
+              "find": "Find the chopsticks."
             }
           ]
         },
@@ -712,7 +713,7 @@
           "items": [
             {
               "word": "plant",
-              "pic": "🪴",
+              "pic": "☘️",
               "hint": "living",
               "say": "Plant. Plants are living things. Most plants are green.",
               "sentence": "Most plants are green."
@@ -741,17 +742,17 @@
             },
             {
               "word": "roots",
-              "pic": "🫚",
-              "hint": "under the ground",
-              "say": "Roots. The roots collect water. The roots hold the plant still.",
+              "pic": "🥕",
+              "hint": "a carrot is a root",
+              "say": "Roots. The roots collect water. The roots hold the plant still. A carrot is a root!",
               "sentence": "The roots collect water.",
               "find": "Find the roots."
             },
             {
               "word": "seeds",
-              "pic": "🫘",
+              "pic": "🌰",
               "hint": "grow into plants",
-              "say": "Seeds. Some plants have flowers which make seeds.",
+              "say": "Seeds. Some plants have flowers which make seeds. A nut is a seed.",
               "sentence": "Seeds grow into plants.",
               "find": "Find the seeds."
             },
@@ -828,7 +829,7 @@
             },
             {
               "word": "gardener",
-              "pic": "🧑‍🌾",
+              "pic": "👒🌱",
               "hint": "looks after plants",
               "say": "Gardener. The gardener gives the plants lots of light and water.",
               "sentence": "The gardener looks after plants."
@@ -861,8 +862,8 @@
             },
             {
               "word": "non-living",
-              "pic": "🪨",
-              "say": "Non-living. A rock is non-living. It is not alive.",
+              "pic": "🧸",
+              "say": "Non-living. A teddy bear is non-living. It is not alive.",
               "hint": "not alive",
               "quiz": false
             },

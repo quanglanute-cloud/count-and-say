@@ -63,4 +63,5 @@ Rules of thumb:
 - Each lesson needs at least 3 items with `pic` and no `quiz: false`, or Listen & Find and Say It! are hidden.
 - Use 1–3 tabs per lesson, with 6–15 items in each tab.
 - Pick emojis that a child recognises without help. If no emoji fits, use a close one and set `hint`.
+- Only use emojis that older devices can show: no characters from Unicode 12 or later (U+1FA70 and above, coloured squares U+1F7E0–1F7FF, domino/card symbols U+1F000–1F0FF) and no joined sequences (ZWJ, like 🧑‍🌾). They show as empty boxes or split pictures on older iPads and Windows.
 - Keep `sentence` short (3–6 words) and in the present tense.

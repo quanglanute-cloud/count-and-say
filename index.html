@@ -136,6 +136,12 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
 .choice{background:var(--card);border-radius:26px;min-width:150px;min-height:150px;padding:14px;display:grid;place-items:center;box-shadow:0 6px 0 var(--frame-soft);font-family:var(--display);font-size:72px;font-weight:700;color:var(--ink)}
 .choice.pic{font-size:84px}
 .choice.ok{background:#e3f4e3;box-shadow:0 6px 0 var(--leaf)}
+.choice.wrong{background:#fde3e1;box-shadow:0 6px 0 #e9a29c}
+.choice .lab{display:none;font-family:var(--display);font-size:clamp(18px,2.6vw,26px);font-weight:600;line-height:1.1;color:var(--ink);margin-top:6px;text-align:center}
+.choices.reveal .lab{display:block;animation:pop .4s}
+.choice.ok .lab{color:#2e7d32}
+.choice.wrong .lab{color:#b3372f}
+.prompt p mark{background:none;color:var(--tomato)}
 .choice.no{animation:shake .4s}
 @keyframes shake{25%{transform:translateX(-10px)}75%{transform:translateX(10px)}}
 .dots{display:flex;gap:8px}
@@ -397,19 +403,19 @@ function domino(n){
 }
 function wordQ(){
   const t=shuffle(quizItems(L)).slice(0,3);const a=t[0];
-  return {text:findOf(a),show:'Find the …',opts:shuffle(t).map(o=>({key:o.word,node:o.pic,cls:'pic'})),ans:a.word};
+  return {text:findOf(a),show:'Find the …',full:findOf(a).replace(/[.?!]$/,''),target:a.word,opts:shuffle(t).map(o=>({key:o.word,node:o.pic,cls:'pic',label:o.word})),ans:a.word};
 }
 function numbersQ(){
   const things=countables(L);
   const type=pick(['num','num','thing','domino','howmany']);
   if(type==='num'){const a=1+rnd(10);const opts=shuffle([a,...shuffle([1,2,3,4,5,6,7,8,9,10].filter(x=>x!==a)).slice(0,2)]);
-    return {text:`Find the number ${WORDS[a]}.`,show:'Find number …',opts:opts.map(o=>({key:o,node:String(o),cls:''})),ans:a}}
+    return {text:`Find the number ${WORDS[a]}.`,show:'Find number …',full:`Find number ${WORDS[a]}`,target:WORDS[a],opts:opts.map(o=>({key:o,node:String(o),cls:'',label:WORDS[o]})),ans:a}}
   if(type==='thing'){const t=shuffle(things).slice(0,3);const a=t[0];
-    return {text:`Find the ${a.s}.`,show:'Find the …',opts:shuffle(t).map(o=>({key:o.s,node:o.e,cls:'pic'})),ans:a.s}}
+    return {text:`Find the ${a.s}.`,show:'Find the …',full:`Find the ${a.s}`,target:a.s,opts:shuffle(t).map(o=>({key:o.s,node:o.e,cls:'pic',label:o.s})),ans:a.s}}
   if(type==='domino'){const a=1+rnd(9);const o=shuffle([a,...shuffle([1,2,3,4,5,6,7,8,9].filter(x=>x!==a)).slice(0,2)]);
-    return {text:`Which domino has ${WORDS[a]} spots?`,show:'Which domino has … spots?',opts:o.map(x=>({key:x,node:domino(x),cls:''})),ans:a}}
+    return {text:`Which domino has ${WORDS[a]} spots?`,show:'Which domino has … spots?',full:`Which domino has ${WORDS[a]} spots?`,target:WORDS[a],opts:o.map(x=>({key:x,node:domino(x),cls:'',label:`${WORDS[x]} spots`})),ans:a}}
   const t=pick(things);const ns=shuffle([1,2,3,4,5,6]).slice(0,3);const a=ns[0];
-  return {text:`Find ${WORDS[a]} ${noun(t,a)}.`,show:'Find …',opts:shuffle(ns).map(x=>({key:x,node:el('span',{style:'font-size:34px;line-height:1.1;display:flex;flex-wrap:wrap;justify-content:center;max-width:150px',text:t.e.repeat(x)}),cls:''})),ans:a};
+  return {text:`Find ${WORDS[a]} ${noun(t,a)}.`,show:'Find …',full:`Find ${WORDS[a]} ${noun(t,a)}`,target:`${WORDS[a]} ${noun(t,a)}`,opts:shuffle(ns).map(x=>({key:x,label:`${WORDS[x]} ${noun(t,x)}`,node:el('span',{style:'font-size:34px;line-height:1.1;display:flex;flex-wrap:wrap;justify-content:center;max-width:150px',text:t.e.repeat(x)}),cls:''})),ans:a};
 }
 // Shared quiz runner: make() returns {text, show, visual?, opts:[{key,node,cls}], ans, explain?, onRight?}
 function quizGame(titleHtml,total,make,again){
@@ -421,15 +427,19 @@ function quizGame(titleHtml,total,make,again){
     const cheer=el('p',{class:'cheer'});
     const dots=el('div',{class:'dots'},[...Array(total)].map((_,j)=>el('i',{class:j<i?'done':''})));
     const choices=el('div',{class:'choices'});
-    q.opts.forEach(o=>{const b=el('button',{class:'choice '+(o.cls||'')},o.node);
+    const promptP=el('p',{text:q.show});
+    // After the first tap (right or wrong) every picture shows its word, and the question shows the target word.
+    const reveal=()=>{choices.classList.add('reveal');if(q.full)promptP.innerHTML=esc(q.full).replace(esc(q.target||''),`<mark>${esc(q.target||'')}</mark>`)};
+    q.opts.forEach(o=>{const b=el('button',{class:'choice '+(o.cls||'')},[o.node,o.label?el('span',{class:'lab',text:o.label}):null]);
       b.addEventListener('click',async()=>{
+        reveal();
         if(o.key===q.ans){b.classList.add('ok');[...choices.children].forEach(x=>x.disabled=true);
           if(firstTry)addStar();q.onRight&&q.onRight();
-          const p=pick(PRAISE);cheer.textContent=p;await say((q.explain?q.explain+' ':'')+p);i++;setTimeout(round,700)}
-        else{firstTry=false;b.classList.remove('no');void b.offsetWidth;b.classList.add('no');cheer.textContent='Try again!';say('Try again. '+q.text)}});
+          const p=pick(PRAISE);cheer.textContent=p;await say((q.explain?q.explain+' ':(o.label?`Yes, ${o.label}! `:''))+p);i++;setTimeout(round,1400)}
+        else{firstTry=false;b.classList.add('wrong');b.classList.remove('no');void b.offsetWidth;b.classList.add('no');cheer.textContent='Try again!';say((o.label?o.label+'. ':'')+'Try again. '+q.text)}});
       choices.append(b)});
     screen.replaceChildren(el('div',{class:'q'},[dots,
-      el('div',{class:'prompt'},[el('button',{class:'speaker','aria-label':'Hear it again',text:'🔊',onclick:()=>say(q.text)}),el('p',{text:q.show})]),
+      el('div',{class:'prompt'},[el('button',{class:'speaker','aria-label':'Hear it again',text:'🔊',onclick:()=>say(q.text)}),promptP]),
       q.visual||null,choices,cheer]));
     setTimeout(()=>say(q.text),300);
   }
@@ -452,7 +462,7 @@ function missingQ(){
     for(let n=1;n<=10;n++){const c=trackCell(n,n===k);if(n===k)hole=c;cells.push(c)}
     return {text:'Count along the number track. Which number is missing?',show:'Which number is missing?',
       visual:el('div',{class:'track',style:'--n:10'},cells),
-      opts:shuffle([k,...near(k,1,10)]).map(x=>({key:x,node:String(x)})),ans:k,
+      opts:shuffle([k,...near(k,1,10)]).map(x=>({key:x,node:String(x),label:WORDS[x]})),ans:k,
       explain:`${cap(WORDS[k])} is the missing number.`,onRight:()=>{hole.textContent=k;hole.classList.add('filled')}};
   }
   const after=type==='after';
@@ -460,7 +470,7 @@ function missingQ(){
   const hole=trackCell(k,true);const known=trackCell(a,false);
   return {text:`What number comes ${type} ${WORDS[a]}?`,show:`What comes ${type} ${a}?`,
     visual:el('div',{class:'track short',style:'--n:2'},after?[known,hole]:[hole,known]),
-    opts:shuffle([k,...shuffle([1,2,3,4,5,6,7,8,9,10].filter(x=>x!==k&&x!==a&&Math.abs(x-k)<=3)).slice(0,2)]).map(x=>({key:x,node:String(x)})),ans:k,
+    opts:shuffle([k,...shuffle([1,2,3,4,5,6,7,8,9,10].filter(x=>x!==k&&x!==a&&Math.abs(x-k)<=3)).slice(0,2)]).map(x=>({key:x,node:String(x),label:WORDS[x]})),ans:k,
     explain:`${cap(WORDS[k])} comes ${type} ${WORDS[a]}.`,
     onRight:()=>{hole.textContent=k;hole.style.background=TRACK[k-1];hole.style.color='#fff';hole.classList.add('filled')}};
 }
