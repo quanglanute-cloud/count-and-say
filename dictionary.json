@@ -1002,5 +1002,141 @@
  "crayons": {
   "ipa": "ˈkreɪˌɑnz",
   "vi": "bút sáp màu"
+ },
+ "a b c d e f g": {
+  "ipa": "ˈeɪ ˈbi ˈsi ˈdi ˈi ˈɛf ˈdʒi",
+  "vi": "A B C D E F G"
+ },
+ "we're in school, you and me.": {
+  "ipa": "wɪr ɪn ˈskul ˈju ən ˈmi",
+  "vi": "Chúng mình ở trường, bạn và tớ."
+ },
+ "i have a pencil. you have a pen.": {
+  "ipa": "aɪ ˈhæv ə ˈpɛnsəl ˈju ˈhæv ə ˈpɛn",
+  "vi": "Tớ có bút chì. Bạn có bút mực."
+ },
+ "look around. what do you see?": {
+  "ipa": "ˈlʊk əˈraʊnd ˈwʌt du ju ˈsi",
+  "vi": "Nhìn xung quanh. Bạn thấy gì?"
+ },
+ "put your hands on your head!": {
+  "ipa": "ˈpʊt jɔr ˈhændz ɑn jɔr ˈhɛd",
+  "vi": "Đặt tay lên đầu nào!"
+ },
+ "pen": {
+  "ipa": "pɛn",
+  "vi": "bút mực"
+ },
+ "dog": {
+  "ipa": "dɔɡ",
+  "vi": "con chó"
+ },
+ "b-i-n-g-o": {
+  "ipa": "ˈbi ˈaɪ ˈɛn ˈdʒi ˈoʊ",
+  "vi": "B-I-N-G-O (tên con chó)"
+ },
+ "r-e-a-d": {
+  "ipa": "ˈɑr ˈi ˈeɪ ˈdi",
+  "vi": "đánh vần chữ READ (đọc)"
+ },
+ "s-i-n-g": {
+  "ipa": "ˈɛs ˈaɪ ˈɛn ˈdʒi",
+  "vi": "đánh vần chữ SING (hát)"
+ },
+ "what's the first letter of your name?": {
+  "ipa": "ˈwʌts ðə ˈfɝst ˈlɛtɚ əv jɔr ˈneɪm",
+  "vi": "Chữ cái đầu tiên trong tên con là gì?"
+ },
+ "look left. look right.": {
+  "ipa": "ˈlʊk ˈlɛft ˈlʊk ˈraɪt",
+  "vi": "Nhìn trái. Nhìn phải."
+ },
+ "look up and down.": {
+  "ipa": "ˈlʊk ˈʌp ən ˈdaʊn",
+  "vi": "Nhìn lên và nhìn xuống."
+ },
+ "left": {
+  "ipa": "lɛft",
+  "vi": "bên trái"
+ },
+ "right": {
+  "ipa": "raɪt",
+  "vi": "bên phải"
+ },
+ "up": {
+  "ipa": "ʌp",
+  "vi": "lên trên"
+ },
+ "down": {
+  "ipa": "daʊn",
+  "vi": "xuống dưới"
+ },
+ "sky": {
+  "ipa": "skaɪ",
+  "vi": "bầu trời"
+ },
+ "grass": {
+  "ipa": "ɡræs",
+  "vi": "bãi cỏ"
+ },
+ "wall": {
+  "ipa": "wɔl",
+  "vi": "bức tường"
+ },
+ "lizard": {
+  "ipa": "ˈlɪzɚd",
+  "vi": "con thằn lằn"
+ },
+ "happy": {
+  "ipa": "ˈhæpi",
+  "vi": "vui vẻ"
+ },
+ "curious": {
+  "ipa": "ˈkjʊriəs",
+  "vi": "tò mò"
+ },
+ "surprised": {
+  "ipa": "sɚˈpraɪzd",
+  "vi": "ngạc nhiên"
+ },
+ "on the way to school, i see flowers and a bee.": {
+  "ipa": "ɑn ðə ˈweɪ tə ˈskul aɪ ˈsi ˈflaʊɚz ən ə ˈbi",
+  "vi": "Trên đường đến trường, tớ thấy hoa và một con ong."
+ },
+ "we read at school.": {
+  "ipa": "wi ˈrid ət ˈskul",
+  "vi": "Chúng mình đọc ở trường."
+ },
+ "we write at school.": {
+  "ipa": "wi ˈraɪt ət ˈskul",
+  "vi": "Chúng mình viết ở trường."
+ },
+ "we draw at school.": {
+  "ipa": "wi ˈdrɔ ət ˈskul",
+  "vi": "Chúng mình vẽ ở trường."
+ },
+ "school is cool!": {
+  "ipa": "ˈskul ɪz ˈkul",
+  "vi": "Trường học thật tuyệt!"
+ },
+ "a red book": {
+  "ipa": "ə ˈrɛd ˈbʊk",
+  "vi": "một quyển sách màu đỏ"
+ },
+ "a red pencil": {
+  "ipa": "ə ˈrɛd ˈpɛnsəl",
+  "vi": "một cái bút chì màu đỏ"
+ },
+ "a red apple": {
+  "ipa": "ə ˈrɛd ˈæpəl",
+  "vi": "một quả táo màu đỏ"
+ },
+ "i can name colours.": {
+  "ipa": "aɪ kən ˈneɪm ˈkʌlɚz",
+  "vi": "Con biết gọi tên các màu."
+ },
+ "i can say the alphabet.": {
+  "ipa": "aɪ kən ˈseɪ ði ˈælfəˌbɛt",
+  "vi": "Con biết đọc bảng chữ cái."
  }
 }

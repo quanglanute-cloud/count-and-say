@@ -1414,7 +1414,7 @@
     {
       "id": "eng-u1-welcome-to-school",
       "book": "english",
-      "unit": "Unit 1",
+      "unit": "Unit 1 · pages 18–33",
       "title": "Welcome to School",
       "icon": "🏫",
       "added": "2026-10-21",
@@ -1762,6 +1762,281 @@
               "pic": "🎶",
               "say": "The more we sing together, together, together. The more we sing together, the happier we'll be.",
               "hint": "sing the song",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "ABC songs",
+          "items": [
+            {
+              "word": "A B C D E F G",
+              "pic": "🔤",
+              "say": "A, B, C, D, E, F, G. We're in school, you and me.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "We're in school, you and me.",
+              "pic": "🏫",
+              "say": "We're in school, you and me.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "I have a pencil. You have a pen.",
+              "pic": "✏️",
+              "say": "H, I, J, K, L, M, N. I have a pencil. You have a pen.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Look around. What do you see?",
+              "pic": "👀",
+              "say": "O, P, Q, R, S, T. Look around. What do you see?",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Put your hands on your head!",
+              "pic": "🙆",
+              "say": "U, V, W, X, Y, Z. Put your hands on your head!",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "pen",
+              "pic": "🖊️",
+              "sentence": "You have a pen."
+            },
+            {
+              "word": "dog",
+              "pic": "🐶",
+              "say": "Dog. There was a farmer had a dog, and Bingo was its name-o.",
+              "sentence": "Bingo is a dog."
+            },
+            {
+              "word": "B-I-N-G-O",
+              "pic": "🐕",
+              "say": "B, I, N, G, O. B, I, N, G, O. B, I, N, G, O. And Bingo was its name-o!",
+              "hint": "spell the dog's name",
+              "quiz": false
+            },
+            {
+              "word": "R-E-A-D",
+              "pic": "📖",
+              "say": "R, E, A, D. Read! Every day we read at school.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "S-I-N-G",
+              "pic": "🎤",
+              "say": "S, I, N, G. Sing! Every day we sing at school.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "What's the first letter of your name?",
+              "pic": "🔠",
+              "say": "What's the first letter of your name? My name begins with B.",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "What do you see?",
+          "items": [
+            {
+              "word": "Look left. Look right.",
+              "pic": "⬅️➡️",
+              "say": "Look left. Look right.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Look up and down.",
+              "pic": "⬆️⬇️",
+              "say": "Look up and down.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "left",
+              "pic": "⬅️",
+              "find": "Find left.",
+              "sentence": "Look left."
+            },
+            {
+              "word": "right",
+              "pic": "➡️",
+              "find": "Find right.",
+              "sentence": "Look right."
+            },
+            {
+              "word": "up",
+              "pic": "⬆️",
+              "find": "Find up.",
+              "sentence": "Look up."
+            },
+            {
+              "word": "down",
+              "pic": "⬇️",
+              "find": "Find down.",
+              "sentence": "Look down."
+            },
+            {
+              "word": "bird",
+              "pic": "🐦",
+              "plural": "birds",
+              "say": "Birds in the sky. Birds on the tree.",
+              "sentence": "Birds in the sky."
+            },
+            {
+              "word": "sky",
+              "pic": "☁️",
+              "sentence": "I can see the sky."
+            },
+            {
+              "word": "grass",
+              "pic": "🌿",
+              "say": "Grass. Green, green grass.",
+              "sentence": "Green, green grass."
+            },
+            {
+              "word": "leaves",
+              "pic": "🍂",
+              "say": "Leaves. Look for some leaves that are not green.",
+              "sentence": "I see red leaves.",
+              "find": "Find the leaves."
+            },
+            {
+              "word": "flowers",
+              "pic": "🌼",
+              "say": "Tiny flowers, white and blue.",
+              "sentence": "I see tiny flowers.",
+              "find": "Find the flowers."
+            },
+            {
+              "word": "wall",
+              "pic": "🧱",
+              "say": "Wall. Up on the wall.",
+              "sentence": "Up on the wall."
+            },
+            {
+              "word": "lizard",
+              "pic": "🦎",
+              "say": "Lizard. A little lizard looking back at me!",
+              "sentence": "I see a little lizard."
+            },
+            {
+              "word": "bee",
+              "pic": "🐝",
+              "say": "Bee. I see flowers and a bee.",
+              "sentence": "I see a bee."
+            },
+            {
+              "word": "happy",
+              "pic": "😊",
+              "hint": "a feeling",
+              "find": "Who is happy?",
+              "sentence": "I feel happy."
+            },
+            {
+              "word": "curious",
+              "pic": "🤔",
+              "hint": "want to know",
+              "find": "Who is curious?",
+              "sentence": "I feel curious."
+            },
+            {
+              "word": "surprised",
+              "pic": "😮",
+              "hint": "a feeling",
+              "find": "Who is surprised?",
+              "sentence": "I feel surprised."
+            },
+            {
+              "word": "On the way to school, I see flowers and a bee.",
+              "pic": "🚸",
+              "say": "On the way to school, I see flowers and a bee.",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "School poem",
+          "items": [
+            {
+              "word": "School",
+              "pic": "🏫",
+              "say": "School. We read at school. We write at school. We draw at school. School is cool!",
+              "hint": "say the whole poem",
+              "quiz": false
+            },
+            {
+              "word": "We read at school.",
+              "pic": "📖",
+              "say": "We read at school.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "We write at school.",
+              "pic": "✍️",
+              "say": "We write at school.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "We draw at school.",
+              "pic": "🎨",
+              "say": "We draw at school.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "School is cool!",
+              "pic": "😎",
+              "say": "School is cool!",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "a red book",
+              "pic": "📕",
+              "say": "a red book",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "a red pencil",
+              "pic": "✏️",
+              "say": "a red pencil",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "a red apple",
+              "pic": "🍎",
+              "say": "a red apple",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "I can name colours.",
+              "pic": "🌈",
+              "say": "I can name colours.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "I can say the alphabet.",
+              "pic": "🔤",
+              "say": "I can say the alphabet.",
+              "hint": "",
               "quiz": false
             }
           ]
