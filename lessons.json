@@ -1,7 +1,31 @@
 {
+  "books": [
+    {
+      "id": "maths",
+      "title": "Mathematics",
+      "icon": "🔢",
+      "color": "#1f8fc4",
+      "shade": "#136a93"
+    },
+    {
+      "id": "science",
+      "title": "Science",
+      "icon": "🔬",
+      "color": "#3f9d47",
+      "shade": "#2b6e31"
+    },
+    {
+      "id": "english",
+      "title": "Global English",
+      "icon": "🌍",
+      "color": "#7b5cc4",
+      "shade": "#56409a"
+    }
+  ],
   "lessons": [
     {
       "id": "u1-numbers",
+      "book": "maths",
       "unit": "Unit 1",
       "title": "Numbers to 10",
       "icon": "🔢",
@@ -238,6 +262,7 @@
     },
     {
       "id": "u1b-order-compare-odd-even",
+      "book": "maths",
       "unit": "Unit 1 · Part 2",
       "title": "Before, After, Odd & Even",
       "icon": "🐟",
@@ -564,6 +589,11 @@
             }
           ]
         }
+      ],
+      "games": [
+        "missing",
+        "oddeven",
+        "compare"
       ]
     }
   ]

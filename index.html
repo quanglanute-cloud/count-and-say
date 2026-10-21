@@ -61,8 +61,46 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
 .badge{position:absolute;top:-8px;right:14px;background:var(--tomato);color:#fff;font-family:var(--display);font-size:15px;font-weight:600;padding:3px 12px;border-radius:999px}
 .note{text-align:center;color:var(--ink-soft);margin:auto;max-width:34ch}
 
+/* Bookshelf */
+.books{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:960px;margin:auto;width:100%;padding-block:8px}
+.book{--c:var(--frame);--shade:#136a93;background:var(--c);color:#fff;border-radius:10px 26px 26px 10px;min-height:280px;padding:24px 22px 22px 40px;text-align:left;
+  display:flex;flex-direction:column;justify-content:space-between;position:relative;box-shadow:inset 16px 0 0 rgba(0,0,0,.16),0 8px 0 var(--shade)}
+.book::after{content:"";position:absolute;right:10px;top:14px;bottom:14px;width:6px;border-radius:3px;background:rgba(255,255,255,.35)}
+.book:active{transform:translateY(4px);box-shadow:inset 16px 0 0 rgba(0,0,0,.16),0 4px 0 var(--shade)}
+.book .pic{font-size:76px;line-height:1}
+.book strong{font-family:var(--display);font-size:clamp(26px,3.4vw,36px);font-weight:700;display:block;line-height:1.1;text-wrap:balance}
+.book small{font-size:17px;opacity:.92;display:block;margin-top:6px}
+.book .badge{right:24px}
+.empty{margin:auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;max-width:34ch;color:var(--ink-soft)}
+.empty .pic{font-size:80px}
+.empty strong{font-family:var(--display);font-size:28px;color:var(--ink)}
+
 /* Game doors */
-.doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;flex:1;align-content:center;max-width:900px;margin:0 auto;width:100%}
+.hub{display:flex;flex-direction:column;gap:14px;max-width:900px;margin:auto;width:100%}
+.hub h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin:6px 0 0;font-weight:700}
+.doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;width:100%}
+.doors.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.doors.three .door{min-height:150px}
+.doors.three .door .pic{font-size:44px}
+.door.missing{background:#e0782f;box-shadow:0 7px 0 #a8551c}
+.door.oddeven{background:#139a8f;box-shadow:0 7px 0 #0c6c64}
+.door.compare{background:#d24f86;box-shadow:0 7px 0 #9a325f}
+
+/* Maths games */
+.track{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));width:min(100%,760px);border-radius:8px;overflow:hidden;box-shadow:0 5px 0 var(--frame-soft)}
+.track.short{width:min(70%,300px)}
+.track span{aspect-ratio:1;display:grid;place-items:center;font-family:var(--display);font-size:clamp(20px,4vw,44px);font-weight:700;color:#fff}
+.track span.blank{background:var(--card);color:var(--ink);outline:3px dashed var(--ink);outline-offset:-6px}
+.track span.blank.filled{outline-style:solid;animation:pop .5s}
+.bignum{font-family:var(--display);font-size:clamp(64px,10vw,96px);font-weight:700;line-height:1;color:var(--frame)}
+.pairs{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;background:var(--card);padding:14px 18px;border-radius:24px;box-shadow:0 5px 0 var(--frame-soft);max-width:100%}
+.pair{display:flex;flex-direction:column;gap:2px;font-size:clamp(36px,6vw,50px);line-height:1.1;padding:6px 8px;border-radius:16px;transition:background .3s}
+.pair.full{background:#e3f4e3}
+.pair.single{background:#fde3e1}
+.choice.word{font-size:clamp(36px,6vw,48px);min-width:170px;min-height:110px}
+.choice.set{min-width:0;padding:16px;display:flex;flex-direction:column;gap:8px;align-items:center}
+.set{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;font-size:clamp(28px,5vw,40px);line-height:1.1}
+.setnum{font-size:40px;color:var(--frame);min-height:44px}
 .door{border-radius:28px;padding:22px;text-align:left;color:#fff;min-height:170px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
 .door:active{transform:scale(.97)}
 .door .pic{font-size:56px;line-height:1}
@@ -134,7 +172,10 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
 .level{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
 
 @media (max-width:560px){
-  .doors{grid-template-columns:1fr}
+  .doors,.doors.three,.books{grid-template-columns:1fr}
+  .book{min-height:150px;flex-direction:row;align-items:center;gap:16px;justify-content:flex-start}
+  .book .pic{font-size:56px}
+  .choice.word{min-width:130px;min-height:90px}
   .door{min-height:120px}
   .choice{min-width:96px;min-height:96px;font-size:52px}
   .choice.pic{font-size:58px}
@@ -180,16 +221,24 @@ function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localSto
 const art=w=>/^[aeiou]/i.test(w)?'an':'a';
 
 // ---------- Lesson data ----------
-let LESSONS=[],L=null;
+const DEFAULT_BOOKS=[
+  {id:'maths',title:'Mathematics',icon:'🔢',color:'#1f8fc4',shade:'#136a93'},
+  {id:'science',title:'Science',icon:'🔬',color:'#3f9d47',shade:'#2b6e31'},
+  {id:'english',title:'Global English',icon:'🌍',color:'#7b5cc4',shade:'#56409a'}];
+let LESSONS=[],BOOKS=DEFAULT_BOOKS,L=null,B=null;
 async function loadLessons(){
+  let j=null;
   try{
     const r=await fetch('lessons.json?t='+Date.now(),{cache:'no-store'});
     if(!r.ok)throw new Error(r.status);
-    const j=await r.json();LESSONS=j.lessons||[];store('cs-lessons',JSON.stringify(j));
+    j=await r.json();store('cs-lessons',JSON.stringify(j));
   }catch(e){
-    try{const c=store('cs-lessons');if(c)LESSONS=JSON.parse(c).lessons||[]}catch(_){}
+    try{const c=store('cs-lessons');if(c)j=JSON.parse(c)}catch(_){}
   }
+  if(j){LESSONS=j.lessons||[];if(j.books&&j.books.length)BOOKS=j.books}
 }
+const bookOf=l=>l.book||'maths';
+const isNew=l=>l.added&&(Date.now()-new Date(l.added+'T00:00:00'))/864e5<3;
 const items=l=>l.tabs.flatMap(t=>t.items);
 const quizItems=l=>items(l).filter(i=>i.pic&&i.quiz!==false);
 // things that can be counted: need a singular and a plural
@@ -230,34 +279,55 @@ function say(text,rate=0.82){
 let backTo=null;
 function setTitle(html,back){$('#title').innerHTML=html;backTo=back||null;$('#backBtn').hidden=!back}
 $('#backBtn').addEventListener('click',()=>{stopListening();if('speechSynthesis' in window)speechSynthesis.cancel();backTo&&backTo()});
-$('#goBtn').addEventListener('click',()=>{$('#start').hidden=true;say("Hello! Let's learn English!");loading.then(shelf)});
+$('#goBtn').addEventListener('click',()=>{$('#start').hidden=true;say("Hello! Let's learn English!");loading.then(bookshelf)});
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
-function shelf(){
-  L=null;setTitle('Count <span>and</span> Say',null);
-  if(!LESSONS.length){screen.replaceChildren(el('p',{class:'note',text:'The lessons could not load. Check the internet connection, then close and open the app again.'}));return}
-  const today=new Date();
-  const list=LESSONS.map((l,i)=>({l,i})).sort((a,b)=>(b.l.added||'').localeCompare(a.l.added||'')||b.i-a.i);
+function bookshelf(){
+  L=null;B=null;stopListening();setTitle('Count <span>and</span> Say',null);
+  if(!LESSONS.length&&!navigator.onLine){screen.replaceChildren(el('p',{class:'note',text:'The lessons could not load. Check the internet connection, then close and open the app again.'}));return}
+  screen.replaceChildren(el('div',{class:'books'},BOOKS.map(b=>{
+    const ls=LESSONS.filter(l=>bookOf(l)===b.id);
+    const bt=el('button',{class:'book',style:`--c:${b.color};--shade:${b.shade}`,onclick:()=>{say(b.title);shelf(b)}},[
+      ls.some(isNew)?el('span',{class:'badge',text:'NEW'}):null,
+      el('span',{class:'pic',text:b.icon}),
+      el('span',{},[el('strong',{text:b.title}),el('small',{text:ls.length?ls.length+(ls.length===1?' lesson':' lessons'):'Coming soon'})])]);
+    return bt;
+  })));
+}
+
+function shelf(b){
+  B=b||B;L=null;stopListening();setTitle(esc(B.title),bookshelf);
+  const list=LESSONS.map((l,i)=>({l,i})).filter(x=>bookOf(x.l)===B.id).sort((a,b)=>(b.l.added||'').localeCompare(a.l.added||'')||b.i-a.i);
+  if(!list.length){screen.replaceChildren(el('div',{class:'empty'},[el('span',{class:'pic',text:B.icon}),el('strong',{text:'Coming soon'}),el('p',{text:'There are no lessons in this book yet. New lessons will appear here.'})]));return}
   screen.replaceChildren(el('div',{class:'shelf'},list.map(({l})=>{
-    const days=l.added?(today-new Date(l.added+'T00:00:00'))/864e5:99;
     const n=items(l).length;
     return el('button',{class:'lesson',onclick:()=>lessonHome(l)},[
-      days<3?el('span',{class:'badge',text:'NEW'}):null,
+      isNew(l)?el('span',{class:'badge',text:'NEW'}):null,
       el('span',{class:'ic',text:l.icon||'📗'}),
       el('span',{},[el('span',{class:'unit',text:l.unit||''}),el('strong',{text:l.title}),el('small',{text:n+' words'})])]);
   })));
 }
 
+const MATHS_GAMES={
+  missing:()=>door('missing','Missing Number','Number order','🔢','Before, after, what is missing?',missingGame),
+  oddeven:()=>door('oddeven','Odd or Even?','Pairs','🧦','Make pairs, then choose',oddEvenGame),
+  compare:()=>door('compare','More or Fewer?','Comparing','⚖️','Which set has more?',compareGame)};
 function lessonHome(l){
   L=l||L;stopListening();
-  setTitle(esc(L.title),shelf);
+  if(!B)B=BOOKS.find(b=>b.id===bookOf(L))||BOOKS[0];
+  setTitle(esc(L.title),()=>shelf());
   const canCount=L.mode==='numbers'||L.count===true;
   const canQuiz=L.mode==='numbers'||quizItems(L).length>=3;
-  screen.replaceChildren(el('div',{class:'doors'},[
-    door('words','Words','Vocabulary','📖','Tap a card to hear it',wordsGame),
-    canQuiz?door('listen','Listen & Find','Listening','👂','Hear it, then tap it',listenGame):null,
-    canCount&&countables(L).length?door('count','Count with Me','Counting','👆','Tap each one and count',countGame):null,
-    canQuiz?door('say','Say It!','Speaking','🎤','Listen, then say it out loud',sayGame):null]));
+  const extra=(L.games||[]).filter(g=>MATHS_GAMES[g]);
+  screen.replaceChildren(el('div',{class:'hub'},[
+    extra.length?el('h2',{text:'English games'}):null,
+    el('div',{class:'doors'},[
+      door('words','Words','Vocabulary','📖','Tap a card to hear it',wordsGame),
+      canQuiz?door('listen','Listen & Find','Listening','👂','Hear it, then tap it',listenGame):null,
+      canCount&&countables(L).length?door('count','Count with Me','Counting','👆','Tap each one and count',countGame):null,
+      canQuiz?door('say','Say It!','Speaking','🎤','Listen, then say it out loud',sayGame):null]),
+    extra.length?el('h2',{text:'Maths games'}):null,
+    extra.length?el('div',{class:'doors'+(extra.length===3?' three':'')},extra.map(g=>MATHS_GAMES[g]())):null]));
 }
 function door(cls,name,skill,pic,sub,fn){
   return el('button',{class:'door '+cls,onclick:fn},[el('span',{class:'skill',text:skill}),el('span',{class:'pic',text:pic}),
@@ -305,28 +375,93 @@ function numbersQ(){
   const t=pick(things);const ns=shuffle([1,2,3,4,5,6]).slice(0,3);const a=ns[0];
   return {text:`Find ${WORDS[a]} ${noun(t,a)}.`,show:'Find …',opts:shuffle(ns).map(x=>({key:x,node:el('span',{style:'font-size:34px;line-height:1.1;display:flex;flex-wrap:wrap;justify-content:center;max-width:150px',text:t.e.repeat(x)}),cls:''})),ans:a};
 }
-function listenGame(){
-  setTitle('Listen <span>&amp;</span> Find',back);
-  let i=0;const total=5;
+// Shared quiz runner: make() returns {text, show, visual?, opts:[{key,node,cls}], ans, explain?, onRight?}
+function quizGame(titleHtml,total,make,again){
+  setTitle(titleHtml,back);
+  let i=0;
   function round(){
-    if(i>=total)return finish(listenGame);
-    const q=(L.mode==='numbers'&&countables(L).length>=3)?numbersQ():wordQ();let firstTry=true;
+    if(i>=total)return finish(again);
+    const q=make();let firstTry=true;
     const cheer=el('p',{class:'cheer'});
     const dots=el('div',{class:'dots'},[...Array(total)].map((_,j)=>el('i',{class:j<i?'done':''})));
     const choices=el('div',{class:'choices'});
-    q.opts.forEach(o=>{const b=el('button',{class:'choice '+o.cls},o.node);
+    q.opts.forEach(o=>{const b=el('button',{class:'choice '+(o.cls||'')},o.node);
       b.addEventListener('click',async()=>{
         if(o.key===q.ans){b.classList.add('ok');[...choices.children].forEach(x=>x.disabled=true);
-          if(firstTry)addStar();cheer.textContent=pick(PRAISE);await say(cheer.textContent);i++;setTimeout(round,500)}
+          if(firstTry)addStar();q.onRight&&q.onRight();
+          const p=pick(PRAISE);cheer.textContent=p;await say((q.explain?q.explain+' ':'')+p);i++;setTimeout(round,700)}
         else{firstTry=false;b.classList.remove('no');void b.offsetWidth;b.classList.add('no');cheer.textContent='Try again!';say('Try again. '+q.text)}});
       choices.append(b)});
     screen.replaceChildren(el('div',{class:'q'},[dots,
       el('div',{class:'prompt'},[el('button',{class:'speaker','aria-label':'Hear it again',text:'🔊',onclick:()=>say(q.text)}),el('p',{text:q.show})]),
-      choices,cheer]));
+      q.visual||null,choices,cheer]));
     setTimeout(()=>say(q.text),300);
   }
   round();
 }
+function listenGame(){
+  quizGame('Listen <span>&amp;</span> Find',5,()=>(L.mode==='numbers'&&countables(L).length>=3)?numbersQ():wordQ(),listenGame);
+}
+
+// ---------- Maths games ----------
+const TRACK=['#8fbf3a','#ee8a3a','#1f86c2','#d8413b','#3fb0d4','#f2bd3a','#ec93b5','#2f9a4a','#d32f4f','#62bddb'];
+const cap=s=>s[0].toUpperCase()+s.slice(1);
+const near=(k,lo,hi)=>shuffle([k-1,k+1,k-2,k+2].filter(x=>x>=lo&&x<=hi&&x!==k)).slice(0,2);
+function trackCell(n,blank){return blank?el('span',{class:'blank',text:''}):el('span',{style:`background:${TRACK[n-1]}`,text:n})}
+
+function missingQ(){
+  const type=pick(['track','track','after','before']);
+  if(type==='track'){
+    const k=1+rnd(10);const cells=[];let hole;
+    for(let n=1;n<=10;n++){const c=trackCell(n,n===k);if(n===k)hole=c;cells.push(c)}
+    return {text:'Count along the number track. Which number is missing?',show:'Which number is missing?',
+      visual:el('div',{class:'track',style:'--n:10'},cells),
+      opts:shuffle([k,...near(k,1,10)]).map(x=>({key:x,node:String(x)})),ans:k,
+      explain:`${cap(WORDS[k])} is the missing number.`,onRight:()=>{hole.textContent=k;hole.classList.add('filled')}};
+  }
+  const after=type==='after';
+  const a=after?1+rnd(9):2+rnd(9);const k=after?a+1:a-1;
+  const hole=trackCell(k,true);const known=trackCell(a,false);
+  return {text:`What number comes ${type} ${WORDS[a]}?`,show:`What comes ${type} ${a}?`,
+    visual:el('div',{class:'track short',style:'--n:2'},after?[known,hole]:[hole,known]),
+    opts:shuffle([k,...shuffle([1,2,3,4,5,6,7,8,9,10].filter(x=>x!==k&&x!==a&&Math.abs(x-k)<=3)).slice(0,2)]).map(x=>({key:x,node:String(x)})),ans:k,
+    explain:`${cap(WORDS[k])} comes ${type} ${WORDS[a]}.`,
+    onRight:()=>{hole.textContent=k;hole.style.background=TRACK[k-1];hole.style.color='#fff';hole.classList.add('filled')}};
+}
+function missingGame(){quizGame('Missing <span>Number</span>',5,missingQ,missingGame)}
+
+const PAIRABLE=[{e:'🧦',s:'sock',p:'socks'},{e:'👟',s:'shoe',p:'shoes'},{e:'🧤',s:'glove',p:'gloves'},{e:'👢',s:'boot',p:'boots'},{e:'🍎',s:'apple',p:'apples'},{e:'⭐',s:'star',p:'stars'}];
+function oddEvenQ(){
+  const n=1+rnd(10);const t=pick(PAIRABLE);
+  const pairs=Math.floor(n/2),left=n%2;
+  const groups=[...Array(pairs)].map(()=>el('div',{class:'pair'},[el('span',{text:t.e}),el('span',{text:t.e})]));
+  if(left)groups.push(el('div',{class:'pair'},[el('span',{text:t.e})]));
+  const kind=left?'odd':'even';
+  const pw=pairs===1?'pair':'pairs';
+  return {text:`Here are ${WORDS[n]} ${n===1?t.s:t.p}. Is ${WORDS[n]} odd or even?`,show:`Is ${n} odd or even?`,
+    visual:el('div',{class:'q',style:'flex:none;gap:10px'},[el('div',{class:'bignum',text:n}),el('div',{class:'pairs'},groups)]),
+    opts:[{key:'odd',node:'odd',cls:'word'},{key:'even',node:'even',cls:'word'}],ans:kind,
+    explain:left?`${cap(WORDS[pairs])} ${pw} and one left over. ${cap(WORDS[n])} is odd.`:`${cap(WORDS[pairs])} ${pw}, none left over. ${cap(WORDS[n])} is even.`,
+    onRight:()=>groups.forEach(g=>g.classList.add(g.children.length===2?'full':'single'))};
+}
+function oddEvenGame(){quizGame('Odd <span>or</span> Even?',5,oddEvenQ,oddEvenGame)}
+
+const FALLBACK=[{s:'spider',p:'spiders',e:'🕷️'},{s:'snail',p:'snails',e:'🐌'},{s:'orange',p:'oranges',e:'🍊'},{s:'banana',p:'bananas',e:'🍌'}];
+function compareQ(){
+  const pool=countables(L).length>=2?countables(L):FALLBACK;
+  const [a,b]=shuffle(pool).slice(0,2);
+  let x=1+rnd(10),y;do{y=1+rnd(10)}while(y===x);
+  const which=pick(['more','fewer']);
+  const nums=[el('div',{class:'setnum'}),el('div',{class:'setnum'})];
+  const set=(t,n,k)=>el('div',{},[el('div',{class:'set'},[...Array(n)].map(()=>el('span',{text:t.e}))),nums[k]]);
+  const big=x>y?a:b,small=x>y?b:a;
+  const ans=which==='more'?(x>y?'L':'R'):(x<y?'L':'R');
+  return {text:`Look at the two sets. Which set has ${which}? Tap it.`,show:`Which set has ${which}?`,
+    opts:[{key:'L',node:set(a,x,0),cls:'set'},{key:'R',node:set(b,y,1),cls:'set'}],ans,
+    explain:`${cap(WORDS[x])} ${x===1?a.s:a.p} and ${WORDS[y]} ${y===1?b.s:b.p}. `+(which==='more'?`There are more ${big.p} than ${small.p}.`:`There are fewer ${small.p} than ${big.p}.`),
+    onRight:()=>{nums[0].textContent=x;nums[1].textContent=y}};
+}
+function compareGame(){quizGame('More <span>or</span> Fewer?',5,compareQ,compareGame)}
 
 // ---------- 3. Count with Me ----------
 function countGame(){
