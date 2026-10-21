@@ -130,6 +130,11 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
 .traybtn .w{font-family:var(--display);font-size:16px;font-weight:600}
 .traybtn.used{visibility:hidden}
 .traybtn.no{animation:shake .4s;background:#fde3e1}
+.ing,.traybtn{touch-action:none;-webkit-touch-callout:none}
+.ing.lifted,.traybtn.lifted{opacity:.35}
+.ghost{position:fixed;z-index:50;pointer-events:none;transform:translate(-50%,-50%) scale(1.25);font-size:64px;line-height:1;filter:drop-shadow(0 8px 6px rgba(0,0,0,.25))}
+.chef.hot,.board.hot{outline:5px dashed var(--leaf);outline-offset:6px;border-radius:24px}
+.mtray:empty::before{content:"👆 Drag it here";font-family:var(--display);font-size:18px;color:var(--ink-soft)}
 
 /* Maths games */
 .track{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));width:min(100%,760px);border-radius:8px;overflow:hidden;box-shadow:0 5px 0 var(--frame-soft)}
@@ -686,6 +691,37 @@ function sayGame(){
 // ---------- Make It! (collect the ingredients, then build) ----------
 const artOf=w=>/s$/.test(w)&&!/(glass|dress|bus)$/.test(w)?'some':art(w);
 const npOf=i=>i.np||(artOf(i.word)+' '+i.word);
+// Drag with finger or mouse (tap still works). onDo runs on a tap, or on a drop over the target.
+function dragTap(b,target,onDo){
+  let st=null,ghost=null,block=0;
+  b.addEventListener('click',e=>{if(Date.now()<block)return;onDo()});
+  b.addEventListener('pointerdown',e=>{
+    if(e.button>0||b.classList.contains('gone')||b.classList.contains('used'))return;
+    st={x:e.clientX,y:e.clientY,id:e.pointerId,moved:false};
+    try{b.setPointerCapture(e.pointerId)}catch(_){}
+  });
+  b.addEventListener('pointermove',e=>{
+    if(!st||e.pointerId!==st.id)return;
+    if(!st.moved&&Math.hypot(e.clientX-st.x,e.clientY-st.y)<10)return;
+    if(!st.moved){st.moved=true;const em=b.querySelector('.em');
+      ghost=el('div',{class:'ghost',text:em?em.textContent:''});document.body.append(ghost);b.classList.add('lifted')}
+    ghost.style.left=e.clientX+'px';ghost.style.top=e.clientY+'px';
+    const t=target();if(t){const r=t.getBoundingClientRect();t.classList.toggle('hot',e.clientX>r.left&&e.clientX<r.right&&e.clientY>r.top&&e.clientY<r.bottom)}
+  });
+  const end=e=>{
+    if(!st||e.pointerId!==st.id)return;
+    const moved=st.moved;st=null;
+    if(!moved)return; // a plain tap: the click handler does the work
+    block=Date.now()+500;b.classList.remove('lifted');
+    const t=target();let over=false;
+    if(t){const r=t.getBoundingClientRect();over=e.clientX>r.left&&e.clientX<r.right&&e.clientY>r.top&&e.clientY<r.bottom;t.classList.remove('hot')}
+    if(over){ghost.remove();ghost=null;onDo({x:e.clientX,y:e.clientY})}
+    else{const r=b.getBoundingClientRect(),g=ghost;ghost=null;g.style.transition='left .25s,top .25s,opacity .25s';
+      g.style.left=(r.left+r.width/2)+'px';g.style.top=(r.top+r.height/2)+'px';g.style.opacity='0';setTimeout(()=>g.remove(),260)}
+  };
+  b.addEventListener('pointerup',end);
+  b.addEventListener('pointercancel',e=>{if(ghost){ghost.remove();ghost=null}b.classList.remove('lifted');const t=target();t&&t.classList.remove('hot');st=null});
+}
 function makeMenu(){
   if(L.makes.length===1)return makeGame(L.makes[0]);
   setTitle('Make <span>It!</span>',back);
@@ -712,7 +748,7 @@ function makeGame(m){
   const showAsk=()=>{const t=order[k];bubbleTxt.innerHTML=esc(ask()).replace(esc(t.word),`<mark>${esc(t.word)}</mark>`);say(ask())};
   const shelf=el('div',{class:'shelf2'},shelfItems.map(i=>{
     const b=el('button',{class:'ing','aria-label':i.word},[el('span',{class:'em',text:i.pic}),el('span',{class:'lab'},[el('span',{text:i.word}),glossEl(i.word)])]);
-    b.addEventListener('click',async()=>{
+    dragTap(b,()=>document.querySelector('.chef'),async()=>{
       if(view!==VIEW||k>=order.length)return;
       b.classList.add('shown');
       if(i===order[k]){
@@ -744,11 +780,15 @@ function buildStage(m){
   const showStep=()=>{const s=steps[k];prompt.innerHTML=esc(putText(s)).replace(esc(s.word),`<mark>${esc(s.word)}</mark>`);say(putText(s))};
   const btns=el('div',{class:'traybtns'},shuffle(steps.slice()).map(s=>{
     const b=el('button',{class:'traybtn'},[el('span',{class:'em',text:s.pic}),el('span',{class:'w',text:s.word})]);
-    b.addEventListener('click',async()=>{
+    dragTap(b,()=>board,async(drop)=>{
       if(view!==VIEW||k>=steps.length)return;
       if(s===steps[k]){
         if(first)addStar();first=true;b.classList.add('used');
-        (s.at?[s.at]:scatter(m.base,s.count||5)).forEach(([x,y,z])=>{const t=el('span',{class:'tp',text:s.pic,style:`left:${x}%;top:${y}%`});t.dataset.z=z;board.append(t)});
+        let pts=s.at?[s.at]:scatter(m.base,s.count||5);
+        if(drop&&!s.at&&m.base==='pizza'){const r=board.getBoundingClientRect();let cx=(drop.x-r.left)/r.width*100,cy=(drop.y-r.top)/r.height*100;
+          const d=Math.hypot(cx-50,cy-50);if(d>24){cx=50+(cx-50)*24/d;cy=50+(cy-50)*24/d}
+          pts[0]=[cx,cy,pts[0][2]]}
+        pts.forEach(([x,y,z])=>{const t=el('span',{class:'tp',text:s.pic,style:`left:${x}%;top:${y}%`});t.dataset.z=z;board.append(t)});
         if(slots[s.word])slots[s.word].remove();
         sizeAll();k++;
         if(k<steps.length){await say(pick(['Good!','Great!','Yes!','Well done!']));if(view===VIEW)showStep()}
