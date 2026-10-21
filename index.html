@@ -76,8 +76,9 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
 .empty strong{font-family:var(--display);font-size:28px;color:var(--ink)}
 
 /* Game doors */
-.hub{display:flex;flex-direction:column;gap:14px;max-width:900px;margin:auto;width:100%}
-.hub h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin:6px 0 0;font-weight:700}
+.hub{flex:1;min-height:0;display:grid;grid-template-rows:auto minmax(0,1fr) auto minmax(0,1fr);gap:10px;max-width:1100px;margin:0 auto;width:100%}
+.hub.solo{grid-template-rows:minmax(0,1fr)}
+.hub h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin:4px 0 0;font-weight:700}
 .doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;width:100%}
 .doors.three{grid-template-columns:repeat(3,minmax(0,1fr))}
 .doors.three .door{min-height:150px}
@@ -148,10 +149,10 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
 .domino .half i{width:15px;height:15px;border-radius:50%;background:var(--ink);place-self:center;visibility:hidden}
 .domino .half i.on{visibility:visible}
 
-.tray{position:relative;width:min(100%,720px);height:min(34vh,300px);background:var(--card);border-radius:26px;box-shadow:0 5px 0 var(--frame-soft)}
+.tray{position:relative;width:min(100%,720px);height:min(30vh,300px);background:var(--card);border-radius:26px;box-shadow:0 5px 0 var(--frame-soft)}
 .obj{position:absolute;font-size:clamp(46px,7vw,64px);width:1.3em;height:1.3em;display:grid;place-items:center;transition:opacity .3s,transform .2s}
 .obj.gone{opacity:0;transform:scale(.4);pointer-events:none}
-.frame10{display:grid;grid-template-columns:repeat(5,1fr);border:3px solid var(--frame);border-radius:10px;overflow:hidden;width:min(100%,440px);background:var(--card)}
+.frame10{display:grid;grid-template-columns:repeat(5,1fr);border:3px solid var(--frame);border-radius:10px;overflow:hidden;width:min(100%,440px,48vh);background:var(--card)}
 .frame10 div{aspect-ratio:1;border:1.5px solid var(--frame-soft);display:grid;place-items:center;font-size:clamp(30px,5vw,46px);position:relative}
 .frame10 div b{position:absolute;top:3px;left:6px;font-family:var(--display);font-size:16px;color:var(--frame)}
 .bubble{font-family:var(--display);font-size:clamp(28px,5vw,46px);font-weight:700;color:var(--frame);min-height:56px;margin:0}
@@ -171,15 +172,50 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
 .heard{font-size:17px;color:var(--ink-soft);min-height:24px;margin:0}
 .level{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
 
+/* Lesson menu: always one screen, tiles scale with screen height */
+.hub .doors{height:100%;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:minmax(0,1fr);gap:clamp(8px,1.6vh,16px)}
+.hub.solo .doors{grid-template-columns:repeat(2,minmax(0,1fr))}
+.hub .doors.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.hub .door,.hub .doors.three .door{min-height:0;padding:clamp(10px,2.2vh,22px);border-radius:clamp(18px,3vh,28px);justify-content:flex-end;gap:4px}
+.hub .door .pic,.hub .doors.three .door .pic{font-size:clamp(28px,7vh,60px);margin-bottom:auto}
+.hub .door strong{font-size:clamp(18px,3.4vh,32px);line-height:1.1}
+.hub .door small{font-size:clamp(12px,1.8vh,16px)}
+.hub .skill{top:clamp(8px,1.6vh,16px);right:clamp(8px,1.6vh,16px);font-size:clamp(9px,1.3vh,12px)}
+@media (max-width:820px){.hub .skill{display:none}}
+
 @media (max-width:560px){
   .doors,.doors.three,.books{grid-template-columns:1fr}
   .book{min-height:150px;flex-direction:row;align-items:center;gap:16px;justify-content:flex-start}
   .book .pic{font-size:56px}
   .choice.word{min-width:130px;min-height:90px}
+  .hub{grid-template-rows:auto minmax(0,2fr) auto minmax(0,1fr)}
+  .hub .doors{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hub .doors.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .hub .doors.three .door small{display:none}
+  .hub .doors.three .door strong{font-size:16px}
   .door{min-height:120px}
   .choice{min-width:96px;min-height:96px;font-size:52px}
   .choice.pic{font-size:58px}
   .domino{width:130px;height:70px}.domino .half i{width:11px;height:11px}
+}
+@media (max-height:720px){
+  .q{gap:10px}
+  .saycard{padding:14px 20px;gap:4px}
+  .saycard .emo{font-size:38px}
+  .saycard .line{font-size:28px}
+  .mic{width:84px;height:84px;font-size:38px}
+  .row{gap:10px}
+  .pill{padding:10px 20px;font-size:19px}
+  .grownup{padding:8px 14px;gap:6px;flex-direction:row;flex-wrap:wrap;justify-content:center}
+  .cheer{font-size:24px;min-height:32px}
+  .bignum{font-size:56px}
+  .pair{font-size:32px;padding:4px 6px}
+  .pairs{padding:10px 14px}
+  .choice{min-width:110px;min-height:110px;font-size:56px}
+  .choice.word{min-height:80px}
+  .tray{height:min(28vh,300px)}
+  .bubble{font-size:28px;min-height:40px}
+  .prompt{padding:6px 20px 6px 6px}.speaker{width:52px;height:52px;font-size:24px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -319,7 +355,7 @@ function lessonHome(l){
   const canCount=L.mode==='numbers'||L.count===true;
   const canQuiz=L.mode==='numbers'||quizItems(L).length>=3;
   const extra=(L.games||[]).filter(g=>MATHS_GAMES[g]);
-  screen.replaceChildren(el('div',{class:'hub'},[
+  screen.replaceChildren(el('div',{class:'hub'+(extra.length?'':' solo')},[
     extra.length?el('h2',{text:'English games'}):null,
     el('div',{class:'doors'},[
       door('words','Words','Vocabulary','📖','Tap a card to hear it',wordsGame),
@@ -484,6 +520,7 @@ function countGame(){
     });
     tray.append(o)});
   function ask(){
+    tray.hidden=true;
     bubble.textContent=`How many ${t.p}?`;
     say(`The last number you said tells you how many. How many ${t.p}?`);
     const opts=shuffle([n,...shuffle([1,2,3,4,5,6,7,8,9,10].filter(x=>x!==n&&Math.abs(x-n)<=3)).slice(0,2)]);
