@@ -342,8 +342,8 @@ function say(text,rate=0.82){
 }
 
 // ---------- Navigation ----------
-let backTo=null;
-function setTitle(html,back){$('#title').innerHTML=html;backTo=back||null;$('#backBtn').hidden=!back}
+let backTo=null,VIEW=0;
+function setTitle(html,back){VIEW++;$('#title').innerHTML=html;backTo=back||null;$('#backBtn').hidden=!back}
 $('#backBtn').addEventListener('click',()=>{stopListening();if('speechSynthesis' in window)speechSynthesis.cancel();backTo&&backTo()});
 $('#goBtn').addEventListener('click',()=>{$('#start').hidden=true;say("Hello! Let's learn English!");loading.then(bookshelf)});
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -427,7 +427,8 @@ function domino(n){
 }
 function wordQ(){
   const t=shuffle(quizItems(L)).slice(0,3);const a=t[0];
-  return {text:findOf(a),show:'Find the …',full:findOf(a).replace(/[.?!]$/,''),target:a.word,opts:shuffle(t).map(o=>({key:o.word,node:o.pic,cls:'pic',label:o.word})),ans:a.word};
+  const full=findOf(a).replace(/[.?!]$/,'');
+  return {text:findOf(a),show:full.includes(a.word)?full.replace(a.word,'…'):'Find …',full,target:a.word,opts:shuffle(t).map(o=>({key:o.word,node:o.pic,cls:'pic',label:o.word})),ans:a.word};
 }
 function numbersQ(){
   const things=countables(L);
@@ -444,8 +445,9 @@ function numbersQ(){
 // Shared quiz runner: make() returns {text, show, visual?, opts:[{key,node,cls}], ans, explain?, onRight?}
 function quizGame(titleHtml,total,make,again){
   setTitle(titleHtml,back);
-  let i=0;
+  let i=0;const view=VIEW;
   function round(){
+    if(view!==VIEW)return; // the child has left this game
     if(i>=total)return finish(again);
     const q=make();let firstTry=true;
     const cheer=el('p',{class:'cheer'});
@@ -465,7 +467,7 @@ function quizGame(titleHtml,total,make,again){
     screen.replaceChildren(el('div',{class:'q'},[dots,
       el('div',{class:'prompt'},[el('button',{class:'speaker','aria-label':'Hear it again',text:'🔊',onclick:()=>say(q.text)}),promptP]),
       q.visual||null,choices,cheer]));
-    setTimeout(()=>say(q.text),300);
+    setTimeout(()=>{if(view===VIEW)say(q.text)},300);
   }
   round();
 }
@@ -550,7 +552,7 @@ function countGame(){
       frame.children[counted-1].replaceChildren(el('b',{text:counted}),t.e);
       bubble.textContent=[...Array(counted)].map((_,k)=>k+1).join(', ')+(counted<n?', …':'');
       say(WORDS[counted],0.9);
-      if(counted===n)setTimeout(ask,900);
+      if(counted===n){const v=VIEW;setTimeout(()=>{if(v===VIEW)ask()},900)}
     });
     tray.append(o)});
   function ask(){
@@ -601,7 +603,7 @@ function sayGame(){
     const cardEl=el('div',{class:'saycard'},[el('div',{class:'emo',text:item.pic}),el('div',{class:'line'})]);
     cardEl.querySelector('.line').innerHTML=item.html;
     const g=glossEl(item.text.replace(/[.?!]$/,''));if(g)cardEl.append(g);
-    const success=async()=>{cheer.textContent=pick(PRAISE);addStar();await say(cheer.textContent);setTimeout(next,600)};
+    const view=VIEW;const success=async()=>{cheer.textContent=pick(PRAISE);addStar();await say(cheer.textContent);setTimeout(()=>{if(view===VIEW)next()},600)};
     const grown=el('div',{class:'grownup'},[el('p',{text:'Grown-up: did they say it clearly?'}),
       el('div',{class:'row'},[el('button',{class:'pill good',text:'✓ Yes',onclick:success}),
         el('button',{class:'pill',text:'Again',onclick:()=>{cheer.textContent='Listen and try again!';say('Listen. '+item.text,0.75)}})])]);

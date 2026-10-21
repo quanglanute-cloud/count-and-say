@@ -982,6 +982,791 @@
           ]
         }
       ]
+    },
+    {
+      "id": "eng-starter",
+      "book": "english",
+      "unit": "Starter Unit",
+      "title": "Hello! Colours & ABC",
+      "icon": "👋",
+      "added": "2026-10-21",
+      "tabs": [
+        {
+          "name": "Hello!",
+          "items": [
+            {
+              "word": "Hi! Hello! How are you?",
+              "pic": "👋",
+              "say": "Hi! Hello! How are you?",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "How are you today?",
+              "pic": "😊",
+              "say": "How are you today?",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "I'm fine, thank you.",
+              "pic": "👍",
+              "say": "I'm fine, thank you.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Do you want to play?",
+              "pic": "🤾",
+              "say": "Do you want to play?",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Yes! Let's play!",
+              "pic": "🎉",
+              "say": "Yes! Let's play!",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Can I play, too?",
+              "pic": "🙋",
+              "say": "Can I play, too?",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "What's that?",
+              "pic": "❓",
+              "say": "What's that?",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "dinosaur",
+              "pic": "🦕",
+              "hint": "It's a dinosaur.",
+              "say": "It's a dinosaur.",
+              "sentence": "It's a dinosaur."
+            },
+            {
+              "word": "car",
+              "pic": "🚗",
+              "sentence": "It's a car."
+            },
+            {
+              "word": "puppet",
+              "pic": "🎎",
+              "hint": "a toy doll",
+              "sentence": "It's a puppet."
+            },
+            {
+              "word": "computer",
+              "pic": "💻",
+              "sentence": "It's a computer."
+            },
+            {
+              "word": "balloon",
+              "pic": "🎈",
+              "sentence": "It's a balloon."
+            }
+          ]
+        },
+        {
+          "name": "My body",
+          "items": [
+            {
+              "word": "head",
+              "pic": "👦",
+              "say": "Head. Touch your head!",
+              "sentence": "Touch your head."
+            },
+            {
+              "word": "shoulders",
+              "pic": "🤷",
+              "say": "Shoulders. Touch your shoulders!",
+              "sentence": "Touch your shoulders.",
+              "find": "Find the shoulders."
+            },
+            {
+              "word": "knees",
+              "pic": "🦵",
+              "hint": "on your leg",
+              "say": "Knees. Touch your knees!",
+              "sentence": "Touch your knees.",
+              "find": "Find the knees."
+            },
+            {
+              "word": "toes",
+              "pic": "🦶",
+              "say": "Toes. Touch your toes!",
+              "sentence": "Touch your toes.",
+              "find": "Find the toes."
+            },
+            {
+              "word": "hand",
+              "pic": "✋",
+              "say": "Hand. Wave your hand!",
+              "sentence": "Wave your hand."
+            },
+            {
+              "word": "mouth",
+              "pic": "👄",
+              "sentence": "This is my mouth."
+            },
+            {
+              "word": "hop",
+              "pic": "🐇",
+              "hint": "jump on one foot",
+              "say": "Hop! Simon says, hop!",
+              "sentence": "Simon says, hop!",
+              "find": "Who can hop?"
+            },
+            {
+              "word": "Head, shoulders, knees and toes",
+              "pic": "🙆",
+              "say": "Head, shoulders, knees and toes",
+              "hint": "sing the song",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Colours",
+          "items": [
+            {
+              "word": "red",
+              "pic": "❤️",
+              "hint": "colour",
+              "say": "Red.",
+              "find": "Find red.",
+              "sentence": "I like red."
+            },
+            {
+              "word": "yellow",
+              "pic": "💛",
+              "hint": "colour",
+              "say": "Yellow.",
+              "find": "Find yellow.",
+              "sentence": "I like yellow."
+            },
+            {
+              "word": "blue",
+              "pic": "💙",
+              "hint": "colour",
+              "say": "Blue.",
+              "find": "Find blue.",
+              "sentence": "I like blue."
+            },
+            {
+              "word": "orange",
+              "pic": "🧡",
+              "hint": "colour",
+              "say": "Orange.",
+              "find": "Find orange.",
+              "sentence": "I like orange."
+            },
+            {
+              "word": "green",
+              "pic": "💚",
+              "hint": "colour",
+              "say": "Green.",
+              "find": "Find green.",
+              "sentence": "I like green."
+            },
+            {
+              "word": "purple",
+              "pic": "💜",
+              "hint": "colour",
+              "say": "Purple.",
+              "find": "Find purple.",
+              "sentence": "I like purple."
+            },
+            {
+              "word": "blue and yellow make green",
+              "pic": "💙💛",
+              "say": "Mix blue and yellow. You get green!",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "red and yellow make orange",
+              "pic": "❤️💛",
+              "say": "Mix red and yellow. You get orange!",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "red and blue make purple",
+              "pic": "❤️💙",
+              "say": "Mix red and blue. You get purple!",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "scissors",
+              "pic": "✂️",
+              "sentence": "I have scissors.",
+              "find": "Find the scissors."
+            },
+            {
+              "word": "paper clip",
+              "pic": "📎",
+              "say": "Paper clip. We can measure with paper clips."
+            },
+            {
+              "word": "ruler",
+              "pic": "📏"
+            }
+          ]
+        },
+        {
+          "name": "Alphabet",
+          "items": [
+            {
+              "word": "apple",
+              "pic": "🍏",
+              "hint": "Aa",
+              "say": "A. A is for apple.",
+              "sentence": "A is for apple."
+            },
+            {
+              "word": "book",
+              "pic": "📘",
+              "hint": "Bb",
+              "say": "B. B is for book.",
+              "sentence": "B is for book."
+            },
+            {
+              "word": "cat",
+              "pic": "🐈",
+              "hint": "Cc",
+              "say": "C. C is for cat.",
+              "sentence": "C is for cat."
+            },
+            {
+              "word": "duck",
+              "pic": "🦆",
+              "hint": "Dd",
+              "say": "D. D is for duck.",
+              "sentence": "D is for duck."
+            },
+            {
+              "word": "egg",
+              "pic": "🥚",
+              "hint": "Ee",
+              "say": "E. E is for egg.",
+              "sentence": "E is for egg."
+            },
+            {
+              "word": "fish",
+              "pic": "🐟",
+              "hint": "Ff",
+              "say": "F. F is for fish.",
+              "sentence": "F is for fish."
+            },
+            {
+              "word": "guitar",
+              "pic": "🎸",
+              "hint": "Gg",
+              "say": "G. G is for guitar.",
+              "sentence": "G is for guitar."
+            },
+            {
+              "word": "hand",
+              "pic": "✋",
+              "hint": "Hh",
+              "say": "H. H is for hand.",
+              "sentence": "H is for hand."
+            },
+            {
+              "word": "insect",
+              "pic": "🐞",
+              "hint": "Ii",
+              "say": "I. I is for insect.",
+              "sentence": "I is for insect."
+            },
+            {
+              "word": "jacket",
+              "pic": "🧥",
+              "hint": "Jj",
+              "say": "J. J is for jacket.",
+              "sentence": "J is for jacket."
+            },
+            {
+              "word": "kangaroo",
+              "pic": "🦘",
+              "hint": "Kk",
+              "say": "K. K is for kangaroo.",
+              "sentence": "K is for kangaroo."
+            },
+            {
+              "word": "leaf",
+              "pic": "🍃",
+              "hint": "Ll",
+              "say": "L. L is for leaf.",
+              "sentence": "L is for leaf."
+            },
+            {
+              "word": "mouth",
+              "pic": "👄",
+              "hint": "Mm",
+              "say": "M. M is for mouth.",
+              "sentence": "M is for mouth."
+            },
+            {
+              "word": "nine",
+              "pic": "9️⃣",
+              "hint": "Nn",
+              "say": "N. N is for nine.",
+              "sentence": "N is for nine."
+            },
+            {
+              "word": "octopus",
+              "pic": "🐙",
+              "hint": "Oo",
+              "say": "O. O is for octopus.",
+              "sentence": "O is for octopus."
+            },
+            {
+              "word": "pencil",
+              "pic": "✏️",
+              "hint": "Pp",
+              "say": "P. P is for pencil.",
+              "sentence": "P is for pencil."
+            },
+            {
+              "word": "queen",
+              "pic": "👸",
+              "hint": "Qq",
+              "say": "Q. Q is for queen.",
+              "sentence": "Q is for queen."
+            },
+            {
+              "word": "rain",
+              "pic": "🌧️",
+              "hint": "Rr",
+              "say": "R. R is for rain.",
+              "sentence": "R is for rain."
+            },
+            {
+              "word": "sun",
+              "pic": "☀️",
+              "hint": "Ss",
+              "say": "S. S is for sun.",
+              "sentence": "S is for sun."
+            },
+            {
+              "word": "tiger",
+              "pic": "🐯",
+              "hint": "Tt",
+              "say": "T. T is for tiger.",
+              "sentence": "T is for tiger."
+            },
+            {
+              "word": "umbrella",
+              "pic": "☂️",
+              "hint": "Uu",
+              "say": "U. U is for umbrella.",
+              "sentence": "U is for umbrella."
+            },
+            {
+              "word": "violin",
+              "pic": "🎻",
+              "hint": "Vv",
+              "say": "V. V is for violin.",
+              "sentence": "V is for violin."
+            },
+            {
+              "word": "watch",
+              "pic": "⌚",
+              "hint": "Ww",
+              "say": "W. W is for watch.",
+              "sentence": "W is for watch."
+            },
+            {
+              "word": "box",
+              "pic": "📦",
+              "hint": "Xx: box ends with x",
+              "say": "X. Box ends with x.",
+              "sentence": "Box ends with X."
+            },
+            {
+              "word": "yellow",
+              "pic": "💛",
+              "hint": "Yy",
+              "say": "Y. Y is for yellow.",
+              "sentence": "Y is for yellow.",
+              "find": "Find yellow."
+            },
+            {
+              "word": "zebra",
+              "pic": "🦓",
+              "hint": "Zz",
+              "say": "Z. Z is for zebra.",
+              "sentence": "Z is for zebra."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u1-welcome-to-school",
+      "book": "english",
+      "unit": "Unit 1",
+      "title": "Welcome to School",
+      "icon": "🏫",
+      "added": "2026-10-21",
+      "tabs": [
+        {
+          "name": "Classroom",
+          "items": [
+            {
+              "word": "table",
+              "pic": "🍽️",
+              "hint": "a classroom table",
+              "quiz": false,
+              "say": "A table."
+            },
+            {
+              "word": "chair",
+              "pic": "💺",
+              "hint": "sit on a chair",
+              "sentence": "I sit on a chair."
+            },
+            {
+              "word": "computer",
+              "pic": "💻",
+              "say": "Computer. A computer.",
+              "sentence": "A computer."
+            },
+            {
+              "word": "crayon",
+              "pic": "🖍️",
+              "plural": "crayons",
+              "sentence": "I draw with crayons."
+            },
+            {
+              "word": "whiteboard",
+              "pic": "📋",
+              "quiz": false,
+              "say": "A whiteboard."
+            },
+            {
+              "word": "book",
+              "pic": "📘",
+              "plural": "books",
+              "sentence": "I have a book."
+            },
+            {
+              "word": "clock",
+              "pic": "🕐",
+              "sentence": "I can see a clock."
+            },
+            {
+              "word": "teacher",
+              "pic": "👩",
+              "say": "The teacher.",
+              "sentence": "This is my teacher."
+            },
+            {
+              "word": "boy",
+              "pic": "👦",
+              "sentence": "He is a boy."
+            },
+            {
+              "word": "girl",
+              "pic": "👧",
+              "plural": "girls",
+              "sentence": "She is a girl."
+            },
+            {
+              "word": "ruler",
+              "pic": "📏",
+              "say": "A red ruler.",
+              "sentence": "I have a red ruler."
+            },
+            {
+              "word": "school",
+              "pic": "🏫",
+              "say": "Hello, school!",
+              "sentence": "Hello, school!"
+            }
+          ]
+        },
+        {
+          "name": "Colours",
+          "items": [
+            {
+              "word": "red",
+              "pic": "🔴",
+              "hint": "colour",
+              "say": "Red.",
+              "find": "Find red.",
+              "sentence": "I like red."
+            },
+            {
+              "word": "blue",
+              "pic": "🔵",
+              "hint": "colour",
+              "say": "Blue.",
+              "find": "Find blue.",
+              "sentence": "I like blue."
+            },
+            {
+              "word": "green",
+              "pic": "💚",
+              "hint": "colour",
+              "say": "Green.",
+              "find": "Find green.",
+              "sentence": "I like green."
+            },
+            {
+              "word": "yellow",
+              "pic": "💛",
+              "hint": "colour",
+              "say": "Yellow.",
+              "find": "Find yellow.",
+              "sentence": "I like yellow."
+            },
+            {
+              "word": "brown",
+              "pic": "🍫",
+              "hint": "colour",
+              "say": "Brown.",
+              "find": "Find brown.",
+              "sentence": "I like brown."
+            },
+            {
+              "word": "orange",
+              "pic": "🧡",
+              "hint": "colour",
+              "say": "Orange.",
+              "find": "Find orange.",
+              "sentence": "I like orange."
+            },
+            {
+              "word": "black",
+              "pic": "⚫",
+              "hint": "colour",
+              "say": "Black.",
+              "find": "Find black.",
+              "sentence": "I like black."
+            },
+            {
+              "word": "purple",
+              "pic": "💜",
+              "hint": "colour",
+              "say": "Purple.",
+              "find": "Find purple.",
+              "sentence": "I like purple."
+            },
+            {
+              "word": "pink",
+              "pic": "💗",
+              "hint": "colour",
+              "say": "Pink.",
+              "find": "Find pink.",
+              "sentence": "I like pink."
+            },
+            {
+              "word": "white",
+              "pic": "⚪",
+              "hint": "colour",
+              "say": "White.",
+              "find": "Find white.",
+              "sentence": "I like white."
+            },
+            {
+              "word": "same",
+              "pic": "🔴🔴",
+              "say": "Same. Red and red are the same.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "different",
+              "pic": "🔴🔵",
+              "say": "Different. Red and blue are different.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "What's your favourite colour?",
+              "pic": "🎨",
+              "say": "What's your favourite colour? My favourite colour is red.",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "At school",
+          "items": [
+            {
+              "word": "read",
+              "pic": "📖",
+              "hint": "at school",
+              "say": "Read. I read at school.",
+              "sentence": "I read at school.",
+              "find": "Who can read?"
+            },
+            {
+              "word": "write",
+              "pic": "✍️",
+              "hint": "at school",
+              "say": "Write. I write at school.",
+              "sentence": "I write at school.",
+              "find": "Who can write?"
+            },
+            {
+              "word": "do maths",
+              "pic": "➕",
+              "hint": "at school",
+              "say": "Do maths. I do maths at school.",
+              "sentence": "I do maths at school.",
+              "find": "Who can do maths?"
+            },
+            {
+              "word": "sing",
+              "pic": "🎤",
+              "hint": "at school",
+              "say": "Sing. I sing at school.",
+              "sentence": "I sing at school.",
+              "find": "Who can sing?"
+            },
+            {
+              "word": "draw",
+              "pic": "🎨",
+              "hint": "at school",
+              "say": "Draw. I draw at school.",
+              "sentence": "I draw at school.",
+              "find": "Who can draw?"
+            },
+            {
+              "word": "bicycle",
+              "pic": "🚲",
+              "say": "Bicycle. I go by bicycle.",
+              "sentence": "I go by bicycle."
+            },
+            {
+              "word": "bus",
+              "pic": "🚌",
+              "say": "Bus. We go by bus.",
+              "sentence": "We go by bus."
+            },
+            {
+              "word": "car",
+              "pic": "🚗",
+              "say": "Car. I go by car.",
+              "sentence": "I go by car."
+            },
+            {
+              "word": "boat",
+              "pic": "⛵",
+              "say": "Boat. We go by boat.",
+              "sentence": "We go by boat."
+            },
+            {
+              "word": "walk",
+              "pic": "🚶",
+              "say": "Walk. We walk to school.",
+              "sentence": "We walk to school.",
+              "find": "Who can walk?"
+            },
+            {
+              "word": "How do you go to school?",
+              "pic": "🗺️",
+              "say": "How do you go to school?",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "My friend",
+          "items": [
+            {
+              "word": "My name is …",
+              "pic": "🙋",
+              "say": "My name is Amira.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "How old are you?",
+              "pic": "🎂",
+              "say": "How old are you? I am six.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "I am six.",
+              "pic": "6️⃣",
+              "say": "I am six.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Can you spell your name, please?",
+              "pic": "🔤",
+              "say": "Can you spell your name, please?",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "This is my friend.",
+              "pic": "👫",
+              "say": "This is my friend.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "He is a boy.",
+              "pic": "👦",
+              "say": "He is a boy.",
+              "hint": "he · his",
+              "quiz": false
+            },
+            {
+              "word": "His name is Tomas.",
+              "pic": "👦",
+              "say": "His name is Tomas.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "She is a girl.",
+              "pic": "👧",
+              "say": "She is a girl.",
+              "hint": "she · her",
+              "quiz": false
+            },
+            {
+              "word": "Her name is Rosa.",
+              "pic": "👧",
+              "say": "Her name is Rosa.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "interview",
+              "pic": "🎙️",
+              "say": "Interview. Ask your friend questions.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "The more we sing together",
+              "pic": "🎶",
+              "say": "The more we sing together, together, together. The more we sing together, the happier we'll be.",
+              "hint": "sing the song",
+              "quiz": false
+            }
+          ]
+        }
+      ]
     }
   ]
 }

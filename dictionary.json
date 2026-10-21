@@ -561,7 +561,7 @@
  },
  "table": {
   "ipa": "ˈteɪbəl",
-  "vi": "bảng"
+  "vi": "cái bàn; bảng"
  },
  "teddy bear": {
   "ipa": "ˈtɛdi ˌbɛr",
@@ -686,5 +686,321 @@
  "this little finger on the right.": {
   "ipa": "ˈðɪs ˈlɪtəl ˈfɪŋɡɚ ɑn ðə ˈraɪt",
   "vi": "Ngón út bên phải này này."
+ },
+ "duck": {
+  "ipa": "dʌk",
+  "vi": "con vịt"
+ },
+ "guitar": {
+  "ipa": "ɡɪˈtɑr",
+  "vi": "đàn ghi-ta"
+ },
+ "hand": {
+  "ipa": "hænd",
+  "vi": "bàn tay"
+ },
+ "insect": {
+  "ipa": "ˈɪnsɛkt",
+  "vi": "côn trùng"
+ },
+ "jacket": {
+  "ipa": "ˈdʒækɪt",
+  "vi": "áo khoác"
+ },
+ "kangaroo": {
+  "ipa": "ˌkæŋɡəˈru",
+  "vi": "con chuột túi"
+ },
+ "mouth": {
+  "ipa": "maʊθ",
+  "vi": "cái miệng"
+ },
+ "octopus": {
+  "ipa": "ˈɑktəpəs",
+  "vi": "con bạch tuộc"
+ },
+ "queen": {
+  "ipa": "kwin",
+  "vi": "nữ hoàng"
+ },
+ "rain": {
+  "ipa": "reɪn",
+  "vi": "mưa"
+ },
+ "sun": {
+  "ipa": "sʌn",
+  "vi": "mặt trời"
+ },
+ "tiger": {
+  "ipa": "ˈtaɪɡɚ",
+  "vi": "con hổ"
+ },
+ "umbrella": {
+  "ipa": "ʌmˈbrɛlə",
+  "vi": "cái ô"
+ },
+ "violin": {
+  "ipa": "vaɪəˈlɪn",
+  "vi": "đàn vi-ô-lông"
+ },
+ "watch": {
+  "ipa": "wɑtʃ",
+  "vi": "đồng hồ đeo tay"
+ },
+ "yellow": {
+  "ipa": "ˈjɛloʊ",
+  "vi": "màu vàng"
+ },
+ "zebra": {
+  "ipa": "ˈzibrə",
+  "vi": "con ngựa vằn"
+ },
+ "hi! hello! how are you?": {
+  "ipa": "ˈhaɪ həˈloʊ ˈhaʊ ɑr ju",
+  "vi": "Chào! Xin chào! Bạn khỏe không?"
+ },
+ "how are you today?": {
+  "ipa": "ˈhaʊ ɑr ju təˈdeɪ",
+  "vi": "Hôm nay bạn thế nào?"
+ },
+ "i'm fine, thank you.": {
+  "ipa": "aɪm ˈfaɪn ˈθæŋk ju",
+  "vi": "Tớ khỏe, cảm ơn bạn."
+ },
+ "do you want to play?": {
+  "ipa": "du ju ˈwɑnt tə ˈpleɪ",
+  "vi": "Bạn có muốn chơi không?"
+ },
+ "yes! let's play!": {
+  "ipa": "ˈjɛs ˈlɛts ˈpleɪ",
+  "vi": "Có! Chơi thôi!"
+ },
+ "can i play, too?": {
+  "ipa": "kən aɪ ˈpleɪ ˈtu",
+  "vi": "Tớ chơi cùng được không?"
+ },
+ "what's that?": {
+  "ipa": "ˈwʌts ˈðæt",
+  "vi": "Cái gì thế?"
+ },
+ "dinosaur": {
+  "ipa": "ˈdaɪnəˌsɔr",
+  "vi": "con khủng long"
+ },
+ "puppet": {
+  "ipa": "ˈpʌpɪt",
+  "vi": "con rối"
+ },
+ "computer": {
+  "ipa": "kəmˈpjutɚ",
+  "vi": "máy tính"
+ },
+ "balloon": {
+  "ipa": "bəˈlun",
+  "vi": "quả bóng bay"
+ },
+ "head": {
+  "ipa": "hɛd",
+  "vi": "cái đầu"
+ },
+ "shoulders": {
+  "ipa": "ˈʃoʊldɚz",
+  "vi": "đôi vai"
+ },
+ "knees": {
+  "ipa": "niz",
+  "vi": "đầu gối"
+ },
+ "toes": {
+  "ipa": "toʊz",
+  "vi": "ngón chân"
+ },
+ "hop": {
+  "ipa": "hɑp",
+  "vi": "nhảy lò cò"
+ },
+ "head, shoulders, knees and toes": {
+  "ipa": "ˈhɛd ˈʃoʊldɚz ˈniz ən ˈtoʊz",
+  "vi": "đầu, vai, đầu gối và ngón chân"
+ },
+ "red": {
+  "ipa": "rɛd",
+  "vi": "màu đỏ"
+ },
+ "blue": {
+  "ipa": "blu",
+  "vi": "màu xanh dương"
+ },
+ "green": {
+  "ipa": "ɡrin",
+  "vi": "màu xanh lá"
+ },
+ "purple": {
+  "ipa": "ˈpɝpəl",
+  "vi": "màu tím"
+ },
+ "blue and yellow make green": {
+  "ipa": "ˈblu ən ˈjɛloʊ ˈmeɪk ˈɡrin",
+  "vi": "xanh dương và vàng thành xanh lá"
+ },
+ "red and yellow make orange": {
+  "ipa": "ˈrɛd ən ˈjɛloʊ ˈmeɪk ˈɔrɪndʒ",
+  "vi": "đỏ và vàng thành màu cam"
+ },
+ "red and blue make purple": {
+  "ipa": "ˈrɛd ən ˈblu ˈmeɪk ˈpɝpəl",
+  "vi": "đỏ và xanh dương thành màu tím"
+ },
+ "scissors": {
+  "ipa": "ˈsɪzɚz",
+  "vi": "cái kéo"
+ },
+ "paper clip": {
+  "ipa": "ˈpeɪpɚ ˌklɪp",
+  "vi": "cái kẹp giấy"
+ },
+ "ruler": {
+  "ipa": "ˈrulɚ",
+  "vi": "thước kẻ"
+ },
+ "chair": {
+  "ipa": "tʃɛr",
+  "vi": "cái ghế"
+ },
+ "crayon": {
+  "ipa": "ˈkreɪˌɑn",
+  "vi": "bút sáp màu"
+ },
+ "whiteboard": {
+  "ipa": "ˈwaɪtˌbɔrd",
+  "vi": "bảng trắng"
+ },
+ "clock": {
+  "ipa": "klɑk",
+  "vi": "đồng hồ"
+ },
+ "teacher": {
+  "ipa": "ˈtitʃɚ",
+  "vi": "cô giáo"
+ },
+ "boy": {
+  "ipa": "bɔɪ",
+  "vi": "bạn trai"
+ },
+ "girl": {
+  "ipa": "ɡɝl",
+  "vi": "bạn gái"
+ },
+ "school": {
+  "ipa": "skul",
+  "vi": "trường học"
+ },
+ "brown": {
+  "ipa": "braʊn",
+  "vi": "màu nâu"
+ },
+ "black": {
+  "ipa": "blæk",
+  "vi": "màu đen"
+ },
+ "pink": {
+  "ipa": "pɪŋk",
+  "vi": "màu hồng"
+ },
+ "white": {
+  "ipa": "waɪt",
+  "vi": "màu trắng"
+ },
+ "what's your favourite colour?": {
+  "ipa": "ˈwʌts jɔr ˈfeɪvrɪt ˈkʌlɚ",
+  "vi": "Màu yêu thích của bạn là gì?"
+ },
+ "read": {
+  "ipa": "rid",
+  "vi": "đọc"
+ },
+ "write": {
+  "ipa": "raɪt",
+  "vi": "viết"
+ },
+ "do maths": {
+  "ipa": "du ˈmæθs",
+  "vi": "làm toán"
+ },
+ "sing": {
+  "ipa": "sɪŋ",
+  "vi": "hát"
+ },
+ "draw": {
+  "ipa": "drɔ",
+  "vi": "vẽ"
+ },
+ "bicycle": {
+  "ipa": "ˈbaɪsɪkəl",
+  "vi": "xe đạp"
+ },
+ "boat": {
+  "ipa": "boʊt",
+  "vi": "con thuyền"
+ },
+ "walk": {
+  "ipa": "wɔk",
+  "vi": "đi bộ"
+ },
+ "how do you go to school?": {
+  "ipa": "ˈhaʊ du ju ˈɡoʊ tə ˈskul",
+  "vi": "Con đi học bằng gì?"
+ },
+ "my name is …": {
+  "ipa": "maɪ ˈneɪm ɪz",
+  "vi": "Tên tớ là …"
+ },
+ "how old are you?": {
+  "ipa": "ˈhaʊ ˈoʊld ɑr ju",
+  "vi": "Bạn mấy tuổi?"
+ },
+ "i am six.": {
+  "ipa": "aɪ æm ˈsɪks",
+  "vi": "Tớ sáu tuổi."
+ },
+ "can you spell your name, please?": {
+  "ipa": "kən ju ˈspɛl jɔr ˈneɪm ˈpliz",
+  "vi": "Bạn đánh vần tên mình được không?"
+ },
+ "this is my friend.": {
+  "ipa": "ˈðɪs ɪz maɪ ˈfrɛnd",
+  "vi": "Đây là bạn của tớ."
+ },
+ "he is a boy.": {
+  "ipa": "hi ɪz ə ˈbɔɪ",
+  "vi": "Bạn ấy là con trai."
+ },
+ "his name is tomas.": {
+  "ipa": "hɪz ˈneɪm ɪz ˈtɑməs",
+  "vi": "Tên bạn ấy là Tomas."
+ },
+ "she is a girl.": {
+  "ipa": "ʃi ɪz ə ˈɡɝl",
+  "vi": "Bạn ấy là con gái."
+ },
+ "her name is rosa.": {
+  "ipa": "hɝ ˈneɪm ɪz ˈroʊzə",
+  "vi": "Tên bạn ấy là Rosa."
+ },
+ "interview": {
+  "ipa": "ˈɪntɚˌvju",
+  "vi": "phỏng vấn"
+ },
+ "the more we sing together": {
+  "ipa": "ðə ˈmɔr wi ˈsɪŋ təˈɡɛðɚ",
+  "vi": "Càng hát cùng nhau"
+ },
+ "girls": {
+  "ipa": "ɡɝlz",
+  "vi": "bạn gái"
+ },
+ "crayons": {
+  "ipa": "ˈkreɪˌɑnz",
+  "vi": "bút sáp màu"
  }
 }
