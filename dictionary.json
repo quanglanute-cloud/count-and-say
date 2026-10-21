@@ -1138,5 +1138,665 @@
  "i can say the alphabet.": {
   "ipa": "aɪ kən ˈseɪ ði ˈælfəˌbɛt",
   "vi": "Con biết đọc bảng chữ cái."
+ },
+ "family": {
+  "ipa": "ˈfæməli",
+  "vi": "gia đình"
+ },
+ "mother": {
+  "ipa": "ˈmʌðɚ",
+  "vi": "mẹ"
+ },
+ "father": {
+  "ipa": "ˈfɑðɚ",
+  "vi": "bố"
+ },
+ "brother": {
+  "ipa": "ˈbrʌðɚ",
+  "vi": "anh trai, em trai"
+ },
+ "sister": {
+  "ipa": "ˈsɪstɚ",
+  "vi": "chị gái, em gái"
+ },
+ "grandma": {
+  "ipa": "ˈɡrænmɑ",
+  "vi": "bà"
+ },
+ "grandpa": {
+  "ipa": "ˈɡrænpɑ",
+  "vi": "ông"
+ },
+ "baby": {
+  "ipa": "ˈbeɪbi",
+  "vi": "em bé"
+ },
+ "th: mother, father, brother": {
+  "ipa": "ˈθ ˈmʌðɚ ˈfɑðɚ ˈbrʌðɚ",
+  "vi": "âm th ở giữa từ"
+ },
+ "there are 4 people in my family.": {
+  "ipa": "ðɛr ɑr ˈfɔr ˈpipəl ɪn maɪ ˈfæməli",
+  "vi": "Gia đình tớ có 4 người."
+ },
+ "this is for you.": {
+  "ipa": "ˈðɪs ɪz fɔr ˈju",
+  "vi": "Cái này tặng bạn."
+ },
+ "thank you! you're welcome.": {
+  "ipa": "ˈθæŋk ju jʊr ˈwɛlkəm",
+  "vi": "Cảm ơn! Không có gì."
+ },
+ "home": {
+  "ipa": "hoʊm",
+  "vi": "nhà"
+ },
+ "eat dinner": {
+  "ipa": "ˈit ˈdɪnɚ",
+  "vi": "ăn tối"
+ },
+ "dance": {
+  "ipa": "dæns",
+  "vi": "nhảy múa"
+ },
+ "read books": {
+  "ipa": "ˈrid ˈbʊks",
+  "vi": "đọc sách"
+ },
+ "play games": {
+  "ipa": "ˈpleɪ ˈɡeɪmz",
+  "vi": "chơi trò chơi"
+ },
+ "watch tv": {
+  "ipa": "ˈwɑtʃ ˌtiˈvi",
+  "vi": "xem ti vi"
+ },
+ "sleep": {
+  "ipa": "slip",
+  "vi": "ngủ"
+ },
+ "house": {
+  "ipa": "haʊs",
+  "vi": "ngôi nhà"
+ },
+ "houses": {
+  "ipa": "ˈhaʊzɪz",
+  "vi": "ngôi nhà"
+ },
+ "door": {
+  "ipa": "dɔr",
+  "vi": "cái cửa ra vào"
+ },
+ "doors": {
+  "ipa": "dɔrz",
+  "vi": "cái cửa ra vào"
+ },
+ "window": {
+  "ipa": "ˈwɪndoʊ",
+  "vi": "cửa sổ"
+ },
+ "windows": {
+  "ipa": "ˈwɪndoʊz",
+  "vi": "cửa sổ"
+ },
+ "bed": {
+  "ipa": "bɛd",
+  "vi": "cái giường"
+ },
+ "beds": {
+  "ipa": "bɛdz",
+  "vi": "cái giường"
+ },
+ "ten in the bed": {
+  "ipa": "ˈtɛn ɪn ðə ˈbɛd",
+  "vi": "Mười bạn trên giường"
+ },
+ "good night!": {
+  "ipa": "ɡʊd ˈnaɪt",
+  "vi": "Chúc ngủ ngon!"
+ },
+ "rice": {
+  "ipa": "raɪs",
+  "vi": "cơm"
+ },
+ "beans": {
+  "ipa": "binz",
+  "vi": "đậu"
+ },
+ "bread": {
+  "ipa": "brɛd",
+  "vi": "bánh mì"
+ },
+ "fruit": {
+  "ipa": "frut",
+  "vi": "hoa quả"
+ },
+ "soup": {
+  "ipa": "sup",
+  "vi": "món súp"
+ },
+ "noodles": {
+  "ipa": "ˈnudəlz",
+  "vi": "mì sợi"
+ },
+ "yogurt": {
+  "ipa": "ˈjoʊɡɚt",
+  "vi": "sữa chua"
+ },
+ "mango": {
+  "ipa": "ˈmæŋɡoʊ",
+  "vi": "quả xoài"
+ },
+ "mangos": {
+  "ipa": "ˈmæŋɡoʊz",
+  "vi": "quả xoài"
+ },
+ "chicken": {
+  "ipa": "ˈtʃɪkən",
+  "vi": "thịt gà"
+ },
+ "carrot": {
+  "ipa": "ˈkærət",
+  "vi": "củ cà rốt"
+ },
+ "carrots": {
+  "ipa": "ˈkærəts",
+  "vi": "củ cà rốt"
+ },
+ "milk": {
+  "ipa": "mɪlk",
+  "vi": "sữa"
+ },
+ "ice cream": {
+  "ipa": "ˈaɪs ˌkrim",
+  "vi": "kem"
+ },
+ "cake": {
+  "ipa": "keɪk",
+  "vi": "bánh ngọt"
+ },
+ "cakes": {
+  "ipa": "keɪks",
+  "vi": "bánh ngọt"
+ },
+ "what do you eat for breakfast?": {
+  "ipa": "ˈwʌt du ju ˈit fɚ ˈbrɛkfəst",
+  "vi": "Con ăn gì vào bữa sáng?"
+ },
+ "do you like apples? yes, i do. no, i don't.": {
+  "ipa": "du ju ˈlaɪk ˈæpəlz ˈjɛs aɪ ˈdu ˈnoʊ aɪ ˈdoʊnt",
+  "vi": "Con có thích táo không? Có. Không."
+ },
+ "map": {
+  "ipa": "mæp",
+  "vi": "tấm bản đồ"
+ },
+ "cap": {
+  "ipa": "kæp",
+  "vi": "mũ lưỡi trai"
+ },
+ "clap": {
+  "ipa": "klæp",
+  "vi": "vỗ tay"
+ },
+ "nap": {
+  "ipa": "næp",
+  "vi": "ngủ trưa"
+ },
+ "lap": {
+  "ipa": "læp",
+  "vi": "lòng (đùi)"
+ },
+ "glasses": {
+  "ipa": "ˈɡlæsɪz",
+  "vi": "kính mắt"
+ },
+ "hands": {
+  "ipa": "hændz",
+  "vi": "bàn tay"
+ },
+ "grandma's glasses": {
+  "ipa": "ˈɡrænmɑz ˈɡlæsɪz",
+  "vi": "Kính của bà"
+ },
+ "monday": {
+  "ipa": "ˈmʌndeɪ",
+  "vi": "thứ Hai"
+ },
+ "tuesday": {
+  "ipa": "ˈtuzdeɪ",
+  "vi": "thứ Ba"
+ },
+ "wednesday": {
+  "ipa": "ˈwɛnzdeɪ",
+  "vi": "thứ Tư"
+ },
+ "thursday": {
+  "ipa": "ˈθɝzdeɪ",
+  "vi": "thứ Năm"
+ },
+ "friday": {
+  "ipa": "ˈfraɪdeɪ",
+  "vi": "thứ Sáu"
+ },
+ "saturday": {
+  "ipa": "ˈsætɚdeɪ",
+  "vi": "thứ Bảy"
+ },
+ "sunday": {
+  "ipa": "ˈsʌndeɪ",
+  "vi": "Chủ nhật"
+ },
+ "birthday": {
+  "ipa": "ˈbɝθˌdeɪ",
+  "vi": "sinh nhật"
+ },
+ "party": {
+  "ipa": "ˈpɑrti",
+  "vi": "bữa tiệc"
+ },
+ "park": {
+  "ipa": "pɑrk",
+  "vi": "công viên"
+ },
+ "run": {
+  "ipa": "rʌn",
+  "vi": "chạy"
+ },
+ "laugh": {
+  "ipa": "læf",
+  "vi": "cười to"
+ },
+ "hen": {
+  "ipa": "hɛn",
+  "vi": "con gà mái"
+ },
+ "chick": {
+  "ipa": "tʃɪk",
+  "vi": "gà con"
+ },
+ "chicks": {
+  "ipa": "tʃɪks",
+  "vi": "gà con"
+ },
+ "good morning, mother hen": {
+  "ipa": "ɡʊd ˈmɔrnɪŋ ˈmʌðɚ ˈhɛn",
+  "vi": "Chào buổi sáng, Mẹ Gà Mái"
+ },
+ "throw": {
+  "ipa": "θroʊ",
+  "vi": "ném"
+ },
+ "catch": {
+  "ipa": "kætʃ",
+  "vi": "bắt"
+ },
+ "hit": {
+  "ipa": "hɪt",
+  "vi": "đánh"
+ },
+ "kick": {
+  "ipa": "kɪk",
+  "vi": "đá"
+ },
+ "roll": {
+  "ipa": "roʊl",
+  "vi": "lăn"
+ },
+ "bounce": {
+  "ipa": "baʊns",
+  "vi": "nảy (đập bóng)"
+ },
+ "ball, ball, bounce the ball!": {
+  "ipa": "ˈbɔl ˈbɔl ˈbaʊns ðə ˈbɔl",
+  "vi": "Bóng ơi, đập bóng nào!"
+ },
+ "can you bounce a ball 4 times?": {
+  "ipa": "kən ju ˈbaʊns ə ˈbɔl ˈfɔr ˈtaɪmz",
+  "vi": "Con đập bóng 4 lần được không?"
+ },
+ "i can kick a ball.": {
+  "ipa": "aɪ kən ˈkɪk ə ˈbɔl",
+  "vi": "Tớ đá được bóng."
+ },
+ "there are 12 biscuits and 2 children.": {
+  "ipa": "ðɛr ɑr ˈtwɛlv ˈbɪskɪts ən ˈtu ˈtʃɪldrən",
+  "vi": "Có 12 cái bánh và 2 bạn."
+ },
+ "rock": {
+  "ipa": "rɑk",
+  "vi": "hòn đá (nắm tay)"
+ },
+ "paper": {
+  "ipa": "ˈpeɪpɚ",
+  "vi": "tờ giấy (xòe tay)"
+ },
+ "1, 2, 3, go!": {
+  "ipa": "ˈwʌn ˈtu ˈθri ˈɡoʊ",
+  "vi": "1, 2, 3, ra!"
+ },
+ "you win!": {
+  "ipa": "ju ˈwɪn",
+  "vi": "Bạn thắng rồi!"
+ },
+ "well played!": {
+  "ipa": "ˈwɛl ˈpleɪd",
+  "vi": "Chơi hay lắm!"
+ },
+ "let's play again.": {
+  "ipa": "ˈlɛts ˈpleɪ əˈɡɛn",
+  "vi": "Mình chơi lại nhé."
+ },
+ "on": {
+  "ipa": "ɑn",
+  "vi": "ở trên"
+ },
+ "under": {
+  "ipa": "ˈʌndɚ",
+  "vi": "ở dưới"
+ },
+ "next to": {
+  "ipa": "ˈnɛkst tu",
+  "vi": "bên cạnh"
+ },
+ "where is the duck?": {
+  "ipa": "ˈwɛr ɪz ðə ˈdʌk",
+  "vi": "Con vịt ở đâu?"
+ },
+ "her pencil is on her nose.": {
+  "ipa": "hɝ ˈpɛnsəl ɪz ɑn hɝ ˈnoʊz",
+  "vi": "Bút chì của bạn ấy ở trên mũi."
+ },
+ "his pencil is on his shoulder.": {
+  "ipa": "hɪz ˈpɛnsəl ɪz ɑn hɪz ˈʃoʊldɚ",
+  "vi": "Bút chì của bạn ấy ở trên vai."
+ },
+ "foot": {
+  "ipa": "fʊt",
+  "vi": "bàn chân"
+ },
+ "knee": {
+  "ipa": "ni",
+  "vi": "đầu gối"
+ },
+ "ear": {
+  "ipa": "ɪr",
+  "vi": "cái tai"
+ },
+ "ears": {
+  "ipa": "ɪrz",
+  "vi": "cái tai"
+ },
+ "nose": {
+  "ipa": "noʊz",
+  "vi": "cái mũi"
+ },
+ "arm": {
+  "ipa": "ɑrm",
+  "vi": "cánh tay"
+ },
+ "ceiling": {
+  "ipa": "ˈsilɪŋ",
+  "vi": "trần nhà"
+ },
+ "floor": {
+  "ipa": "flɔr",
+  "vi": "sàn nhà"
+ },
+ "wind the bobbin up": {
+  "ipa": "ˈwaɪnd ðə ˈbɑbɪn ˈʌp",
+  "vi": "Quấn cuộn chỉ lên"
+ },
+ "cup": {
+  "ipa": "kʌp",
+  "vi": "cái cốc"
+ },
+ "bug": {
+  "ipa": "bʌɡ",
+  "vi": "con bọ"
+ },
+ "puppy": {
+  "ipa": "ˈpʌpi",
+  "vi": "chó con"
+ },
+ "jump": {
+  "ipa": "dʒʌmp",
+  "vi": "nhảy"
+ },
+ "buzz": {
+  "ipa": "bʌz",
+  "vi": "kêu vo ve"
+ },
+ "nut": {
+  "ipa": "nʌt",
+  "vi": "quả hạch"
+ },
+ "truck": {
+  "ipa": "trʌk",
+  "vi": "xe tải"
+ },
+ "cut": {
+  "ipa": "kʌt",
+  "vi": "cắt"
+ },
+ "mud": {
+  "ipa": "mʌd",
+  "vi": "bùn"
+ },
+ "i can sit on the rug.": {
+  "ipa": "aɪ kən ˈsɪt ɑn ðə ˈrʌɡ",
+  "vi": "Tớ ngồi được trên tấm thảm."
+ },
+ "run, duck, run!": {
+  "ipa": "ˈrʌn ˈdʌk ˈrʌn",
+  "vi": "Chạy đi vịt ơi!"
+ },
+ "thank you very much!": {
+  "ipa": "ˈθæŋk ju ˈvɛri ˈmʌtʃ",
+  "vi": "Cảm ơn bạn rất nhiều!"
+ },
+ "good luck!": {
+  "ipa": "ɡʊd ˈlʌk",
+  "vi": "Chúc may mắn!"
+ },
+ "lion": {
+  "ipa": "ˈlaɪən",
+  "vi": "con sư tử"
+ },
+ "pond": {
+  "ipa": "pɑnd",
+  "vi": "cái ao"
+ },
+ "scared": {
+  "ipa": "skɛrd",
+  "vi": "sợ hãi"
+ },
+ "silly": {
+  "ipa": "ˈsɪli",
+  "vi": "ngốc nghếch"
+ },
+ "wise": {
+  "ipa": "waɪz",
+  "vi": "thông thái"
+ },
+ "storm": {
+  "ipa": "stɔrm",
+  "vi": "cơn bão"
+ },
+ "train": {
+  "ipa": "treɪn",
+  "vi": "tàu hỏa"
+ },
+ "fire": {
+  "ipa": "ˈfaɪɚ",
+  "vi": "ngọn lửa"
+ },
+ "what's wrong?": {
+  "ipa": "ˈwʌts ˈrɔŋ",
+  "vi": "Có chuyện gì thế?"
+ },
+ "don't be scared, rabbit.": {
+  "ipa": "ˈdoʊnt bi ˈskɛrd ˈræbɪt",
+  "vi": "Đừng sợ, Thỏ ơi."
+ },
+ "i'm here with you.": {
+  "ipa": "aɪm ˈhɪr wɪð ju",
+  "vi": "Tớ ở đây với cậu."
+ },
+ "let's go look at it.": {
+  "ipa": "ˈlɛts ˈɡoʊ ˈlʊk æt ɪt",
+  "vi": "Mình cùng đi xem nào."
+ },
+ "dress": {
+  "ipa": "drɛs",
+  "vi": "cái váy liền"
+ },
+ "shirt": {
+  "ipa": "ʃɝt",
+  "vi": "áo sơ mi"
+ },
+ "trousers": {
+  "ipa": "ˈtraʊzɚz",
+  "vi": "quần dài"
+ },
+ "skirt": {
+  "ipa": "skɝt",
+  "vi": "chân váy"
+ },
+ "crown": {
+  "ipa": "kraʊn",
+  "vi": "vương miện"
+ },
+ "diamond": {
+  "ipa": "ˈdaɪmənd",
+  "vi": "viên kim cương"
+ },
+ "can you guess who i am?": {
+  "ipa": "kən ju ˈɡɛs ˈhu aɪ æm",
+  "vi": "Bạn đoán được tớ là ai không?"
+ },
+ "clown": {
+  "ipa": "klaʊn",
+  "vi": "chú hề"
+ },
+ "princess": {
+  "ipa": "ˈprɪnsɛs",
+  "vi": "công chúa"
+ },
+ "king": {
+  "ipa": "kɪŋ",
+  "vi": "nhà vua"
+ },
+ "superhero": {
+  "ipa": "ˈsupɚˌhɪroʊ",
+  "vi": "siêu anh hùng"
+ },
+ "pilot": {
+  "ipa": "ˈpaɪlət",
+  "vi": "phi công"
+ },
+ "cook": {
+  "ipa": "kʊk",
+  "vi": "đầu bếp"
+ },
+ "spoon": {
+  "ipa": "spun",
+  "vi": "cái thìa"
+ },
+ "spoons": {
+  "ipa": "spunz",
+  "vi": "cái thìa"
+ },
+ "what are you making?": {
+  "ipa": "ˈwʌt ɑr ju ˈmeɪkɪŋ",
+  "vi": "Bạn đang làm gì thế?"
+ },
+ "i'm = i am. he's = he is.": {
+  "ipa": "aɪm aɪ ˈæm hiz hi ˈɪz",
+  "vi": "I'm là I am. He's là He is."
+ },
+ "circle": {
+  "ipa": "ˈsɝkəl",
+  "vi": "hình tròn"
+ },
+ "circles": {
+  "ipa": "ˈsɝkəlz",
+  "vi": "hình tròn"
+ },
+ "square": {
+  "ipa": "skwɛr",
+  "vi": "hình vuông"
+ },
+ "squares": {
+  "ipa": "skwɛrz",
+  "vi": "hình vuông"
+ },
+ "triangle": {
+  "ipa": "ˈtraɪˌæŋɡəl",
+  "vi": "hình tam giác"
+ },
+ "triangles": {
+  "ipa": "ˈtraɪˌæŋɡəlz",
+  "vi": "hình tam giác"
+ },
+ "rectangle": {
+  "ipa": "ˈrɛkˌtæŋɡəl",
+  "vi": "hình chữ nhật"
+ },
+ "rectangles": {
+  "ipa": "ˈrɛkˌtæŋɡəlz",
+  "vi": "hình chữ nhật"
+ },
+ "quilt": {
+  "ipa": "kwɪlt",
+  "vi": "chăn chắp vải"
+ },
+ "eleven": {
+  "ipa": "ɪˈlɛvən",
+  "vi": "mười một"
+ },
+ "twelve": {
+  "ipa": "twɛlv",
+  "vi": "mười hai"
+ },
+ "thirteen": {
+  "ipa": "ˌθɝˈtin",
+  "vi": "mười ba"
+ },
+ "fourteen": {
+  "ipa": "ˌfɔrˈtin",
+  "vi": "mười bốn"
+ },
+ "fifteen": {
+  "ipa": "ˌfɪfˈtin",
+  "vi": "mười lăm"
+ },
+ "sixteen": {
+  "ipa": "ˌsɪksˈtin",
+  "vi": "mười sáu"
+ },
+ "seventeen": {
+  "ipa": "ˌsɛvənˈtin",
+  "vi": "mười bảy"
+ },
+ "eighteen": {
+  "ipa": "ˌeɪˈtin",
+  "vi": "mười tám"
+ },
+ "nineteen": {
+  "ipa": "ˌnaɪnˈtin",
+  "vi": "mười chín"
+ },
+ "twenty": {
+  "ipa": "ˈtwɛnti",
+  "vi": "hai mươi"
+ },
+ "blue and green": {
+  "ipa": "ˈblu ən ˈɡrin",
+  "vi": "xanh dương và xanh lá"
+ },
+ "what are you doing?": {
+  "ipa": "ˈwʌt ɑr ju ˈduɪŋ",
+  "vi": "Bạn đang làm gì thế?"
  }
 }

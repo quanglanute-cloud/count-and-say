@@ -2042,6 +2042,1211 @@
           ]
         }
       ]
+    },
+    {
+      "id": "eng-u2-family-time",
+      "book": "english",
+      "unit": "Unit 2 · pages 34–49",
+      "title": "Family Time",
+      "icon": "👪",
+      "added": "2026-10-21",
+      "count": true,
+      "tabs": [
+        {
+          "name": "My family",
+          "items": [
+            {
+              "word": "family",
+              "pic": "👪",
+              "sentence": "I love my family."
+            },
+            {
+              "word": "mother",
+              "pic": "👩",
+              "hint": "mum",
+              "say": "Mother. Mum. This is my mother.",
+              "sentence": "This is my mother."
+            },
+            {
+              "word": "father",
+              "pic": "👨",
+              "hint": "dad",
+              "say": "Father. Dad. This is my father.",
+              "sentence": "This is my father."
+            },
+            {
+              "word": "brother",
+              "pic": "👦",
+              "sentence": "This is my brother."
+            },
+            {
+              "word": "sister",
+              "pic": "👧",
+              "sentence": "This is my sister."
+            },
+            {
+              "word": "grandma",
+              "pic": "👵",
+              "sentence": "This is my grandma."
+            },
+            {
+              "word": "grandpa",
+              "pic": "👴",
+              "sentence": "This is my grandpa."
+            },
+            {
+              "word": "baby",
+              "pic": "👶",
+              "sentence": "My little baby brother."
+            },
+            {
+              "word": "th: mother, father, brother",
+              "pic": "👅",
+              "say": "Listen to the th sound. Mother. Father. Brother.",
+              "hint": "the th sound",
+              "quiz": false
+            },
+            {
+              "word": "There are 4 people in my family.",
+              "pic": "👨👩👦👶",
+              "say": "There are four people in my family. My father, my mother, my little baby brother. Wait, there's one other. Oh, yes. It's me!",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "This is for you.",
+              "pic": "🎁",
+              "say": "This is for you.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Thank you! You're welcome.",
+              "pic": "🙏",
+              "say": "Thank you! You're welcome.",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "At home",
+          "items": [
+            {
+              "word": "home",
+              "pic": "🏠",
+              "say": "Home. I sleep at home.",
+              "sentence": "I sleep at home."
+            },
+            {
+              "word": "eat dinner",
+              "pic": "🍽️",
+              "say": "Eat dinner. We eat dinner at home.",
+              "sentence": "We eat dinner at home.",
+              "find": "Who can eat dinner?"
+            },
+            {
+              "word": "dance",
+              "pic": "💃",
+              "say": "Dance. We dance at home.",
+              "sentence": "We dance at home.",
+              "find": "Who can dance?"
+            },
+            {
+              "word": "read books",
+              "pic": "📚",
+              "say": "Read books. I read books with my family.",
+              "sentence": "I read books with my family.",
+              "find": "Who can read books?"
+            },
+            {
+              "word": "play games",
+              "pic": "🎲",
+              "say": "Play games. We play games at home.",
+              "sentence": "We play games at home.",
+              "find": "Who can play games?"
+            },
+            {
+              "word": "watch TV",
+              "pic": "📺",
+              "say": "Watch tv. We watch TV at home.",
+              "sentence": "We watch TV at home.",
+              "find": "Who can watch TV?"
+            },
+            {
+              "word": "sleep",
+              "pic": "😴",
+              "say": "Sleep. I sleep in my bed.",
+              "sentence": "I sleep in my bed.",
+              "find": "Who can sleep?"
+            },
+            {
+              "word": "house",
+              "pic": "🏠",
+              "plural": "houses",
+              "sentence": "There is one house."
+            },
+            {
+              "word": "door",
+              "pic": "🚪",
+              "plural": "doors",
+              "sentence": "How many doors are there?"
+            },
+            {
+              "word": "window",
+              "pic": "🖼️",
+              "plural": "windows",
+              "hint": "a window",
+              "sentence": "There are four windows."
+            },
+            {
+              "word": "bed",
+              "pic": "🛏️",
+              "plural": "beds",
+              "sentence": "There are two beds."
+            },
+            {
+              "word": "tree",
+              "pic": "🌳",
+              "plural": "trees",
+              "sentence": "How many trees are there?"
+            },
+            {
+              "word": "flower",
+              "pic": "🌸",
+              "plural": "flowers",
+              "sentence": "How many flowers are there?"
+            },
+            {
+              "word": "Ten in the bed",
+              "pic": "🛏️",
+              "say": "There are ten in the bed, and the little one says, roll over, roll over! So they all roll over and one falls out. There are nine in the bed.",
+              "hint": "sing the song",
+              "quiz": false
+            },
+            {
+              "word": "Good night!",
+              "pic": "🌙",
+              "say": "Good night!",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Food",
+          "items": [
+            {
+              "word": "rice",
+              "pic": "🍚",
+              "sentence": "I eat rice for breakfast."
+            },
+            {
+              "word": "beans",
+              "pic": "🥫",
+              "hint": "beans in a can",
+              "sentence": "I eat beans."
+            },
+            {
+              "word": "eggs",
+              "pic": "🍳",
+              "sentence": "My brother eats eggs.",
+              "find": "Find the eggs."
+            },
+            {
+              "word": "bread",
+              "pic": "🍞",
+              "sentence": "I eat bread."
+            },
+            {
+              "word": "fruit",
+              "pic": "🍉",
+              "sentence": "Sami eats fruit."
+            },
+            {
+              "word": "soup",
+              "pic": "🍲",
+              "sentence": "I eat soup."
+            },
+            {
+              "word": "noodles",
+              "pic": "🍜",
+              "sentence": "I eat noodles for breakfast.",
+              "find": "Find the noodles."
+            },
+            {
+              "word": "yogurt",
+              "pic": "🥣",
+              "sentence": "I eat yogurt."
+            },
+            {
+              "word": "mango",
+              "pic": "🥭",
+              "plural": "mangos",
+              "sentence": "I like mangos."
+            },
+            {
+              "word": "pear",
+              "pic": "🍐",
+              "plural": "pears",
+              "sentence": "She doesn't like pears."
+            },
+            {
+              "word": "grapes",
+              "pic": "🍇",
+              "sentence": "Sara likes grapes.",
+              "find": "Find the grapes."
+            },
+            {
+              "word": "chicken",
+              "pic": "🍗",
+              "sentence": "We buy chicken."
+            },
+            {
+              "word": "carrot",
+              "pic": "🥕",
+              "plural": "carrots",
+              "sentence": "We buy carrots."
+            },
+            {
+              "word": "milk",
+              "pic": "🥛",
+              "sentence": "We buy milk."
+            },
+            {
+              "word": "ice cream",
+              "pic": "🍦",
+              "sentence": "We like to eat ice cream."
+            },
+            {
+              "word": "cake",
+              "pic": "🎂",
+              "plural": "cakes",
+              "sentence": "Mum makes a cake."
+            },
+            {
+              "word": "What do you eat for breakfast?",
+              "pic": "🥞",
+              "say": "What do you eat for breakfast? I eat bread.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Do you like apples? Yes, I do. No, I don't.",
+              "pic": "🍏",
+              "say": "Do you like apples? Yes, I do. No, I don't.",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Short a",
+          "items": [
+            {
+              "word": "cat",
+              "pic": "🐈",
+              "say": "Cat. The cat has a hat.",
+              "sentence": "The cat has a hat."
+            },
+            {
+              "word": "hat",
+              "pic": "🎩",
+              "sentence": "Here is Grandma's hat."
+            },
+            {
+              "word": "map",
+              "pic": "🗺️",
+              "sentence": "The cat has a map."
+            },
+            {
+              "word": "cap",
+              "pic": "🧢",
+              "say": "Cap. Cap rhymes with map.",
+              "sentence": "I have a cap."
+            },
+            {
+              "word": "clap",
+              "pic": "👏",
+              "say": "Clap! The cat claps.",
+              "sentence": "The cat claps.",
+              "find": "Who can clap?"
+            },
+            {
+              "word": "nap",
+              "pic": "😴",
+              "say": "Nap. The cat has a nap in Dad's lap.",
+              "sentence": "The cat has a nap."
+            },
+            {
+              "word": "lap",
+              "pic": "🛋️",
+              "say": "Lap. She puts her hands on her lap.",
+              "hint": "map, lap, nap, cap, clap",
+              "quiz": false
+            },
+            {
+              "word": "glasses",
+              "pic": "👓",
+              "say": "Glasses. Here are Grandma's glasses.",
+              "sentence": "Here are Grandma's glasses.",
+              "find": "Find the glasses."
+            },
+            {
+              "word": "hand",
+              "pic": "✋",
+              "plural": "hands",
+              "sentence": "She folds her hands."
+            },
+            {
+              "word": "Grandma's glasses",
+              "pic": "👵👓",
+              "say": "Here are Grandma's glasses. Here is Grandma's hat. This is how she folds her hands, and puts them on her lap.",
+              "hint": "say the rhyme",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Days & fun",
+          "items": [
+            {
+              "word": "Monday",
+              "pic": "📅",
+              "say": "Monday",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Tuesday",
+              "pic": "📅",
+              "say": "Tuesday",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Wednesday",
+              "pic": "📅",
+              "say": "Wednesday",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Thursday",
+              "pic": "📅",
+              "say": "Thursday",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Friday",
+              "pic": "📅",
+              "say": "Friday",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Saturday",
+              "pic": "📅",
+              "say": "Saturday",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Sunday",
+              "pic": "📅",
+              "say": "Sunday",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "birthday",
+              "pic": "🎉",
+              "say": "Birthday. Happy birthday, Grandpa!",
+              "sentence": "Happy birthday, Grandpa!"
+            },
+            {
+              "word": "party",
+              "pic": "🎈",
+              "say": "Party. We plan a party.",
+              "sentence": "We plan a party."
+            },
+            {
+              "word": "park",
+              "pic": "🏞️",
+              "say": "Park. We like to go to the park.",
+              "sentence": "We like to go to the park."
+            },
+            {
+              "word": "run",
+              "pic": "🏃",
+              "say": "Run. We like to run.",
+              "sentence": "We like to run.",
+              "find": "Who can run?"
+            },
+            {
+              "word": "sing",
+              "pic": "🎤",
+              "say": "Sing. We like to sing.",
+              "sentence": "We like to sing.",
+              "find": "Who can sing?"
+            },
+            {
+              "word": "laugh",
+              "pic": "😂",
+              "say": "Laugh. We like to laugh.",
+              "sentence": "We like to laugh.",
+              "find": "Who can laugh?"
+            },
+            {
+              "word": "hen",
+              "pic": "🐔",
+              "say": "Hen. Good morning, Mother Hen.",
+              "sentence": "Good morning, Mother Hen."
+            },
+            {
+              "word": "chick",
+              "pic": "🐤",
+              "plural": "chicks",
+              "say": "Chick. How many chicks have you got?",
+              "sentence": "I have ten chicks."
+            },
+            {
+              "word": "Good morning, Mother Hen",
+              "pic": "🐔🐤",
+              "say": "Chook, chook, chook, chook, chook. Good morning, Mother Hen. How many chicks have you got? Oh my, I have ten. Four of them are yellow. Four of them are brown. And two of them are speckled red, the nicest in the town.",
+              "hint": "say the poem",
+              "quiz": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u3-fun-and-games",
+      "book": "english",
+      "unit": "Unit 3 · pages 50–67",
+      "title": "Fun and Games",
+      "icon": "⚽",
+      "added": "2026-10-21",
+      "tabs": [
+        {
+          "name": "Ball games",
+          "items": [
+            {
+              "word": "throw",
+              "pic": "🤾",
+              "say": "Throw. Throw the ball!",
+              "sentence": "Throw the ball!",
+              "find": "Who can throw?"
+            },
+            {
+              "word": "catch",
+              "pic": "🙌",
+              "say": "Catch. Catch the ball!",
+              "sentence": "Catch the ball!",
+              "find": "Who can catch?"
+            },
+            {
+              "word": "hit",
+              "pic": "🏓",
+              "say": "Hit. Hit the ball!",
+              "sentence": "Hit the ball!",
+              "find": "Who can hit?"
+            },
+            {
+              "word": "kick",
+              "pic": "⚽",
+              "say": "Kick. Kick the ball!",
+              "sentence": "Kick the ball!",
+              "find": "Who can kick?"
+            },
+            {
+              "word": "roll",
+              "pic": "🎳",
+              "say": "Roll. Roll the ball!",
+              "sentence": "Roll the ball!",
+              "find": "Who can roll?"
+            },
+            {
+              "word": "bounce",
+              "pic": "🏀",
+              "say": "Bounce. Bounce the ball!",
+              "sentence": "Bounce the ball!",
+              "find": "Who can bounce?"
+            },
+            {
+              "word": "box",
+              "pic": "📦",
+              "sentence": "Throw a ball into a box."
+            },
+            {
+              "word": "ball",
+              "pic": "⚽",
+              "plural": "balls",
+              "sentence": "I can kick a ball."
+            },
+            {
+              "word": "Ball, ball, bounce the ball!",
+              "pic": "🏀",
+              "say": "Ball, ball, bounce the ball! Roll it, throw it, catch the ball!",
+              "hint": "say the poem",
+              "quiz": false
+            },
+            {
+              "word": "Can you bounce a ball 4 times?",
+              "pic": "🏀",
+              "say": "Can you bounce a ball four times? Yes, I can. No, I can't.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "I can kick a ball.",
+              "pic": "⚽",
+              "say": "I can kick a ball.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "There are 12 biscuits and 2 children.",
+              "pic": "🍪",
+              "say": "There are twelve biscuits and two children. How many biscuits can each child have? Six!",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Hand games",
+          "items": [
+            {
+              "word": "rock",
+              "pic": "✊",
+              "say": "Rock. A rock can break scissors, so rock wins.",
+              "sentence": "A rock can break scissors."
+            },
+            {
+              "word": "paper",
+              "pic": "✋",
+              "say": "Paper. Paper can cover a rock, so paper wins.",
+              "sentence": "Paper can cover a rock."
+            },
+            {
+              "word": "scissors",
+              "pic": "✌️",
+              "say": "Scissors. Scissors can cut paper, so scissors win.",
+              "sentence": "Scissors can cut paper.",
+              "find": "Find the scissors."
+            },
+            {
+              "word": "bird",
+              "pic": "🐦",
+              "say": "Bird. A bird can drink water, so bird wins.",
+              "sentence": "A bird can drink water."
+            },
+            {
+              "word": "water",
+              "pic": "💧",
+              "say": "Water. Water can cover a rock, so water wins.",
+              "sentence": "Water can cover a rock."
+            },
+            {
+              "word": "1, 2, 3, go!",
+              "pic": "🚦",
+              "say": "1, 2, 3, go!",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "You win!",
+              "pic": "🏆",
+              "say": "You win!",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Well played!",
+              "pic": "👍",
+              "say": "Well played!",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Let's play again.",
+              "pic": "🔁",
+              "say": "Let's play again.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "clap",
+              "pic": "👏",
+              "say": "Clap! Clap your hands.",
+              "sentence": "Clap your hands.",
+              "find": "Who can clap?"
+            }
+          ]
+        },
+        {
+          "name": "Where is it?",
+          "items": [
+            {
+              "word": "duck",
+              "pic": "🦆",
+              "say": "Duck. Where is the duck? The duck is on the table.",
+              "sentence": "The duck is on the table."
+            },
+            {
+              "word": "on",
+              "pic": "⬆️",
+              "say": "On. The duck is on the table.",
+              "sentence": "The duck is on the table.",
+              "find": "Find on."
+            },
+            {
+              "word": "under",
+              "pic": "⬇️",
+              "say": "Under. The duck is under the table.",
+              "sentence": "The duck is under the table.",
+              "find": "Find under."
+            },
+            {
+              "word": "next to",
+              "pic": "↔️",
+              "say": "Next to. The duck is next to the table.",
+              "sentence": "The duck is next to the table.",
+              "find": "Find next to."
+            },
+            {
+              "word": "Where is the duck?",
+              "pic": "🦆❓",
+              "say": "Where is the duck?",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Her pencil is on her nose.",
+              "pic": "👃✏️",
+              "say": "Her pencil is on her nose.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "His pencil is on his shoulder.",
+              "pic": "✏️",
+              "say": "His pencil is on his shoulder.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "foot",
+              "pic": "🦶",
+              "sentence": "Point to your foot."
+            },
+            {
+              "word": "toes",
+              "pic": "🦶",
+              "sentence": "Point to your toes.",
+              "find": "Find the toes."
+            },
+            {
+              "word": "knee",
+              "pic": "🦵",
+              "plural": "knees",
+              "sentence": "Point to your knee."
+            },
+            {
+              "word": "ear",
+              "pic": "👂",
+              "plural": "ears",
+              "sentence": "Point to your ears."
+            },
+            {
+              "word": "nose",
+              "pic": "👃",
+              "sentence": "Point to your nose."
+            },
+            {
+              "word": "arm",
+              "pic": "💪",
+              "sentence": "Point to your arm."
+            },
+            {
+              "word": "finger",
+              "pic": "☝️",
+              "sentence": "Put your finger on your nose."
+            },
+            {
+              "word": "ceiling",
+              "pic": "🔝",
+              "hint": "up, up, up",
+              "sentence": "Point to the ceiling."
+            },
+            {
+              "word": "floor",
+              "pic": "👇",
+              "hint": "down, down",
+              "sentence": "Point to the floor."
+            },
+            {
+              "word": "Wind the bobbin up",
+              "pic": "🧵",
+              "say": "Wind the bobbin up. Wind the bobbin up. Pull, pull. Clap, clap, clap. Point to the ceiling. Point to the floor. Point to the window and point to the door. Clap your hands together, one, two, three. Put your hands upon your knees.",
+              "hint": "sing and dance",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Short u",
+          "items": [
+            {
+              "word": "cup",
+              "pic": "☕",
+              "sentence": "A cup and a cap."
+            },
+            {
+              "word": "bug",
+              "pic": "🐛",
+              "sentence": "I can jump like a bug."
+            },
+            {
+              "word": "puppy",
+              "pic": "🐶",
+              "sentence": "I can run like a puppy."
+            },
+            {
+              "word": "jump",
+              "pic": "🦘",
+              "sentence": "It can jump.",
+              "find": "Who can jump?"
+            },
+            {
+              "word": "buzz",
+              "pic": "🐝",
+              "sentence": "I can buzz like a bee.",
+              "find": "Who can buzz?"
+            },
+            {
+              "word": "sun",
+              "pic": "☀️",
+              "sentence": "I run in the sun."
+            },
+            {
+              "word": "nut",
+              "pic": "🌰",
+              "sentence": "A big nut fell in the pond."
+            },
+            {
+              "word": "truck",
+              "pic": "🚚",
+              "sentence": "I have a truck."
+            },
+            {
+              "word": "cut",
+              "pic": "✂️",
+              "sentence": "The cat can cut.",
+              "find": "Who can cut?"
+            },
+            {
+              "word": "mud",
+              "pic": "🐷",
+              "say": "Mud. The duck is in the mud. She's stuck!",
+              "hint": "the duck is stuck",
+              "quiz": false
+            },
+            {
+              "word": "I can sit on the rug.",
+              "pic": "🧘",
+              "say": "I can sit on the rug.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Run, duck, run!",
+              "pic": "🦆",
+              "say": "I run in the sun. It's lots of fun! Help! I'm stuck in the mud! I can help. I have a truck. Up, up, up! Thank you very much! Goodbye. Good luck!",
+              "hint": "the phonics story",
+              "quiz": false
+            },
+            {
+              "word": "Thank you very much!",
+              "pic": "🙏",
+              "say": "Thank you very much!",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Good luck!",
+              "pic": "🍀",
+              "say": "Good luck!",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Ker-PLUNK",
+          "items": [
+            {
+              "word": "rabbit",
+              "pic": "🐇",
+              "say": "Rabbit. Help! A scary Ker-PLUNK! Run, run, run!",
+              "sentence": "Rabbit is scared."
+            },
+            {
+              "word": "lion",
+              "pic": "🦁",
+              "say": "Lion. Goodbye, wise lion!",
+              "sentence": "The lion is wise."
+            },
+            {
+              "word": "frog",
+              "pic": "🐸",
+              "plural": "frogs",
+              "say": "Frogs. Jump, jump, jump!",
+              "sentence": "The frogs jump."
+            },
+            {
+              "word": "pond",
+              "pic": "🏞️",
+              "sentence": "A big nut fell in the pond."
+            },
+            {
+              "word": "scared",
+              "pic": "😱",
+              "say": "Scared. Rabbit is scared.",
+              "sentence": "Rabbit is scared.",
+              "find": "Who is scared?"
+            },
+            {
+              "word": "silly",
+              "pic": "🤪",
+              "say": "Silly. Silly rabbit!",
+              "sentence": "Silly rabbit!",
+              "find": "Who is silly?"
+            },
+            {
+              "word": "wise",
+              "pic": "🦉",
+              "say": "Wise. The lion is wise.",
+              "sentence": "The lion is wise."
+            },
+            {
+              "word": "storm",
+              "pic": "⛈️",
+              "sentence": "A storm is scary."
+            },
+            {
+              "word": "train",
+              "pic": "🚆",
+              "sentence": "A train is not scary."
+            },
+            {
+              "word": "fire",
+              "pic": "🔥",
+              "sentence": "A fire is scary."
+            },
+            {
+              "word": "What's wrong?",
+              "pic": "😟",
+              "say": "What's wrong?",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Don't be scared, Rabbit.",
+              "pic": "🤗",
+              "say": "Don't be scared, Rabbit.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "I'm here with you.",
+              "pic": "🤝",
+              "say": "I'm here with you.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Let's go look at it.",
+              "pic": "👀",
+              "say": "Let's go look at it.",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u4-making-things",
+      "book": "english",
+      "unit": "Unit 4 · pages 68–73",
+      "title": "Making Things",
+      "icon": "✂️",
+      "added": "2026-10-21",
+      "tabs": [
+        {
+          "name": "Clothes",
+          "items": [
+            {
+              "word": "dress",
+              "pic": "👗",
+              "sentence": "I'm wearing a dress."
+            },
+            {
+              "word": "shirt",
+              "pic": "👕",
+              "sentence": "I'm wearing a shirt."
+            },
+            {
+              "word": "trousers",
+              "pic": "👖",
+              "sentence": "I'm wearing trousers.",
+              "find": "Find the trousers."
+            },
+            {
+              "word": "jacket",
+              "pic": "🧥",
+              "sentence": "I'm wearing a jacket."
+            },
+            {
+              "word": "skirt",
+              "pic": "🎀",
+              "hint": "a skirt",
+              "sentence": "I'm making a skirt."
+            },
+            {
+              "word": "shoes",
+              "pic": "👞",
+              "sentence": "I'm wearing shoes.",
+              "find": "Find the shoes."
+            },
+            {
+              "word": "glasses",
+              "pic": "👓",
+              "sentence": "I'm wearing yellow glasses.",
+              "find": "Find the glasses."
+            },
+            {
+              "word": "hat",
+              "pic": "🎩",
+              "sentence": "I'm wearing a hat."
+            },
+            {
+              "word": "crown",
+              "pic": "👑",
+              "sentence": "I'm making a crown."
+            },
+            {
+              "word": "diamond",
+              "pic": "💎",
+              "sentence": "There's a diamond on my shirt."
+            },
+            {
+              "word": "Can you guess who I am?",
+              "pic": "🤔",
+              "say": "I'm wearing yellow glasses and a bright blue skirt. Can you guess who I am? There's a diamond on my shirt.",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Who am I?",
+          "items": [
+            {
+              "word": "clown",
+              "pic": "🤡",
+              "sentence": "I am a clown."
+            },
+            {
+              "word": "princess",
+              "pic": "👸",
+              "sentence": "I am a princess."
+            },
+            {
+              "word": "king",
+              "pic": "🤴",
+              "sentence": "I am a king."
+            },
+            {
+              "word": "superhero",
+              "pic": "🦸",
+              "sentence": "I am a superhero."
+            },
+            {
+              "word": "pilot",
+              "pic": "✈️",
+              "sentence": "I am a pilot."
+            },
+            {
+              "word": "cook",
+              "pic": "🍳",
+              "sentence": "I am a cook."
+            },
+            {
+              "word": "puppet",
+              "pic": "🧸",
+              "hint": "a toy to make",
+              "sentence": "I'm making a clown puppet."
+            },
+            {
+              "word": "sock",
+              "pic": "🧦",
+              "plural": "socks",
+              "sentence": "Make a puppet from a sock."
+            },
+            {
+              "word": "glove",
+              "pic": "🧤",
+              "plural": "gloves",
+              "sentence": "Make a puppet from a glove."
+            },
+            {
+              "word": "spoon",
+              "pic": "🥄",
+              "plural": "spoons",
+              "sentence": "How many spoons are there?"
+            },
+            {
+              "word": "What are you making?",
+              "pic": "✂️",
+              "say": "What are you making? I am making a clown puppet.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "I'm = I am. He's = He is.",
+              "pic": "✍️",
+              "say": "I am. I'm. He is. He's.",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Shapes",
+          "items": [
+            {
+              "word": "circle",
+              "pic": "🔵",
+              "plural": "circles",
+              "sentence": "I can see blue circles."
+            },
+            {
+              "word": "square",
+              "pic": "⬛",
+              "plural": "squares",
+              "sentence": "She's cutting squares."
+            },
+            {
+              "word": "triangle",
+              "pic": "🔺",
+              "plural": "triangles",
+              "sentence": "We're cutting green triangles."
+            },
+            {
+              "word": "rectangle",
+              "pic": "🚪",
+              "plural": "rectangles",
+              "hint": "a door is a rectangle",
+              "sentence": "He's making a quilt with rectangles."
+            },
+            {
+              "word": "quilt",
+              "pic": "🛏️",
+              "hint": "a colourful blanket",
+              "sentence": "This blanket is a quilt."
+            },
+            {
+              "word": "eleven",
+              "pic": "1️⃣1️⃣",
+              "say": "eleven",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "twelve",
+              "pic": "1️⃣2️⃣",
+              "say": "twelve",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "thirteen",
+              "pic": "1️⃣3️⃣",
+              "say": "thirteen",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "fourteen",
+              "pic": "1️⃣4️⃣",
+              "say": "fourteen",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "fifteen",
+              "pic": "1️⃣5️⃣",
+              "say": "fifteen",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "sixteen",
+              "pic": "1️⃣6️⃣",
+              "say": "sixteen",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "seventeen",
+              "pic": "1️⃣7️⃣",
+              "say": "seventeen",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "eighteen",
+              "pic": "1️⃣8️⃣",
+              "say": "eighteen",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "nineteen",
+              "pic": "1️⃣9️⃣",
+              "say": "nineteen",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "twenty",
+              "pic": "2️⃣0️⃣",
+              "say": "twenty",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "blue and green",
+              "pic": "💙💚",
+              "say": "We use and to link words. Blue and green.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "What are you doing?",
+              "pic": "✂️",
+              "say": "What are you doing? I'm cutting blue squares. I'm making a picture.",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        }
+      ]
     }
   ]
 }
