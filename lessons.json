@@ -2982,7 +2982,7 @@
     {
       "id": "eng-u4-making-things",
       "book": "english",
-      "unit": "Unit 4 · pages 68–73",
+      "unit": "Unit 4 · pages 68–83",
       "title": "Making Things",
       "icon": "✂️",
       "added": "2026-10-21",
@@ -3241,6 +3241,555 @@
               "word": "What are you doing?",
               "pic": "✂️",
               "say": "What are you doing? I'm cutting blue squares. I'm making a picture.",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Painting",
+          "items": [
+            {
+              "word": "paint",
+              "pic": "🎨",
+              "sentence": "We are painting a picture.",
+              "find": "Who can paint?"
+            },
+            {
+              "word": "mural",
+              "pic": "🖼️",
+              "sentence": "We make a big mural."
+            },
+            {
+              "word": "jet",
+              "pic": "✈️",
+              "sentence": "Liz paints a red jet."
+            },
+            {
+              "word": "bridge",
+              "pic": "🌉",
+              "sentence": "They paint a gold bridge."
+            },
+            {
+              "word": "star",
+              "pic": "⭐",
+              "sentence": "She cuts silver stars.",
+              "plural": "stars"
+            },
+            {
+              "word": "city",
+              "pic": "🏙️",
+              "sentence": "The city is beautiful."
+            },
+            {
+              "word": "silver",
+              "pic": "🥈",
+              "sentence": "I like silver.",
+              "find": "Find silver."
+            },
+            {
+              "word": "gold",
+              "pic": "🥇",
+              "sentence": "I like gold.",
+              "find": "Find gold."
+            },
+            {
+              "word": "He is … / They are …",
+              "pic": "👦👫",
+              "hint": "one person: is · more: are",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Short e",
+          "items": [
+            {
+              "word": "egg",
+              "pic": "🥚",
+              "sentence": "Meg has an egg."
+            },
+            {
+              "word": "pen",
+              "pic": "🖊️",
+              "sentence": "The hen has a pen."
+            },
+            {
+              "word": "hen",
+              "pic": "🐔",
+              "sentence": "My black hen."
+            },
+            {
+              "word": "bed",
+              "pic": "🛏️",
+              "sentence": "A tent next to the bed."
+            },
+            {
+              "word": "tent",
+              "pic": "⛺",
+              "sentence": "Let's make a tent."
+            },
+            {
+              "word": "teddy",
+              "pic": "🧸",
+              "sentence": "Put the teddy in the tent."
+            },
+            {
+              "word": "ten",
+              "pic": "🔟",
+              "sentence": "I have ten pens."
+            },
+            {
+              "word": "red",
+              "pic": "❤️",
+              "sentence": "A red tent.",
+              "find": "Find red."
+            }
+          ]
+        },
+        {
+          "name": "The shoemaker",
+          "items": [
+            {
+              "word": "shoemaker",
+              "pic": "👞",
+              "sentence": "The shoemaker makes shoes."
+            },
+            {
+              "word": "elf",
+              "pic": "🧝",
+              "sentence": "The elves help.",
+              "plural": "elves"
+            },
+            {
+              "word": "boots",
+              "pic": "👢",
+              "sentence": "New boots!",
+              "find": "Find the boots."
+            },
+            {
+              "word": "tired",
+              "pic": "😫",
+              "sentence": "I am very tired.",
+              "find": "Who is tired?"
+            },
+            {
+              "word": "sleeping",
+              "pic": "😴",
+              "sentence": "He is sleeping.",
+              "find": "Who is sleeping?"
+            },
+            {
+              "word": "happy",
+              "pic": "😊",
+              "sentence": "The elves are happy.",
+              "find": "Who is happy?"
+            },
+            {
+              "word": "present",
+              "pic": "🎁",
+              "sentence": "A present for you."
+            },
+            {
+              "word": "morning",
+              "pic": "🌅",
+              "sentence": "It's morning."
+            },
+            {
+              "word": "beautiful = lovely = pretty",
+              "pic": "💖",
+              "hint": "three words, same meaning",
+              "quiz": false
+            },
+            {
+              "word": "piano",
+              "pic": "🎹",
+              "sentence": "I like playing the piano."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eng-u5-on-the-farm",
+      "book": "english",
+      "unit": "Unit 5 · pages 84–99",
+      "title": "On the Farm",
+      "icon": "🚜",
+      "added": "2026-10-21",
+      "count": true,
+      "tabs": [
+        {
+          "name": "Farm animals",
+          "items": [
+            {
+              "word": "tractor",
+              "pic": "🚜",
+              "sentence": "The farmer drives a tractor."
+            },
+            {
+              "word": "cow",
+              "pic": "🐄",
+              "sentence": "The cow says moo.",
+              "plural": "cows"
+            },
+            {
+              "word": "sheep",
+              "pic": "🐑",
+              "sentence": "The sheep says baa.",
+              "plural": "sheep"
+            },
+            {
+              "word": "hen",
+              "pic": "🐔",
+              "sentence": "The hen says cluck.",
+              "plural": "hens"
+            },
+            {
+              "word": "horse",
+              "pic": "🐴",
+              "sentence": "The horse says neigh.",
+              "plural": "horses"
+            },
+            {
+              "word": "goat",
+              "pic": "🐐",
+              "sentence": "Here is an apple for the goat.",
+              "plural": "goats"
+            },
+            {
+              "word": "duck",
+              "pic": "🦆",
+              "sentence": "The duck says quack.",
+              "plural": "ducks"
+            },
+            {
+              "word": "dog",
+              "pic": "🐶",
+              "sentence": "The dog says woof.",
+              "plural": "dogs"
+            },
+            {
+              "word": "cat",
+              "pic": "🐈",
+              "sentence": "The cat says meow.",
+              "plural": "cats"
+            },
+            {
+              "word": "lamb",
+              "pic": "🐑",
+              "hint": "a baby sheep",
+              "quiz": false
+            },
+            {
+              "word": "farmer",
+              "pic": "👒",
+              "hint": "works on a farm",
+              "quiz": false
+            },
+            {
+              "word": "moo · baa · cluck · neigh · woof · quack · meow",
+              "pic": "🔊",
+              "hint": "animal sounds",
+              "quiz": false
+            },
+            {
+              "word": "Old MacDonald had a farm",
+              "pic": "🎶",
+              "hint": "sing the song",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Farm work",
+          "items": [
+            {
+              "word": "feeding",
+              "pic": "🥕",
+              "sentence": "I'm feeding the horse.",
+              "find": "Who is feeding?"
+            },
+            {
+              "word": "carrying",
+              "pic": "📦",
+              "sentence": "He is carrying a box.",
+              "find": "Who is carrying?"
+            },
+            {
+              "word": "picking",
+              "pic": "🍓",
+              "sentence": "She is picking strawberries.",
+              "find": "Who is picking?"
+            },
+            {
+              "word": "driving",
+              "pic": "🚜",
+              "sentence": "He is driving a tractor.",
+              "find": "Who is driving?"
+            },
+            {
+              "word": "planting",
+              "pic": "🌱",
+              "sentence": "They are planting seeds.",
+              "find": "Who is planting?"
+            },
+            {
+              "word": "Are you picking? Yes, I am. No, I'm not.",
+              "pic": "🙋",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Living things need food and water.",
+              "pic": "💧",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Life cycles",
+          "items": [
+            {
+              "word": "seed",
+              "pic": "🌰",
+              "sentence": "A seed is in the ground.",
+              "plural": "seeds"
+            },
+            {
+              "word": "plant",
+              "pic": "🌿",
+              "sentence": "The seed grows into a plant."
+            },
+            {
+              "word": "bean",
+              "pic": "🥫",
+              "sentence": "A bean grows on the plant.",
+              "plural": "beans"
+            },
+            {
+              "word": "egg",
+              "pic": "🥚",
+              "sentence": "A chick grows inside an egg."
+            },
+            {
+              "word": "chick",
+              "pic": "🐤",
+              "sentence": "The chick comes out of the egg.",
+              "plural": "chicks"
+            },
+            {
+              "word": "duckling",
+              "pic": "🐥",
+              "sentence": "A duckling grows into a duck."
+            },
+            {
+              "word": "caterpillar",
+              "pic": "🐛",
+              "sentence": "A caterpillar becomes a butterfly."
+            },
+            {
+              "word": "butterfly",
+              "pic": "🦋",
+              "sentence": "I see a butterfly."
+            },
+            {
+              "word": "frog",
+              "pic": "🐸",
+              "sentence": "A tadpole grows into a frog."
+            },
+            {
+              "word": "tadpole",
+              "pic": "🐸",
+              "hint": "a baby frog",
+              "quiz": false
+            },
+            {
+              "word": "corn",
+              "pic": "🌽",
+              "sentence": "Corn grows from seeds."
+            },
+            {
+              "word": "diagram",
+              "pic": "🔄",
+              "hint": "follow the arrows",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Vegetables",
+          "items": [
+            {
+              "word": "carrot",
+              "pic": "🥕",
+              "sentence": "Carrots grow in the ground.",
+              "plural": "carrots"
+            },
+            {
+              "word": "pepper",
+              "pic": "🌶️",
+              "sentence": "Peppers grow above the ground.",
+              "plural": "peppers"
+            },
+            {
+              "word": "onion",
+              "pic": "🧅",
+              "sentence": "Onions grow in the ground.",
+              "plural": "onions"
+            },
+            {
+              "word": "potato",
+              "pic": "🥔",
+              "sentence": "Potatoes grow in the ground.",
+              "plural": "potatoes"
+            },
+            {
+              "word": "tomato",
+              "pic": "🍅",
+              "sentence": "Tomatoes grow above the ground.",
+              "plural": "tomatoes"
+            },
+            {
+              "word": "above",
+              "pic": "⬆️",
+              "sentence": "It grows above the ground.",
+              "find": "Find above."
+            },
+            {
+              "word": "in the ground",
+              "pic": "⬇️",
+              "hint": "under the soil",
+              "quiz": false
+            },
+            {
+              "word": "they're = they are · she's = she is",
+              "pic": "✍️",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Short i",
+          "items": [
+            {
+              "word": "big",
+              "pic": "🐘",
+              "sentence": "A big chick.",
+              "find": "Find something big."
+            },
+            {
+              "word": "pick",
+              "pic": "🍒",
+              "sentence": "I pick apples.",
+              "find": "Who can pick?"
+            },
+            {
+              "word": "fish",
+              "pic": "🐟",
+              "sentence": "This fish can fix things."
+            },
+            {
+              "word": "ship",
+              "pic": "🚢",
+              "sentence": "He is fixing a ship."
+            },
+            {
+              "word": "six",
+              "pic": "6️⃣",
+              "sentence": "Six sisters sing."
+            },
+            {
+              "word": "sick",
+              "pic": "🤒",
+              "sentence": "The sheep are sick.",
+              "find": "Who is sick?"
+            },
+            {
+              "word": "sticks",
+              "pic": "🥢",
+              "sentence": "How many sticks?"
+            },
+            {
+              "word": "kick",
+              "pic": "⚽",
+              "sentence": "A chick can kick.",
+              "find": "Who can kick?"
+            },
+            {
+              "word": "wings",
+              "pic": "🕊️",
+              "sentence": "Birds have wings.",
+              "find": "Find the wings."
+            },
+            {
+              "word": "fix",
+              "pic": "🔧",
+              "sentence": "I can fix it.",
+              "find": "Who can fix?"
+            },
+            {
+              "word": "ch: chick · sh: fish, ship",
+              "pic": "🐤🐟",
+              "hint": "",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Little Red Hen",
+          "items": [
+            {
+              "word": "wheat",
+              "pic": "🌾",
+              "sentence": "The hen picks the wheat."
+            },
+            {
+              "word": "bread",
+              "pic": "🍞",
+              "sentence": "The hen makes bread."
+            },
+            {
+              "word": "flour",
+              "pic": "🍚",
+              "hint": "made from wheat",
+              "quiz": false
+            },
+            {
+              "word": "Can you help me, please?",
+              "pic": "🙏",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Sorry, I'm busy.",
+              "pic": "🙅",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "I can do it myself.",
+              "pic": "💪",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "It's delicious!",
+              "pic": "😋",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "You are very helpful.",
+              "pic": "🤝",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Yes, I will.",
+              "pic": "👍",
               "hint": "",
               "quiz": false
             }

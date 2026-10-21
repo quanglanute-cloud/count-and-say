@@ -1798,5 +1798,289 @@
  "what are you doing?": {
   "ipa": "ˈwʌt ɑr ju ˈduɪŋ",
   "vi": "Bạn đang làm gì thế?"
+ },
+ "paint": {
+  "ipa": "peɪnt",
+  "vi": "sơn, tô màu"
+ },
+ "mural": {
+  "ipa": "ˈmjʊrəl",
+  "vi": "tranh tường"
+ },
+ "jet": {
+  "ipa": "dʒɛt",
+  "vi": "máy bay phản lực"
+ },
+ "bridge": {
+  "ipa": "brɪdʒ",
+  "vi": "cây cầu"
+ },
+ "city": {
+  "ipa": "ˈsɪti",
+  "vi": "thành phố"
+ },
+ "silver": {
+  "ipa": "ˈsɪlvɚ",
+  "vi": "màu bạc"
+ },
+ "gold": {
+  "ipa": "ɡoʊld",
+  "vi": "màu vàng kim"
+ },
+ "he is … / they are …": {
+  "ipa": "hi ɪz ðeɪ ɑr",
+  "vi": "is cho một người, are cho nhiều người"
+ },
+ "tent": {
+  "ipa": "tɛnt",
+  "vi": "cái lều"
+ },
+ "teddy": {
+  "ipa": "ˈtɛdi",
+  "vi": "gấu bông"
+ },
+ "shoemaker": {
+  "ipa": "ˈʃuˌmeɪkɚ",
+  "vi": "ông thợ đóng giày"
+ },
+ "elf": {
+  "ipa": "ɛlf",
+  "vi": "chú tiên tí hon"
+ },
+ "elves": {
+  "ipa": "ɛlvz",
+  "vi": "chú tiên tí hon"
+ },
+ "tired": {
+  "ipa": "ˈtaɪɚd",
+  "vi": "mệt"
+ },
+ "sleeping": {
+  "ipa": "ˈslipɪŋ",
+  "vi": "đang ngủ"
+ },
+ "present": {
+  "ipa": "ˈprɛzənt",
+  "vi": "món quà"
+ },
+ "morning": {
+  "ipa": "ˈmɔrnɪŋ",
+  "vi": "buổi sáng"
+ },
+ "beautiful = lovely = pretty": {
+  "ipa": "ˈbjutəfəl ˈlʌvli ˈprɪti",
+  "vi": "đẹp"
+ },
+ "piano": {
+  "ipa": "piˈænoʊ",
+  "vi": "đàn piano"
+ },
+ "tractor": {
+  "ipa": "ˈtræktɚ",
+  "vi": "máy kéo"
+ },
+ "cow": {
+  "ipa": "kaʊ",
+  "vi": "con bò"
+ },
+ "cows": {
+  "ipa": "kaʊz",
+  "vi": "con bò"
+ },
+ "sheep": {
+  "ipa": "ʃip",
+  "vi": "con cừu"
+ },
+ "hens": {
+  "ipa": "hɛnz",
+  "vi": "con gà mái"
+ },
+ "horse": {
+  "ipa": "hɔrs",
+  "vi": "con ngựa"
+ },
+ "horses": {
+  "ipa": "ˈhɔrsɪz",
+  "vi": "con ngựa"
+ },
+ "ducks": {
+  "ipa": "dʌks",
+  "vi": "con vịt"
+ },
+ "dogs": {
+  "ipa": "dɔɡz",
+  "vi": "con chó"
+ },
+ "lamb": {
+  "ipa": "læm",
+  "vi": "cừu con"
+ },
+ "farmer": {
+  "ipa": "ˈfɑrmɚ",
+  "vi": "bác nông dân"
+ },
+ "moo · baa · cluck · neigh · woof · quack · meow": {
+  "ipa": "mu bɑ klʌk neɪ wʊf kwæk miˈaʊ",
+  "vi": "tiếng kêu của các con vật"
+ },
+ "old macdonald had a farm": {
+  "ipa": "ˈoʊld məkˈdɑnəld hæd ə ˈfɑrm",
+  "vi": "Ông MacDonald có một trang trại"
+ },
+ "feeding": {
+  "ipa": "ˈfidɪŋ",
+  "vi": "cho ăn"
+ },
+ "carrying": {
+  "ipa": "ˈkæriɪŋ",
+  "vi": "mang, bê"
+ },
+ "picking": {
+  "ipa": "ˈpɪkɪŋ",
+  "vi": "hái"
+ },
+ "driving": {
+  "ipa": "ˈdraɪvɪŋ",
+  "vi": "lái xe"
+ },
+ "planting": {
+  "ipa": "ˈplæntɪŋ",
+  "vi": "trồng cây"
+ },
+ "are you picking? yes, i am. no, i'm not.": {
+  "ipa": "ɑr ju ˈpɪkɪŋ ˈjɛs aɪ ˈæm ˈnoʊ aɪm ˈnɑt",
+  "vi": "Bạn đang hái phải không? Đúng. Không phải."
+ },
+ "living things need food and water.": {
+  "ipa": "ˈlɪvɪŋ ˈθɪŋz ˈnid ˈfud ən ˈwɔtɚ",
+  "vi": "Sinh vật cần thức ăn và nước."
+ },
+ "seed": {
+  "ipa": "sid",
+  "vi": "hạt giống"
+ },
+ "bean": {
+  "ipa": "bin",
+  "vi": "hạt đậu"
+ },
+ "duckling": {
+  "ipa": "ˈdʌklɪŋ",
+  "vi": "vịt con"
+ },
+ "tadpole": {
+  "ipa": "ˈtædpoʊl",
+  "vi": "nòng nọc"
+ },
+ "corn": {
+  "ipa": "kɔrn",
+  "vi": "bắp ngô"
+ },
+ "diagram": {
+  "ipa": "ˈdaɪəˌɡræm",
+  "vi": "sơ đồ"
+ },
+ "pepper": {
+  "ipa": "ˈpɛpɚ",
+  "vi": "quả ớt"
+ },
+ "peppers": {
+  "ipa": "ˈpɛpɚz",
+  "vi": "quả ớt"
+ },
+ "onion": {
+  "ipa": "ˈʌnjən",
+  "vi": "củ hành"
+ },
+ "onions": {
+  "ipa": "ˈʌnjənz",
+  "vi": "củ hành"
+ },
+ "potato": {
+  "ipa": "pəˈteɪtoʊ",
+  "vi": "củ khoai tây"
+ },
+ "potatoes": {
+  "ipa": "pəˈteɪtoʊz",
+  "vi": "củ khoai tây"
+ },
+ "tomatoes": {
+  "ipa": "təˈmeɪtoʊz",
+  "vi": "quả cà chua"
+ },
+ "above": {
+  "ipa": "əˈbʌv",
+  "vi": "ở trên"
+ },
+ "in the ground": {
+  "ipa": "ɪn ðə ˈɡraʊnd",
+  "vi": "ở dưới đất"
+ },
+ "they're = they are · she's = she is": {
+  "ipa": "ðɛr ðeɪ ˈɑr ʃiz ʃi ˈɪz",
+  "vi": "they're là they are, she's là she is"
+ },
+ "big": {
+  "ipa": "bɪɡ",
+  "vi": "to, lớn"
+ },
+ "pick": {
+  "ipa": "pɪk",
+  "vi": "hái"
+ },
+ "ship": {
+  "ipa": "ʃɪp",
+  "vi": "con tàu"
+ },
+ "sick": {
+  "ipa": "sɪk",
+  "vi": "bị ốm"
+ },
+ "sticks": {
+  "ipa": "stɪks",
+  "vi": "que, cành cây"
+ },
+ "wings": {
+  "ipa": "wɪŋz",
+  "vi": "đôi cánh"
+ },
+ "fix": {
+  "ipa": "fɪks",
+  "vi": "sửa"
+ },
+ "ch: chick · sh: fish, ship": {
+  "ipa": "tʃ ʃ",
+  "vi": "âm ch và sh"
+ },
+ "wheat": {
+  "ipa": "wit",
+  "vi": "lúa mì"
+ },
+ "flour": {
+  "ipa": "ˈflaʊɚ",
+  "vi": "bột mì"
+ },
+ "can you help me, please?": {
+  "ipa": "kən ju ˈhɛlp mi ˈpliz",
+  "vi": "Bạn giúp tớ được không?"
+ },
+ "sorry, i'm busy.": {
+  "ipa": "ˈsɑri aɪm ˈbɪzi",
+  "vi": "Xin lỗi, tớ bận rồi."
+ },
+ "i can do it myself.": {
+  "ipa": "aɪ kən ˈdu ɪt maɪˈsɛlf",
+  "vi": "Tớ tự làm được."
+ },
+ "it's delicious!": {
+  "ipa": "ɪts dɪˈlɪʃəs",
+  "vi": "Ngon quá!"
+ },
+ "you are very helpful.": {
+  "ipa": "ju ɑr ˈvɛri ˈhɛlpfəl",
+  "vi": "Bạn thật hay giúp đỡ."
+ },
+ "yes, i will.": {
+  "ipa": "ˈjɛs aɪ ˈwɪl",
+  "vi": "Vâng, tớ sẽ làm."
  }
 }
