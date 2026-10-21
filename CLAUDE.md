@@ -65,6 +65,16 @@ Maths games (`games` list), add only the ones the pages actually teach:
 - `oddeven`: Odd or Even?. Objects shown in pairs, child picks odd or even.
 - `compare`: More or Fewer?. Two sets of the lesson's countable things; uses items with `plural`.
 
+Make It! (optional `makes` list on a lesson): a cooking/making game. The child collects ingredients from a shelf when the chef asks "Can I have …, please?", then puts each one on the base. Use only words the lesson teaches.
+```json
+"makes": [{"title": "Pizza", "icon": "🍕", "chef": "👵", "chefName": "Grandma",
+  "base": "pizza",            // pizza | bowl | pot | any word with "baseEmoji" (e.g. "🧦")
+  "intro": "Let's make a pizza!", "put": "Put the {w} on the pizza.", "done": "Your pizza is ready!",
+  "items": [{"word": "cheese", "pic": "🧀", "np": "some cheese"},   // np = how the chef asks for it
+            {"word": "hat", "pic": "🎩", "at": [50, 4, 20]}]}]       // at = fixed x%, y%, size% (dress-up)
+```
+Use 4–6 items; every `word` needs a dictionary entry.
+
 Rules of thumb:
 - Each lesson needs at least 3 items with `pic` and no `quiz: false`, or Listen & Find and Say It! are hidden.
 - Use 1–3 tabs per lesson, with 6–15 items in each tab.

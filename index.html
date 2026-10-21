@@ -86,6 +86,50 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
 .door.missing{background:#e0782f;box-shadow:0 7px 0 #a8551c}
 .door.oddeven{background:#139a8f;box-shadow:0 7px 0 #0c6c64}
 .door.compare{background:#d24f86;box-shadow:0 7px 0 #9a325f}
+.door.make{background:#d99a12;box-shadow:0 7px 0 #a06f05}
+.hub .doors.n1{grid-template-columns:minmax(0,1fr)}
+.hub .doors.n2{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+/* Make It! */
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:900px;margin:auto;width:100%}
+.pickcard{background:var(--card);border-radius:24px;padding:20px;display:flex;flex-direction:column;align-items:center;gap:6px;box-shadow:0 5px 0 var(--frame-soft)}
+.pickcard .pic{font-size:72px;line-height:1}
+.pickcard strong{font-family:var(--display);font-size:26px}
+.pickcard small{color:var(--ink-soft);font-size:15px;text-align:center}
+.mk{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:16px;align-items:stretch}
+.shelf2{background:#c98b4f;border-radius:24px;padding:14px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:minmax(0,1fr);gap:10px;align-content:center;box-shadow:inset 0 -10px 0 #9c6635}
+.ing{background:#fffaf2;border-radius:16px;padding:8px 4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:0;box-shadow:0 4px 0 #9c6635}
+.ing .em{font-size:clamp(30px,6.5vh,56px);line-height:1.1}
+.ing .lab{display:none;font-family:var(--display);font-size:clamp(14px,2.2vh,19px);font-weight:600;text-align:center;line-height:1.1}
+.ing .lab .gl .ipa,.ing .lab .gl .vi{font-size:clamp(11px,1.6vh,14px);font-weight:400}
+.ing.shown .lab{display:block}
+.ing.gone{visibility:hidden}
+.ing.no{animation:shake .4s;background:#fde3e1}
+.chef{background:var(--card);border-radius:24px;padding:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;box-shadow:0 5px 0 var(--frame-soft);min-height:0}
+.chef .who{font-size:clamp(56px,12vh,96px);line-height:1}
+.chef .name{font-family:var(--display);font-weight:600;color:var(--ink-soft);font-size:18px}
+.bubble2{background:#fff7e3;border:3px solid var(--sun);border-radius:20px;padding:10px 16px;font-family:var(--display);font-size:clamp(20px,3vh,28px);font-weight:600;text-align:center;display:flex;gap:10px;align-items:center}
+.bubble2 p{margin:0}
+.bubble2 mark{background:none;color:var(--tomato)}
+.mtray{width:100%;min-height:76px;background:var(--frame-soft);border-radius:999px;display:flex;gap:6px;justify-content:center;align-items:center;flex-wrap:wrap;padding:8px 14px;font-size:clamp(30px,5vh,44px)}
+.mtray span{animation:pop .5s}
+.mk2{flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;gap:12px}
+.board{position:relative;width:min(92vw,42vh,440px);aspect-ratio:1;max-width:100%}
+.base{position:absolute;inset:0}
+.base.pizza{border-radius:50%;background:radial-gradient(circle,#d9442f 0 60%,#f0c26a 61% 100%);box-shadow:0 8px 0 #c99a45}
+.base.bowl,.base.pot{top:42%;border-radius:0 0 50% 50%/0 0 100% 100%;background:#ffffff;border:8px solid var(--frame);border-top-width:12px}
+.base.pot{background:#8a8f99;border-color:#5d626b}
+.base.soup::before{content:"";position:absolute;left:4%;right:4%;top:-14px;height:28px;border-radius:50%;background:#e9963b}
+.base.big{display:grid;place-items:center;line-height:1}
+.slot{position:absolute;transform:translate(-50%,-50%);opacity:.18;filter:grayscale(1);line-height:1;pointer-events:none}
+.tp{position:absolute;transform:translate(-50%,-50%);line-height:1;pointer-events:none;animation:drop .45s ease-out}
+@keyframes drop{from{transform:translate(-50%,-120%) scale(1.4);opacity:0}}
+.traybtns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.traybtn{background:var(--card);border-radius:18px;padding:6px 14px;display:flex;flex-direction:column;align-items:center;box-shadow:0 4px 0 var(--frame-soft);min-width:84px}
+.traybtn .em{font-size:clamp(30px,5.5vh,46px);line-height:1.1}
+.traybtn .w{font-family:var(--display);font-size:16px;font-weight:600}
+.traybtn.used{visibility:hidden}
+.traybtn.no{animation:shake .4s;background:#fde3e1}
 
 /* Maths games */
 .track{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));width:min(100%,760px);border-radius:8px;overflow:hidden;box-shadow:0 5px 0 var(--frame-soft)}
@@ -195,6 +239,7 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
 .hub .skill{top:clamp(8px,1.6vh,16px);right:clamp(8px,1.6vh,16px);font-size:clamp(9px,1.3vh,12px)}
 @media (max-width:820px){.hub .skill{display:none}}
 
+@media (max-width:760px){.mk{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr)}.mk .chef{order:-1;flex-direction:row;flex-wrap:wrap;padding:10px}.chef .who{font-size:48px}}
 @media (max-width:560px){
   .doors,.doors.three,.books{grid-template-columns:1fr}
   .book{min-height:150px;flex-direction:row;align-items:center;gap:16px;justify-content:flex-start}
@@ -211,6 +256,8 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
   .domino{width:130px;height:70px}.domino .half i{width:11px;height:11px}
 }
 @media (max-height:720px){
+  .board{width:min(92vw,36vh,440px)}
+  .mk2{gap:8px}
   .q{gap:10px}
   .saycard{padding:14px 20px;gap:4px}
   .saycard .emo{font-size:38px}
@@ -384,7 +431,9 @@ function lessonHome(l){
   setTitle(esc(L.title),()=>shelf());
   const canCount=L.mode==='numbers'||L.count===true;
   const canQuiz=L.mode==='numbers'||quizItems(L).length>=3;
-  const extra=(L.games||[]).filter(g=>MATHS_GAMES[g]);
+  const extra=(L.games||[]).filter(g=>MATHS_GAMES[g]).map(g=>MATHS_GAMES[g]());
+  if(L.makes&&L.makes.length)extra.push(door('make','Make It!','Make & learn',L.makes[0].icon||'🍕',L.makes.map(m=>m.title).join(' · '),makeMenu));
+  const row2=(L.games||[]).length?((L.makes&&L.makes.length)?'Maths & making':'Maths games'):'Make it!';
   screen.replaceChildren(el('div',{class:'hub'+(extra.length?'':' solo')},[
     extra.length?el('h2',{text:'English games'}):null,
     el('div',{class:'doors'},[
@@ -392,8 +441,8 @@ function lessonHome(l){
       canQuiz?door('listen','Listen & Find','Listening','👂','Hear it, then tap it',listenGame):null,
       canCount&&countables(L).length?door('count','Count with Me','Counting','👆','Tap each one and count',countGame):null,
       canQuiz?door('say','Say It!','Speaking','🎤','Listen, then say it out loud',sayGame):null]),
-    extra.length?el('h2',{text:'Maths games'}):null,
-    extra.length?el('div',{class:'doors'+(extra.length===3?' three':'')},extra.map(g=>MATHS_GAMES[g]())):null]));
+    extra.length?el('h2',{text:row2}):null,
+    extra.length?el('div',{class:'doors n'+extra.length+(extra.length===3?' three':'')},extra):null]));
 }
 function door(cls,name,skill,pic,sub,fn){
   return el('button',{class:'door '+cls,onclick:fn},[el('span',{class:'skill',text:skill}),el('span',{class:'pic',text:pic}),
@@ -632,6 +681,83 @@ function sayGame(){
   }
   render();
   setTimeout(()=>say('Listen, then say it. '+item.text),300);
+}
+
+// ---------- Make It! (collect the ingredients, then build) ----------
+const artOf=w=>/s$/.test(w)&&!/(glass|dress|bus)$/.test(w)?'some':art(w);
+const npOf=i=>i.np||(artOf(i.word)+' '+i.word);
+function makeMenu(){
+  if(L.makes.length===1)return makeGame(L.makes[0]);
+  setTitle('Make <span>It!</span>',back);
+  screen.replaceChildren(el('div',{class:'picks'},L.makes.map(m=>el('button',{class:'pickcard',onclick:()=>makeGame(m)},[
+    el('span',{class:'pic',text:m.icon}),el('strong',{text:m.title}),el('small',{text:m.items.map(i=>i.pic).join(' ')})]))));
+  say('What do you want to make?');
+}
+function scatter(kind,n){
+  const pts=[];for(let k=0;k<n;k++){
+    if(kind==='pizza'){const a=Math.random()*Math.PI*2,r=Math.sqrt(Math.random())*27;pts.push([50+r*Math.cos(a),50+r*Math.sin(a),11])}
+    else pts.push([24+Math.random()*52,38+Math.random()*12,13]);}
+  return pts;
+}
+function makeGame(m){
+  setTitle(esc(m.title),()=>L.makes.length>1?makeMenu():lessonHome());
+  const view=VIEW;const items=m.items;
+  const extra=shuffle(quizItems(L).filter(i=>!items.some(x=>x.pic===i.pic||x.word===i.word))).slice(0,Math.max(0,8-items.length));
+  const shelfItems=shuffle([...items,...extra]);
+  const order=shuffle(items.slice());let k=0,first=true;
+  const tray=el('div',{class:'mtray'});
+  const bubbleTxt=el('p');
+  const ask=()=>`Can I have ${npOf(order[k])}, please?`;
+  const bubble=el('div',{class:'bubble2'},[el('button',{class:'speaker','aria-label':'Hear it again',text:'🔊',style:'width:48px;height:48px;font-size:22px',onclick:()=>say(ask())}),bubbleTxt]);
+  const showAsk=()=>{const t=order[k];bubbleTxt.innerHTML=esc(ask()).replace(esc(t.word),`<mark>${esc(t.word)}</mark>`);say(ask())};
+  const shelf=el('div',{class:'shelf2'},shelfItems.map(i=>{
+    const b=el('button',{class:'ing','aria-label':i.word},[el('span',{class:'em',text:i.pic}),el('span',{class:'lab'},[el('span',{text:i.word}),glossEl(i.word)])]);
+    b.addEventListener('click',async()=>{
+      if(view!==VIEW||k>=order.length)return;
+      b.classList.add('shown');
+      if(i===order[k]){
+        if(first)addStar();first=true;
+        tray.append(el('span',{text:i.pic}));b.classList.add('gone');k++;
+        if(k<order.length){await say(`Thank you! ${i.word}.`);if(view===VIEW)showAsk()}
+        else{bubbleTxt.textContent="Thank you! Now let's make it!";await say("Thank you! Now let's make it!");if(view===VIEW)setTimeout(()=>{if(view===VIEW)buildStage(m)},400)}
+      }else{first=false;b.classList.remove('no');void b.offsetWidth;b.classList.add('no');say(`That's ${npOf(i)}. ${ask()}`)}
+    });
+    return b;}));
+  screen.replaceChildren(el('div',{class:'mk'},[shelf,el('div',{class:'chef'},[el('span',{class:'who',text:m.chef||'👵'}),el('span',{class:'name',text:m.chefName||''}),bubble,tray])]));
+  const intro=m.intro||"Let's cook!";bubbleTxt.textContent=intro;
+  setTimeout(()=>{if(view===VIEW)say(intro).then(()=>{if(view===VIEW)showAsk()})},300);
+}
+function buildStage(m){
+  setTitle(esc(m.title),()=>L.makes.length>1?makeMenu():lessonHome());
+  const view=VIEW;const steps=m.items.slice();let k=0,first=true;
+  const board=el('div',{class:'board'});
+  const base=el('div',{class:'base '+(m.base||'pizza')+(m.base==='pot'?' soup':'')});
+  if(m.baseEmoji){base.classList.add('big');base.textContent=m.baseEmoji}
+  board.append(base);
+  (m.fixed||[]).forEach(([pic,x,y,z])=>{const f=el('span',{class:'tp',text:pic,style:`left:${x}%;top:${y}%;animation:none`});f.dataset.z=z;board.append(f)});
+  const slots={};
+  steps.forEach(s=>{if(s.at){const g=el('span',{class:'slot',text:s.pic,style:`left:${s.at[0]}%;top:${s.at[1]}%`});g.dataset.z=s.at[2];slots[s.word]=g;board.append(g)}});
+  const sizeAll=()=>{const w=board.clientWidth||300;if(m.baseEmoji)base.style.fontSize=(w*(m.baseSize||0.7))+'px';board.querySelectorAll('[data-z]').forEach(e=>e.style.fontSize=(w*e.dataset.z/100)+'px')};
+  const putText=s=>(m.put||'Put the {w} on it.').replace('{w}',s.word);
+  const prompt=el('p');
+  const promptBox=el('div',{class:'bubble2'},[el('button',{class:'speaker','aria-label':'Hear it again',text:'🔊',style:'width:48px;height:48px;font-size:22px',onclick:()=>say(putText(steps[k]||steps[0]))}),prompt]);
+  const showStep=()=>{const s=steps[k];prompt.innerHTML=esc(putText(s)).replace(esc(s.word),`<mark>${esc(s.word)}</mark>`);say(putText(s))};
+  const btns=el('div',{class:'traybtns'},shuffle(steps.slice()).map(s=>{
+    const b=el('button',{class:'traybtn'},[el('span',{class:'em',text:s.pic}),el('span',{class:'w',text:s.word})]);
+    b.addEventListener('click',async()=>{
+      if(view!==VIEW||k>=steps.length)return;
+      if(s===steps[k]){
+        if(first)addStar();first=true;b.classList.add('used');
+        (s.at?[s.at]:scatter(m.base,s.count||5)).forEach(([x,y,z])=>{const t=el('span',{class:'tp',text:s.pic,style:`left:${x}%;top:${y}%`});t.dataset.z=z;board.append(t)});
+        if(slots[s.word])slots[s.word].remove();
+        sizeAll();k++;
+        if(k<steps.length){await say(pick(['Good!','Great!','Yes!','Well done!']));if(view===VIEW)showStep()}
+        else{const d=m.done||'All done!';prompt.textContent=d;addStar(2);await say(d+' Thank you! You are very helpful!');
+          if(view===VIEW)promptBox.after(el('div',{class:'row'},[el('button',{class:'pill good',text:'Make it again',onclick:()=>makeGame(m)}),el('button',{class:'pill',text:'Lesson menu',onclick:back})]))}
+      }else{first=false;b.classList.remove('no');void b.offsetWidth;b.classList.add('no');say(`That's ${npOf(s)}. ${putText(steps[k])}`)}
+    });return b}));
+  screen.replaceChildren(el('div',{class:'mk2'},[promptBox,board,btns]));
+  sizeAll();setTimeout(()=>{if(view===VIEW){sizeAll();showStep()}},250);
 }
 
 function finish(again){

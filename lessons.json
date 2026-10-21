@@ -2520,6 +2520,75 @@
             }
           ]
         }
+      ],
+      "makes": [
+        {
+          "title": "Pizza",
+          "icon": "🍕",
+          "chef": "👵",
+          "chefName": "Grandma",
+          "base": "pizza",
+          "intro": "Let's make a pizza for the family!",
+          "put": "Put the {w} on the pizza.",
+          "done": "Your pizza is ready. It's delicious!",
+          "items": [
+            {
+              "word": "cheese",
+              "pic": "🧀",
+              "np": "some cheese"
+            },
+            {
+              "word": "tomato",
+              "pic": "🍅"
+            },
+            {
+              "word": "chicken",
+              "pic": "🍗",
+              "np": "some chicken"
+            },
+            {
+              "word": "pepper",
+              "pic": "🌶️"
+            },
+            {
+              "word": "onion",
+              "pic": "🧅"
+            }
+          ]
+        },
+        {
+          "title": "Breakfast Bowl",
+          "icon": "🥣",
+          "chef": "👩",
+          "chefName": "Mum",
+          "base": "bowl",
+          "intro": "What do you eat for breakfast? Let's make a fruit bowl!",
+          "put": "Put the {w} in the bowl.",
+          "done": "Bananas and mangos in my breakfast bowl. Yummy!",
+          "items": [
+            {
+              "word": "banana",
+              "pic": "🍌"
+            },
+            {
+              "word": "mango",
+              "pic": "🥭"
+            },
+            {
+              "word": "strawberry",
+              "pic": "🍓"
+            },
+            {
+              "word": "grapes",
+              "pic": "🍇",
+              "np": "some grapes"
+            },
+            {
+              "word": "apple",
+              "pic": "🍏"
+            }
+          ]
+        }
       ]
     },
     {
@@ -3408,6 +3477,137 @@
             }
           ]
         }
+      ],
+      "makes": [
+        {
+          "title": "Sock Puppet",
+          "icon": "🧦",
+          "chef": "👧",
+          "chefName": "Lucy",
+          "base": "puppet",
+          "baseEmoji": "🧦",
+          "baseSize": 0.8,
+          "intro": "Let's make a sock puppet!",
+          "put": "Put the {w} on the puppet.",
+          "done": "Look at my puppet! It's beautiful!",
+          "items": [
+            {
+              "word": "eyes",
+              "pic": "👀",
+              "np": "some eyes",
+              "at": [
+                58,
+                26,
+                18
+              ]
+            },
+            {
+              "word": "crown",
+              "pic": "👑",
+              "at": [
+                60,
+                8,
+                22
+              ]
+            },
+            {
+              "word": "glasses",
+              "pic": "👓",
+              "np": "the glasses",
+              "at": [
+                58,
+                27,
+                22
+              ]
+            },
+            {
+              "word": "diamond",
+              "pic": "💎",
+              "at": [
+                45,
+                52,
+                12
+              ]
+            },
+            {
+              "word": "skirt",
+              "pic": "🎀",
+              "at": [
+                42,
+                74,
+                22
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Dress the Clown",
+          "icon": "🤡",
+          "chef": "🤡",
+          "chefName": "Clown",
+          "base": "person",
+          "fixed": [
+            [
+              "🙂",
+              50,
+              18,
+              22
+            ]
+          ],
+          "intro": "We're going to a fun day! Help me get dressed.",
+          "put": "Put the {w} on the clown.",
+          "done": "I'm wearing a hat, glasses, a jacket, trousers and shoes!",
+          "items": [
+            {
+              "word": "hat",
+              "pic": "🎩",
+              "at": [
+                50,
+                4,
+                20
+              ]
+            },
+            {
+              "word": "glasses",
+              "pic": "👓",
+              "np": "the glasses",
+              "at": [
+                50,
+                17,
+                15
+              ]
+            },
+            {
+              "word": "jacket",
+              "pic": "🧥",
+              "at": [
+                50,
+                43,
+                30
+              ]
+            },
+            {
+              "word": "trousers",
+              "pic": "👖",
+              "np": "the trousers",
+              "at": [
+                50,
+                68,
+                26
+              ]
+            },
+            {
+              "word": "shoes",
+              "pic": "👞",
+              "np": "the shoes",
+              "at": [
+                50,
+                90,
+                16
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -3792,6 +3992,41 @@
               "pic": "👍",
               "hint": "",
               "quiz": false
+            }
+          ]
+        }
+      ],
+      "makes": [
+        {
+          "title": "Vegetable Soup",
+          "icon": "🍲",
+          "chef": "🐔",
+          "chefName": "Little Red Hen",
+          "base": "pot",
+          "intro": "I am making soup today. Can you help me?",
+          "put": "Put the {w} in the soup.",
+          "done": "The soup is ready. It's delicious!",
+          "items": [
+            {
+              "word": "carrot",
+              "pic": "🥕"
+            },
+            {
+              "word": "potato",
+              "pic": "🥔"
+            },
+            {
+              "word": "onion",
+              "pic": "🧅"
+            },
+            {
+              "word": "tomato",
+              "pic": "🍅"
+            },
+            {
+              "word": "corn",
+              "pic": "🌽",
+              "np": "some corn"
             }
           ]
         }
