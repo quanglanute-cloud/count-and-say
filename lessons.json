@@ -595,6 +595,392 @@
         "oddeven",
         "compare"
       ]
+    },
+    {
+      "id": "sci-u1-living-things",
+      "book": "science",
+      "unit": "Unit 1",
+      "title": "Living Things",
+      "icon": "🌱",
+      "added": "2026-10-21",
+      "tabs": [
+        {
+          "name": "Living or not?",
+          "items": [
+            {
+              "word": "elephant",
+              "pic": "🐘",
+              "hint": "living",
+              "say": "Elephant. An elephant is living. Animals move around and eat other things.",
+              "sentence": "An elephant is living."
+            },
+            {
+              "word": "snail",
+              "pic": "🐌",
+              "hint": "living",
+              "say": "Snail. A snail is living.",
+              "sentence": "A snail is living."
+            },
+            {
+              "word": "worm",
+              "pic": "🪱",
+              "hint": "living",
+              "say": "Worm. A worm is living.",
+              "sentence": "A worm is living."
+            },
+            {
+              "word": "fish",
+              "pic": "🐟",
+              "hint": "living",
+              "say": "Fish. A fish is living.",
+              "sentence": "A fish is living."
+            },
+            {
+              "word": "bird",
+              "pic": "🐦",
+              "hint": "living",
+              "say": "Bird. A bird is living.",
+              "sentence": "A bird is living."
+            },
+            {
+              "word": "tree",
+              "pic": "🌳",
+              "hint": "living",
+              "say": "Tree. A tree is living. Plants make their own food.",
+              "sentence": "A tree is living."
+            },
+            {
+              "word": "sunflower",
+              "pic": "🌻",
+              "hint": "living",
+              "say": "Sunflower. A sunflower is living.",
+              "sentence": "A sunflower is living."
+            },
+            {
+              "word": "cactus",
+              "pic": "🌵",
+              "hint": "living",
+              "say": "Cactus. A cactus is a plant. It lives in dry places.",
+              "sentence": "A cactus is living."
+            },
+            {
+              "word": "rock",
+              "pic": "🪨",
+              "hint": "non-living",
+              "say": "Rock. A rock is non-living.",
+              "sentence": "A rock is non-living."
+            },
+            {
+              "word": "teddy bear",
+              "pic": "🧸",
+              "hint": "non-living",
+              "say": "Teddy bear. A teddy bear is non-living. A toy is not alive.",
+              "sentence": "A teddy bear is non-living."
+            },
+            {
+              "word": "book",
+              "pic": "📕",
+              "hint": "non-living",
+              "say": "Book. A book is non-living.",
+              "sentence": "A book is non-living."
+            },
+            {
+              "word": "pencil",
+              "pic": "✏️",
+              "hint": "non-living",
+              "say": "Pencil. A pencil is non-living.",
+              "sentence": "A pencil is non-living."
+            },
+            {
+              "word": "chair",
+              "pic": "🪑",
+              "hint": "non-living",
+              "say": "Chair. A chair is non-living.",
+              "sentence": "A chair is non-living."
+            },
+            {
+              "word": "stick",
+              "pic": "🪵",
+              "hint": "used to be alive",
+              "say": "Stick. A stick is non-living. It used to be alive, on a tree.",
+              "sentence": "A stick used to be alive."
+            }
+          ]
+        },
+        {
+          "name": "Parts of a plant",
+          "items": [
+            {
+              "word": "plant",
+              "pic": "🪴",
+              "hint": "living",
+              "say": "Plant. Plants are living things. Most plants are green.",
+              "sentence": "Most plants are green."
+            },
+            {
+              "word": "flower",
+              "pic": "🌸",
+              "hint": "makes seeds",
+              "say": "Flower. The flower is the part where the seeds are made.",
+              "sentence": "The flower makes seeds."
+            },
+            {
+              "word": "leaf",
+              "pic": "🍃",
+              "hint": "makes food",
+              "say": "Leaf. The leaf makes food for the plant.",
+              "sentence": "The leaf makes food.",
+              "plural": "leaves"
+            },
+            {
+              "word": "stem",
+              "pic": "🌿",
+              "hint": "holds the plant up",
+              "say": "Stem. The stem holds the leaves and flowers up.",
+              "sentence": "The stem holds the leaves up."
+            },
+            {
+              "word": "roots",
+              "pic": "🫚",
+              "hint": "under the ground",
+              "say": "Roots. The roots collect water. The roots hold the plant still.",
+              "sentence": "The roots collect water.",
+              "find": "Find the roots."
+            },
+            {
+              "word": "seeds",
+              "pic": "🫘",
+              "hint": "grow into plants",
+              "say": "Seeds. Some plants have flowers which make seeds.",
+              "sentence": "Seeds grow into plants.",
+              "find": "Find the seeds."
+            },
+            {
+              "word": "tomato",
+              "pic": "🍅",
+              "hint": "a tomato plant",
+              "say": "Tomato. A tomato plant has leaves, a stem, roots and flowers.",
+              "sentence": "I can see a tomato."
+            },
+            {
+              "word": "magnifying glass",
+              "pic": "🔍",
+              "hint": "helps you look",
+              "say": "Magnifying glass. Use a magnifying glass to observe a plant.",
+              "sentence": "I look with a magnifying glass."
+            }
+          ]
+        },
+        {
+          "name": "Plants need…",
+          "items": [
+            {
+              "word": "light",
+              "pic": "☀️",
+              "hint": "plants need light",
+              "say": "Light. Plants use light to make food. Plants need light.",
+              "sentence": "Plants need light.",
+              "find": "Find the light."
+            },
+            {
+              "word": "water",
+              "pic": "💧",
+              "hint": "plants need water",
+              "say": "Water. Plants need water. Water moves, but it is not alive.",
+              "sentence": "Plants need water.",
+              "find": "Find the water."
+            },
+            {
+              "word": "grow",
+              "pic": "🌱",
+              "hint": "get bigger",
+              "say": "Grow. When plants get bigger, we say they grow.",
+              "sentence": "The plant grows.",
+              "find": "Which one is a young plant?"
+            },
+            {
+              "word": "box",
+              "pic": "📦",
+              "hint": "no light inside",
+              "say": "Box. Marcus covers one plant with a box. No light!",
+              "sentence": "The box is dark."
+            },
+            {
+              "word": "cave",
+              "pic": "🕳️",
+              "hint": "too dark for plants",
+              "say": "Cave. Plants can't grow in a cave because there is no light.",
+              "sentence": "Plants can't grow in a cave."
+            },
+            {
+              "word": "dry plant",
+              "pic": "🥀",
+              "hint": "not enough water",
+              "say": "A dry plant. If plants do not have enough water, they can die.",
+              "sentence": "This plant needs water!"
+            },
+            {
+              "word": "garden",
+              "pic": "🏡",
+              "hint": "plants grow here",
+              "say": "Garden. In a garden we can learn about plants.",
+              "sentence": "I love to play in the garden."
+            },
+            {
+              "word": "gardener",
+              "pic": "🧑‍🌾",
+              "hint": "looks after plants",
+              "say": "Gardener. The gardener gives the plants lots of light and water.",
+              "sentence": "The gardener looks after plants."
+            },
+            {
+              "word": "bee",
+              "pic": "🐝",
+              "hint": "lives in the garden",
+              "say": "Bee. A bee is a living thing. Bees visit flowers.",
+              "sentence": "A bee is living."
+            }
+          ]
+        },
+        {
+          "name": "Science words",
+          "items": [
+            {
+              "word": "alive",
+              "pic": "💚",
+              "say": "Alive. Plants and animals are alive.",
+              "hint": "plants and animals",
+              "quiz": false
+            },
+            {
+              "word": "living",
+              "pic": "🐾",
+              "say": "Living. Plants and animals are living things.",
+              "hint": "plants and animals",
+              "quiz": false
+            },
+            {
+              "word": "non-living",
+              "pic": "🪨",
+              "say": "Non-living. A rock is non-living. It is not alive.",
+              "hint": "not alive",
+              "quiz": false
+            },
+            {
+              "word": "animal",
+              "pic": "🐘",
+              "say": "Animal. Animals move around and eat other things.",
+              "hint": "moves and eats",
+              "quiz": false
+            },
+            {
+              "word": "group",
+              "pic": "🗂️",
+              "say": "Group. Put things into two groups: living and non-living.",
+              "hint": "things that go together",
+              "quiz": false
+            },
+            {
+              "word": "look",
+              "pic": "👀",
+              "say": "Look. Use your eyes to look at the picture.",
+              "hint": "use your eyes",
+              "quiz": false
+            },
+            {
+              "word": "observe",
+              "pic": "🔍",
+              "say": "Observe. Look carefully. Observe the plant parts.",
+              "hint": "look carefully",
+              "quiz": false
+            },
+            {
+              "word": "name",
+              "pic": "🏷️",
+              "say": "Name. Name the parts of a plant: leaf, stem, flower, root.",
+              "hint": "say what it is called",
+              "quiz": false
+            },
+            {
+              "word": "parts",
+              "pic": "🧩",
+              "say": "Parts. All plants have parts that we can see.",
+              "hint": "leaf, stem, flower, root",
+              "quiz": false
+            },
+            {
+              "word": "similar",
+              "pic": "🍏🍎",
+              "say": "Similar. These two apples are similar. They are nearly the same.",
+              "hint": "nearly the same",
+              "quiz": false
+            },
+            {
+              "word": "different",
+              "pic": "🍎🍌",
+              "say": "Different. An apple and a banana are different.",
+              "hint": "not the same",
+              "quiz": false
+            },
+            {
+              "word": "model",
+              "pic": "🧸",
+              "say": "Model. Make a model of a plant.",
+              "hint": "a copy you make",
+              "quiz": false
+            },
+            {
+              "word": "question",
+              "pic": "❓",
+              "say": "Question. Marcus asks a question: why is this plant bent?",
+              "hint": "something you ask",
+              "quiz": false
+            },
+            {
+              "word": "answer",
+              "pic": "💬",
+              "say": "Answer. Here is the answer: it is growing towards the light.",
+              "hint": "what you say back",
+              "quiz": false
+            },
+            {
+              "word": "investigation",
+              "pic": "🧪",
+              "say": "Investigation. Do a science investigation to find the answer.",
+              "hint": "a science test",
+              "quiz": false
+            },
+            {
+              "word": "predict",
+              "pic": "🤔",
+              "say": "Predict. Say what you think will happen.",
+              "hint": "say what will happen",
+              "quiz": false
+            },
+            {
+              "word": "explain",
+              "pic": "🗣️",
+              "say": "Explain. Explain why plants need water.",
+              "hint": "say why",
+              "quiz": false
+            },
+            {
+              "word": "record",
+              "pic": "📝",
+              "say": "Record. Record your results. Write or draw them.",
+              "hint": "write it down",
+              "quiz": false
+            },
+            {
+              "word": "table",
+              "pic": "📊",
+              "say": "Table. Record your results in a table.",
+              "hint": "rows and boxes",
+              "quiz": false
+            }
+          ]
+        }
+      ]
     }
   ]
 }
