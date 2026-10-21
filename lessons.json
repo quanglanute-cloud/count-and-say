@@ -11,51 +11,557 @@
         {
           "name": "Numbers",
           "items": [
-            { "count": 1, "word": "one", "pic": "🍌", "thing": "banana", "plural": "bananas" },
-            { "count": 2, "word": "two", "pic": "🐘", "thing": "elephant", "plural": "elephants" },
-            { "count": 3, "word": "three", "pic": "🥚", "thing": "egg", "plural": "eggs" },
-            { "count": 4, "word": "four", "pic": "🐈", "thing": "cat", "plural": "cats" },
-            { "count": 5, "word": "five", "pic": "🥁", "thing": "drum", "plural": "drums" },
-            { "count": 6, "word": "six", "pic": "👒", "thing": "hat", "plural": "hats" },
-            { "count": 7, "word": "seven", "pic": "🦋", "thing": "butterfly", "plural": "butterflies" },
-            { "count": 8, "word": "eight", "pic": "👟", "thing": "shoe", "plural": "shoes" },
-            { "count": 9, "word": "nine", "pic": "🧸", "thing": "toy", "plural": "toys" },
-            { "count": 10, "word": "ten", "pic": "⚽", "thing": "ball", "plural": "balls" }
+            {
+              "count": 1,
+              "word": "one",
+              "pic": "🍌",
+              "thing": "banana",
+              "plural": "bananas"
+            },
+            {
+              "count": 2,
+              "word": "two",
+              "pic": "🐘",
+              "thing": "elephant",
+              "plural": "elephants"
+            },
+            {
+              "count": 3,
+              "word": "three",
+              "pic": "🥚",
+              "thing": "egg",
+              "plural": "eggs"
+            },
+            {
+              "count": 4,
+              "word": "four",
+              "pic": "🐈",
+              "thing": "cat",
+              "plural": "cats"
+            },
+            {
+              "count": 5,
+              "word": "five",
+              "pic": "🥁",
+              "thing": "drum",
+              "plural": "drums"
+            },
+            {
+              "count": 6,
+              "word": "six",
+              "pic": "👒",
+              "thing": "hat",
+              "plural": "hats"
+            },
+            {
+              "count": 7,
+              "word": "seven",
+              "pic": "🦋",
+              "thing": "butterfly",
+              "plural": "butterflies"
+            },
+            {
+              "count": 8,
+              "word": "eight",
+              "pic": "👟",
+              "thing": "shoe",
+              "plural": "shoes"
+            },
+            {
+              "count": 9,
+              "word": "nine",
+              "pic": "🧸",
+              "thing": "toy",
+              "plural": "toys"
+            },
+            {
+              "count": 10,
+              "word": "ten",
+              "pic": "⚽",
+              "thing": "ball",
+              "plural": "balls"
+            }
           ]
         },
         {
           "name": "Things",
           "items": [
-            { "word": "hippo", "plural": "hippos", "pic": "🦛" },
-            { "word": "robot", "plural": "robots", "pic": "🤖" },
-            { "word": "elephant", "plural": "elephants", "pic": "🐘" },
-            { "word": "pencil", "plural": "pencils", "pic": "✏️" },
-            { "word": "cookie", "plural": "cookies", "pic": "🍪" },
-            { "word": "bus", "plural": "buses", "pic": "🚌" },
-            { "word": "sunflower", "plural": "sunflowers", "pic": "🌻" },
-            { "word": "rabbit", "plural": "rabbits", "pic": "🐇" },
-            { "word": "frog", "plural": "frogs", "pic": "🐸" },
-            { "word": "tree", "plural": "trees", "pic": "🌳" },
-            { "word": "bird", "plural": "birds", "pic": "🐦" },
-            { "word": "butterfly", "plural": "butterflies", "pic": "🦋" },
-            { "word": "car", "plural": "cars", "pic": "🚗" },
-            { "word": "sweet", "plural": "sweets", "pic": "🍬" },
-            { "word": "apple", "plural": "apples", "pic": "🍎" },
-            { "word": "flower", "plural": "flowers", "pic": "🌸" },
-            { "word": "book", "plural": "books", "pic": "📘" }
+            {
+              "word": "hippo",
+              "plural": "hippos",
+              "pic": "🦛"
+            },
+            {
+              "word": "robot",
+              "plural": "robots",
+              "pic": "🤖"
+            },
+            {
+              "word": "elephant",
+              "plural": "elephants",
+              "pic": "🐘"
+            },
+            {
+              "word": "pencil",
+              "plural": "pencils",
+              "pic": "✏️"
+            },
+            {
+              "word": "cookie",
+              "plural": "cookies",
+              "pic": "🍪"
+            },
+            {
+              "word": "bus",
+              "plural": "buses",
+              "pic": "🚌"
+            },
+            {
+              "word": "sunflower",
+              "plural": "sunflowers",
+              "pic": "🌻"
+            },
+            {
+              "word": "rabbit",
+              "plural": "rabbits",
+              "pic": "🐇"
+            },
+            {
+              "word": "frog",
+              "plural": "frogs",
+              "pic": "🐸"
+            },
+            {
+              "word": "tree",
+              "plural": "trees",
+              "pic": "🌳"
+            },
+            {
+              "word": "bird",
+              "plural": "birds",
+              "pic": "🐦"
+            },
+            {
+              "word": "butterfly",
+              "plural": "butterflies",
+              "pic": "🦋"
+            },
+            {
+              "word": "car",
+              "plural": "cars",
+              "pic": "🚗"
+            },
+            {
+              "word": "sweet",
+              "plural": "sweets",
+              "pic": "🍬"
+            },
+            {
+              "word": "apple",
+              "plural": "apples",
+              "pic": "🍎"
+            },
+            {
+              "word": "flower",
+              "plural": "flowers",
+              "pic": "🌸"
+            },
+            {
+              "word": "book",
+              "plural": "books",
+              "pic": "📘"
+            }
           ]
         },
         {
           "name": "Maths words",
           "items": [
-            { "word": "count", "pic": "👆", "hint": "one, two, three…", "say": "Count. Say one number for each thing. One, two, three.", "quiz": false },
-            { "word": "how many", "pic": "❓", "hint": "How many cats?", "say": "How many cats? Four cats.", "quiz": false },
-            { "word": "set", "pic": "🐈🐈🐈", "hint": "a group of things", "say": "A set is a group of things. A set of three cats.", "quiz": false },
-            { "word": "line", "pic": "✏️✏️✏️✏️", "hint": "things in a row", "say": "Put the pencils in a line.", "quiz": false },
-            { "word": "estimate", "pic": "🤔", "hint": "a good guess", "say": "Estimate. An estimate is a good guess. I estimate there are three sunflowers.", "quiz": false },
-            { "word": "total", "pic": "🟰", "hint": "how many altogether", "say": "Total. How many altogether? The total is five.", "quiz": false },
-            { "word": "spots", "pic": "🁫", "hint": "dots on a domino", "say": "Spots. This domino has four spots.", "quiz": false },
-            { "word": "zero", "pic": "⬜", "hint": "none at all", "say": "Zero. Zero means none. There are zero counters.", "quiz": false }
+            {
+              "word": "count",
+              "pic": "👆",
+              "hint": "one, two, three…",
+              "say": "Count. Say one number for each thing. One, two, three.",
+              "quiz": false
+            },
+            {
+              "word": "how many",
+              "pic": "❓",
+              "hint": "How many cats?",
+              "say": "How many cats? Four cats.",
+              "quiz": false
+            },
+            {
+              "word": "set",
+              "pic": "🐈🐈🐈",
+              "hint": "a group of things",
+              "say": "A set is a group of things. A set of three cats.",
+              "quiz": false
+            },
+            {
+              "word": "line",
+              "pic": "✏️✏️✏️✏️",
+              "hint": "things in a row",
+              "say": "Put the pencils in a line.",
+              "quiz": false
+            },
+            {
+              "word": "estimate",
+              "pic": "🤔",
+              "hint": "a good guess",
+              "say": "Estimate. An estimate is a good guess. I estimate there are three sunflowers.",
+              "quiz": false
+            },
+            {
+              "word": "total",
+              "pic": "🟰",
+              "hint": "how many altogether",
+              "say": "Total. How many altogether? The total is five.",
+              "quiz": false
+            },
+            {
+              "word": "spots",
+              "pic": "🁫",
+              "hint": "dots on a domino",
+              "say": "Spots. This domino has four spots.",
+              "quiz": false
+            },
+            {
+              "word": "zero",
+              "pic": "⬜",
+              "hint": "none at all",
+              "say": "Zero. Zero means none. There are zero counters.",
+              "quiz": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u1b-order-compare-odd-even",
+      "unit": "Unit 1 · Part 2",
+      "title": "Before, After, Odd & Even",
+      "icon": "🐟",
+      "added": "2026-10-21",
+      "mode": "numbers",
+      "count": true,
+      "tabs": [
+        {
+          "name": "Fish rhyme",
+          "items": [
+            {
+              "word": "Say the whole rhyme",
+              "pic": "🐟",
+              "say": "One, two, three, four, five, once I caught a fish alive! Six, seven, eight, nine, ten, then I let it go again! Why did you let it go? Because it bit my finger so. Which finger did it bite? This little finger on the right.",
+              "hint": "tap to listen",
+              "quiz": false
+            },
+            {
+              "word": "1, 2, 3, 4, 5,",
+              "pic": "🖐️",
+              "say": "One, two, three, four, five,",
+              "hint": "count with your fingers",
+              "quiz": false
+            },
+            {
+              "word": "Once I caught a fish alive!",
+              "pic": "🎣",
+              "say": "Once I caught a fish alive!",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "6, 7, 8, 9, 10,",
+              "pic": "🙌",
+              "say": "Six, seven, eight, nine, ten,",
+              "hint": "keep counting",
+              "quiz": false
+            },
+            {
+              "word": "Then I let it go again!",
+              "pic": "🐠",
+              "say": "Then I let it go again!",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Why did you let it go?",
+              "pic": "❓",
+              "say": "Why did you let it go?",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Because it bit my finger so.",
+              "pic": "😣",
+              "say": "Because it bit my finger so.",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "Which finger did it bite?",
+              "pic": "🤔",
+              "say": "Which finger did it bite?",
+              "hint": "",
+              "quiz": false
+            },
+            {
+              "word": "This little finger on the right.",
+              "pic": "🤙",
+              "say": "This little finger on the right.",
+              "hint": "wiggle your little finger",
+              "quiz": false
+            }
+          ]
+        },
+        {
+          "name": "Fruit",
+          "items": [
+            {
+              "word": "orange",
+              "plural": "oranges",
+              "pic": "🍊"
+            },
+            {
+              "word": "apple",
+              "plural": "apples",
+              "pic": "🍎"
+            },
+            {
+              "word": "banana",
+              "plural": "bananas",
+              "pic": "🍌"
+            },
+            {
+              "word": "watermelon",
+              "plural": "watermelons",
+              "pic": "🍉"
+            },
+            {
+              "word": "pineapple",
+              "plural": "pineapples",
+              "pic": "🍍"
+            },
+            {
+              "word": "pear",
+              "plural": "pears",
+              "pic": "🍐"
+            },
+            {
+              "word": "kiwi",
+              "plural": "kiwis",
+              "pic": "🥝"
+            },
+            {
+              "word": "lemon",
+              "plural": "lemons",
+              "pic": "🍋"
+            },
+            {
+              "word": "strawberry",
+              "plural": "strawberries",
+              "pic": "🍓"
+            },
+            {
+              "word": "grapes",
+              "pic": "🍇",
+              "hint": "a bunch of grapes",
+              "say": "Grapes. A bunch of grapes.",
+              "sentence": "I can see some grapes."
+            },
+            {
+              "word": "basket",
+              "pic": "🧺",
+              "hint": "zero fruit in it",
+              "say": "A basket. There is zero fruit in the basket.",
+              "sentence": "I can see a basket."
+            }
+          ]
+        },
+        {
+          "name": "Animals & things",
+          "items": [
+            {
+              "word": "fish",
+              "plural": "fish",
+              "pic": "🐠",
+              "hint": "two fish"
+            },
+            {
+              "word": "spider",
+              "plural": "spiders",
+              "pic": "🕷️"
+            },
+            {
+              "word": "snail",
+              "plural": "snails",
+              "pic": "🐌"
+            },
+            {
+              "word": "goat",
+              "plural": "goats",
+              "pic": "🐐"
+            },
+            {
+              "word": "star",
+              "plural": "stars",
+              "pic": "⭐"
+            },
+            {
+              "word": "sunflower",
+              "plural": "sunflowers",
+              "pic": "🌻"
+            },
+            {
+              "word": "teddy bear",
+              "plural": "teddy bears",
+              "pic": "🧸"
+            },
+            {
+              "word": "boot",
+              "plural": "boots",
+              "pic": "👢"
+            },
+            {
+              "word": "coin",
+              "plural": "coins",
+              "pic": "🪙"
+            },
+            {
+              "word": "finger",
+              "plural": "fingers",
+              "pic": "☝️"
+            }
+          ]
+        },
+        {
+          "name": "Maths words",
+          "items": [
+            {
+              "word": "before",
+              "pic": "⬅️",
+              "say": "Before. Four comes before five.",
+              "hint": "4 comes before 5",
+              "quiz": false
+            },
+            {
+              "word": "after",
+              "pic": "➡️",
+              "say": "After. Six comes after five.",
+              "hint": "6 comes after 5",
+              "quiz": false
+            },
+            {
+              "word": "between",
+              "pic": "5️⃣6️⃣7️⃣",
+              "say": "Between. Six is between five and seven.",
+              "hint": "6 is between 5 and 7",
+              "quiz": false
+            },
+            {
+              "word": "next",
+              "pic": "⏭️",
+              "say": "Next. One, two, three. What comes next? Four!",
+              "hint": "what comes next?",
+              "quiz": false
+            },
+            {
+              "word": "order",
+              "pic": "🔢",
+              "say": "Order. One, two, three, four, five. The numbers are in order.",
+              "hint": "1, 2, 3, 4, 5",
+              "quiz": false
+            },
+            {
+              "word": "number track",
+              "pic": "🟩🟧🟦🟥🟦",
+              "say": "A number track. One, two, three, four, five, six, seven, eight, nine, ten.",
+              "hint": "1 to 10 in a row",
+              "quiz": false
+            },
+            {
+              "word": "point",
+              "pic": "👉",
+              "say": "Point. Point to each number as you say it.",
+              "hint": "point and say",
+              "quiz": false
+            },
+            {
+              "word": "missing",
+              "pic": "❔",
+              "say": "Missing. Six, blank, eight. Seven is the missing number.",
+              "hint": "6, ?, 8",
+              "quiz": false
+            },
+            {
+              "word": "compare",
+              "pic": "🔍",
+              "say": "Compare. Look at two sets. Which set has more?",
+              "hint": "look at two sets",
+              "quiz": false
+            },
+            {
+              "word": "more",
+              "pic": "🍊🍊🍊🍊🍊",
+              "say": "More. Five is more than four.",
+              "hint": "5 is more than 4",
+              "quiz": false
+            },
+            {
+              "word": "fewer",
+              "pic": "🐌🐌",
+              "say": "Fewer. There are fewer snails than spiders.",
+              "hint": "not as many",
+              "quiz": false
+            },
+            {
+              "word": "less",
+              "pic": "🤏",
+              "say": "Less. Seven is less than nine.",
+              "hint": "7 is less than 9",
+              "quiz": false
+            },
+            {
+              "word": "same",
+              "pic": "🍎🍎🍎",
+              "say": "Same. Three apples and three apples. They are the same.",
+              "hint": "the same number",
+              "quiz": false
+            },
+            {
+              "word": "equal",
+              "pic": "⚖️",
+              "say": "Equal. Four and four are equal.",
+              "hint": "4 and 4 are equal",
+              "quiz": false
+            },
+            {
+              "word": "pair",
+              "pic": "👢👢",
+              "say": "A pair. Two things that go together. A pair of boots.",
+              "hint": "two together",
+              "quiz": false
+            },
+            {
+              "word": "even",
+              "pic": "🧦🧦🧦🧦",
+              "say": "Even. Four is an even number. Two pairs, none left over.",
+              "hint": "2, 4, 6, 8, 10",
+              "quiz": false
+            },
+            {
+              "word": "odd",
+              "pic": "🧦🧦🧦",
+              "say": "Odd. Three is an odd number. One pair and one left over.",
+              "hint": "1, 3, 5, 7, 9",
+              "quiz": false
+            },
+            {
+              "word": "pattern",
+              "pic": "🔴🔵🔴🔵",
+              "say": "Pattern. Odd, even, odd, even. It is a pattern.",
+              "hint": "odd, even, odd, even",
+              "quiz": false
+            }
           ]
         }
       ]
