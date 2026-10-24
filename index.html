@@ -417,7 +417,7 @@ function bookshelf(){
 
 function shelf(b){
   B=b||B;L=null;stopListening();setTitle(esc(B.title),bookshelf);
-  const list=LESSONS.map((l,i)=>({l,i})).filter(x=>bookOf(x.l)===B.id).sort((a,b)=>(b.l.added||'').localeCompare(a.l.added||'')||b.i-a.i);
+  const list=LESSONS.map((l,i)=>({l,i})).filter(x=>bookOf(x.l)===B.id).sort((a,b)=>(a.l.order??a.i)-(b.l.order??b.i)); // book order: first lesson top-left
   if(!list.length){screen.replaceChildren(el('div',{class:'empty'},[el('span',{class:'pic',text:B.icon}),el('strong',{text:'Coming soon'}),el('p',{text:'There are no lessons in this book yet. New lessons will appear here.'})]));return}
   screen.replaceChildren(el('div',{class:'shelf'},list.map(({l})=>{
     const n=items(l).length;

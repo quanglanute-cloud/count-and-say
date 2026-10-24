@@ -7,7 +7,7 @@ An iPad English app for a 5-year-old (listening, speaking, vocabulary). It is a 
 The owner sends photos or a PDF of textbook pages and asks for them to be added. To add them:
 
 1. Read the pages and pick the vocabulary a 3–6 year old can learn from them: concrete nouns with a clear emoji, plus a few key phrases.
-2. Decide which book the pages come from (`maths`, `science` or `english`; ask if unclear), then append one lesson object to the END of the `lessons` array in `lessons.json` with that `book`. Never change or remove an existing lesson unless asked.
+2. Decide which book the pages come from (`maths`, `science` or `english`; ask if unclear), then add one lesson object to the `lessons` array in `lessons.json` with that `book`. Lessons show in the order they appear in the file (book order, first lesson top-left), so insert it after the previous unit of the same book. Never change or remove an existing lesson unless asked.
 3. Add every new `word`, `plural` and `thing` (lower-case) to `dictionary.json` with its American pronunciation in IPA (no slashes) and a short Vietnamese meaning, e.g. `"elephant": {"ipa": "ˈɛləfənt", "vi": "con voi"}`. For countable nouns include the Vietnamese classifier (con, quả, cái, chiếc…) so "three cats" becomes "ba con mèo". Never remove existing entries.
 4. Check both files are valid JSON and every word has a dictionary entry:
    `python3 -c "import json;d=json.load(open('dictionary.json'));L=json.load(open('lessons.json'));m={i[k].lower() for l in L['lessons'] for t in l['tabs'] for i in t['items'] for k in ('word','plural','thing') if i.get(k)}-set(d);print('missing:',m or 'none')"`
@@ -33,7 +33,7 @@ The home screen is a bookshelf. `lessons.json` has a `books` array (Mathematics 
   "unit": "Unit 2",             // small label above the title
   "title": "Shapes",            // lesson name
   "icon": "🔷",                 // one emoji for the lesson button
-  "added": "2026-10-20",        // YYYY-MM-DD (today); newest lessons appear first
+  "added": "2026-10-20",        // YYYY-MM-DD (today); shows a NEW badge for 3 days
   "mode": "words",              // "words" (default) or "numbers" (enables the number/domino games)
   "count": false,               // true = show the "Count with Me" game (needs items with "plural")
   "games": ["missing", "oddeven", "compare"],  // optional maths games, only if the pages teach them
