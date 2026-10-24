@@ -54,6 +54,8 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
 .swap{color:var(--frame);font-weight:700;text-decoration:underline;font-size:17px;padding:6px}
 .parentlink{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));color:var(--ink-soft);font-size:15px;font-weight:700;padding:8px 14px;border-radius:999px;background:var(--card);box-shadow:0 3px 0 var(--frame-soft)}
 .who{font-family:var(--display);font-size:18px;font-weight:600;background:var(--card);border-radius:999px;padding:10px 16px;box-shadow:0 3px 0 var(--frame-soft);flex:none;max-width:40vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.who.mode{background:var(--ink);color:#fff;box-shadow:0 3px 0 #0b1a28}
+.playas{margin-left:auto;font-size:16px;padding:8px 16px}
 .pill.danger{background:var(--tomato);color:#fff;box-shadow:0 4px 0 #9e2c26}
 .pform{margin:auto;display:flex;flex-direction:column;align-items:center;gap:12px;width:min(420px,100%);text-align:center}
 .pform .pic{font-size:64px}.pform strong{font-family:var(--display);font-size:28px}.pform p{margin:0;color:var(--ink-soft)}
@@ -360,6 +362,7 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
   <header class="top">
     <button class="back" id="backBtn" aria-label="Back" hidden>‹</button>
     <h1 id="title">Count <span>and</span> Say</h1>
+    <button class="who mode" id="modeBtn" hidden></button>
     <button class="who" id="whoBtn" hidden></button>
     <div class="stars" aria-label="Stars"><b>★</b><span id="starCount">0</span></div>
   </header>
@@ -468,7 +471,7 @@ function say(text,rate=0.82){
 
 // ---------- Navigation ----------
 let backTo=null,VIEW=0;
-function setTitle(html,back){VIEW++;$('#title').innerHTML=html;backTo=back||null;$('#backBtn').hidden=!back}
+function setTitle(html,back){VIEW++;PARENT_MODE=false;updateModeBtn();$('#title').innerHTML=html;backTo=back||null;$('#backBtn').hidden=!back}
 $('#backBtn').addEventListener('click',()=>{stopListening();if('speechSynthesis' in window)speechSynthesis.cancel();backTo&&backTo()});
 function showStart(){
   $('#start').hidden=false;stopListening();VIEW++;
@@ -508,8 +511,22 @@ $('#parentBtn').addEventListener('click',()=>{$('#start').hidden=true;loading.th
 $('#whoBtn').addEventListener('click',playerMenu);
 // ---------- Parents: password, players and progress report ----------
 let PTOKEN=store('cs-parent')||'';
+// Test account: one button switches between playing as the test child and the Parents page.
+let PARENT_MODE=false;
+function updateModeBtn(){
+  const m=$('#modeBtn');m.hidden=!(ME&&ME.tester);
+  if(!m.hidden)m.textContent=PARENT_MODE?`🧪 Play as ${ME.name}`:'🔐 Parents';
+}
+$('#modeBtn').addEventListener('click',()=>{if(PARENT_MODE){loadPlayer();bookshelf();say(`Hello, ${ME.name}!`)}else{stopListening();clearTimeout(syncT);syncNow().finally(parentScreen)}});
+async function playAs(k,btn){
+  btn.disabled=true;
+  try{const j=await api({action:'login',code:k.code});
+    ME={code:k.code,name:j.name,tester:!!j.tester,resetAt:j.resetAt||null};store('cs-me',JSON.stringify(ME));store('cs-guest','0');
+    loadPlayer();applyServer(j);bookshelf();say(`Hello, ${ME.name}!`)}
+  catch(e){btn.disabled=false;btn.textContent=e.message}
+}
 function parentScreen(){
-  setTitle('Parents',showStart);
+  setTitle('Parents',showStart);PARENT_MODE=true;updateModeBtn();
   if(!PTOKEN)return parentLogin();
   loadDashboard();
 }
@@ -590,7 +607,8 @@ function kidCard(k){
   actions.replaceChildren(...baseActions());
   const copy=el('button',{class:'copy',text:'Copy',onclick:async e=>{try{await navigator.clipboard.writeText(k.code);e.target.textContent='Copied'}catch(_){e.target.textContent='Select the code to copy'}}});
   return el('div',{class:'kid'+(k.tester?' tester':'')},[
-    el('div',{class:'kh'},[el('strong',{text:k.name}),k.tester?el('span',{class:'chip',text:'TEST'}):null]),
+    el('div',{class:'kh'},[el('strong',{text:k.name}),k.tester?el('span',{class:'chip',text:'TEST'}):null,
+      k.tester?el('button',{class:'pill good playas',text:ME&&ME.code===k.code?'▶ Play':'▶ Play as '+k.name,onclick:e=>playAs(k,e.target)}):null]),
     el('div',{class:'kcode'},[el('span',{text:'Code '}),el('b',{class:'sel',text:k.code}),copy]),
     el('div',{class:'kstats'},[el('span',{text:`⭐ ${k.stars}`}),el('span',{text:`⏱ ${weekMinutes(k.log)} min this week`}),el('span',{text:`🕒 ${ago(k.lastSeen)}`})]),
     ...books,detail,actions]);
@@ -651,6 +669,7 @@ function loadPlayer(){
   stars=parseInt(store(pk('cs-stars'))||'0',10)||0;
   $('#starCount').textContent=stars;
   const w=$('#whoBtn');w.hidden=!ME;if(ME)w.textContent=(ME.tester?'🧪 ':'🙂 ')+ME.name;
+  updateModeBtn();
 }
 function savePlayer(){store(pk('cs-progress'),JSON.stringify(PROG));store(pk('cs-stars'),String(stars));store(pk('cs-log'),JSON.stringify(LOG))}
 let syncT=null;
