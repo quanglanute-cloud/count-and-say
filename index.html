@@ -443,7 +443,7 @@ async function api(body){
   catch(e){throw Object.assign(new Error("The app can't reach the internet right now."),{noServer:true})}
   let j=null;try{j=await r.json()}catch(e){}
   if(!j)throw Object.assign(new Error('Online saving is not set up for this link.'),{noServer:true});
-  if(!r.ok||j.error)throw Object.assign(new Error(j.error||'Something went wrong.'),{status:r.status});
+  if(!r.ok||j.error)throw Object.assign(new Error(j.error||'Something went wrong.'),{status:r.status,noServer:r.status===503});
   return j;
 }
 let stars=0,LOG={};

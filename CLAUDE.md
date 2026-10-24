@@ -1,6 +1,6 @@
 # Count and Say
 
-An iPad English app for a 5-year-old (listening, speaking, vocabulary). It is a static site: `index.html` is the game engine and `lessons.json` holds all lesson content. The site deploys automatically when `main` is pushed, so pushing to `main` updates the live app.
+An iPad English app for a 5-year-old (listening, speaking, vocabulary). It is a static site: `index.html` is the game engine and `lessons.json` holds all lesson content. The site is hosted on Cloudflare Pages and deploys automatically when `main` is pushed. Push as few times as possible: group all changes of one request into ONE commit and ONE push (each push is a deploy; the old Netlify host charged credits per deploy).
 
 ## Adding a lesson (the usual task)
 
@@ -26,7 +26,7 @@ Inside each book, lessons open one at a time in file order. A lesson is finished
 
 ## Players, accounts and the Parents page
 
-Each child signs in once per device with a 6-character code; the parent creates codes on the Parents page (button on the start screen, password protected). Progress, stars and play time are kept per player in localStorage (`cs-progress:<code>`, `cs-stars:<code>`, `cs-log:<code>`) and synced to the online service in `netlify/functions/api.mjs` (logic in `netlify/lib/api-core.mjs`, storage in Netlify Blobs store `count-and-say`). Progress only ever merges forward, except a reset. Test accounts (`tester`) can reset themselves from the player menu. When a test account is signed in, a header button switches between playing as that test child and the Parents page; the Parents page also has a "▶ Play as" button on test-account cards. If the service cannot be reached the app offers "Play without saving online".
+Each child signs in once per device with a 6-character code; the parent creates codes on the Parents page (button on the start screen, password protected). Progress, stars and play time are kept per player in localStorage (`cs-progress:<code>`, `cs-stars:<code>`, `cs-log:<code>`) and synced to the online service: `functions/api.js` (Cloudflare Pages Function, D1 database bound as `DB`, one table `kv`) with the logic in `lib/api-core.mjs` (Web Crypto only). `netlify/functions/api.mjs` is the old Netlify version of the same service, kept only as a fallback. Progress only ever merges forward, except a reset. Test accounts (`tester`) can reset themselves from the player menu. When a test account is signed in, a header button switches between playing as that test child and the Parents page; the Parents page also has a "▶ Play as" button on test-account cards. If the service cannot be reached the app offers "Play without saving online".
 
 ## Books
 
