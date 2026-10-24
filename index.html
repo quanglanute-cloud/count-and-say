@@ -58,6 +58,22 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
 .lesson .unit{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:700}
 .lesson strong{font-family:var(--display);font-size:24px;font-weight:600;display:block;line-height:1.15}
 .lesson small{color:var(--ink-soft);font-size:15px}
+.lesson .ic{position:relative}
+.lesson .num{position:absolute;top:-8px;left:-8px;min-width:28px;height:28px;padding:0 6px;border-radius:999px;background:var(--frame);color:#fff;font-family:var(--display);font-size:15px;font-weight:600;display:grid;place-items:center;font-style:normal}
+.lesson .lock{position:absolute;bottom:-6px;right:-6px;font-size:26px}
+.lesson.done .num{background:var(--leaf)}
+.lesson.done small{color:#2e7d32;font-weight:700}
+.lesson.next{box-shadow:0 5px 0 var(--leaf),0 0 0 4px var(--leaf)}
+.lesson.locked{background:#e6edf2;box-shadow:0 5px 0 #d3dde5}
+.lesson.locked .ic>span:first-child,.lesson.locked strong{opacity:.45;filter:grayscale(1)}
+.lesson.no{animation:shake .4s}
+.badge.go{background:var(--leaf);animation:beat 1.2s ease-in-out infinite}
+@keyframes beat{50%{transform:scale(1.08)}}
+.badge.go{box-shadow:0 3px 0 #357a38}
+.door .tick{position:absolute;right:clamp(10px,1.6vh,16px);bottom:clamp(10px,1.6vh,16px);background:rgba(255,255,255,.25);color:#fff;font-family:var(--display);font-weight:700;border-radius:999px;padding:2px 12px;font-size:clamp(13px,1.9vh,17px)}
+.door .tick.ok{background:#fff;color:#2e7d32}
+.trophy{font-size:clamp(90px,16vh,130px);line-height:1;animation:pop .6s}
+.unlock{font-family:var(--display);font-size:clamp(20px,3vh,28px);font-weight:600;margin:0;color:var(--ink)}
 .badge{position:absolute;top:-8px;right:14px;background:var(--tomato);color:#fff;font-family:var(--display);font-size:15px;font-weight:600;padding:3px 12px;border-radius:999px}
 .note{text-align:center;color:var(--ink-soft);margin:auto;max-width:34ch}
 
@@ -410,21 +426,58 @@ function bookshelf(){
     const bt=el('button',{class:'book',style:`--c:${b.color};--shade:${b.shade}`,onclick:()=>{say(b.title);shelf(b)}},[
       ls.some(isNew)?el('span',{class:'badge',text:'NEW'}):null,
       el('span',{class:'pic',text:b.icon}),
-      el('span',{},[el('strong',{text:b.title}),el('small',{text:ls.length?ls.length+(ls.length===1?' lesson':' lessons'):'Coming soon'})])]);
+      el('span',{},[el('strong',{text:b.title}),el('small',{text:ls.length?`${ls.filter(isDone).length} of ${ls.length} ${ls.length===1?'lesson':'lessons'} finished`:'Coming soon'})])]);
     return bt;
   })));
+}
+
+// ---------- Learning path: each lesson opens when the one before it is finished ----------
+// A lesson is finished when Listen & Find has been completed once and Say It! has SAY_GOAL correct answers.
+const SAY_GOAL=5;
+let PROG={};try{PROG=JSON.parse(store('cs-progress')||'{}')||{}}catch(e){PROG={}}
+const prog=id=>PROG[id]||{listen:false,say:0,words:false};
+const needsQuiz=l=>l.mode==='numbers'||quizItems(l).length>=3;
+const isDone=l=>{const p=prog(l.id);return needsQuiz(l)?(p.listen&&p.say>=SAY_GOAL):!!p.words};
+const bookList=bid=>LESSONS.map((l,i)=>({l,i})).filter(x=>bookOf(x.l)===bid).sort((a,b)=>(a.l.order??a.i)-(b.l.order??b.i)).map(x=>x.l);
+const isOpen=l=>{const list=bookList(bookOf(l));const k=list.indexOf(l);return k<=0||isDone(list[k-1])};
+const nextLesson=l=>{const list=bookList(bookOf(l));return list[list.indexOf(l)+1]||null};
+function markProgress(kind){ // returns true when this action finished the lesson
+  const was=isDone(L);const p=Object.assign(prog(L.id));
+  if(kind==='listen')p.listen=true;
+  if(kind==='say')p.say=Math.min(SAY_GOAL,(p.say||0)+1);
+  if(kind==='words')p.words=true;
+  PROG[L.id]=p;store('cs-progress',JSON.stringify(PROG));
+  return !was&&isDone(L);
+}
+function lessonComplete(){
+  const nx=nextLesson(L);addStar(3);
+  const msg=nx?`Lesson complete! The next lesson is open: ${nx.title}.`:'Lesson complete! You finished every lesson in this book. Well done!';
+  say(msg);
+  screen.replaceChildren(el('div',{class:'q'},[el('div',{class:'trophy',text:'🏆'}),
+    el('p',{class:'bubble',text:'Lesson complete!'}),
+    nx?el('p',{class:'unlock',text:`🔓 Next lesson is open: ${nx.title}`}):el('p',{class:'unlock',text:'You finished every lesson in this book!'}),
+    el('div',{class:'row'},[nx?el('button',{class:'pill good',text:`Go to ${nx.title} ›`,onclick:()=>lessonHome(nx)}):null,
+      el('button',{class:'pill',text:'Lesson menu',onclick:back})])]));
 }
 
 function shelf(b){
   B=b||B;L=null;stopListening();setTitle(esc(B.title),bookshelf);
   const list=LESSONS.map((l,i)=>({l,i})).filter(x=>bookOf(x.l)===B.id).sort((a,b)=>(a.l.order??a.i)-(b.l.order??b.i)); // book order: first lesson top-left
   if(!list.length){screen.replaceChildren(el('div',{class:'empty'},[el('span',{class:'pic',text:B.icon}),el('strong',{text:'Coming soon'}),el('p',{text:'There are no lessons in this book yet. New lessons will appear here.'})]));return}
-  screen.replaceChildren(el('div',{class:'shelf'},list.map(({l})=>{
-    const n=items(l).length;
-    return el('button',{class:'lesson',onclick:()=>lessonHome(l)},[
-      isNew(l)?el('span',{class:'badge',text:'NEW'}):null,
-      el('span',{class:'ic',text:l.icon||'📗'}),
-      el('span',{},[el('span',{class:'unit',text:l.unit||''}),el('strong',{text:l.title}),el('small',{text:n+' words'})])]);
+  screen.replaceChildren(el('div',{class:'shelf'},list.map(({l},k)=>{
+    const n=items(l).length,done=isDone(l),open=isOpen(l),next=open&&!done;
+    const p=prog(l.id);
+    const status=done?'✓ Finished':!open?`🔒 Opens after lesson ${k}`:needsQuiz(l)?`${n} words · ${(p.listen?1:0)+Math.min(p.say||0,SAY_GOAL)} of ${SAY_GOAL+1} steps`:`${n} words`;
+    const card=el('button',{class:'lesson'+(done?' done':'')+(!open?' locked':'')+(next?' next':'')},[
+      next?el('span',{class:'badge go',text:'▶ Start here'}):(open&&isNew(l)?el('span',{class:'badge',text:'NEW'}):null),
+      el('span',{class:'ic'},[el('span',{text:l.icon||'📗'}),el('span',{class:'num',text:done?'✓':String(k+1)}),!open?el('span',{class:'lock',text:'🔒'}):null]),
+      el('span',{},[el('span',{class:'unit',text:l.unit||''}),el('strong',{text:l.title}),el('small',{text:status})])]);
+    card.addEventListener('click',()=>{
+      if(open)return lessonHome(l);
+      card.classList.remove('no');void card.offsetWidth;card.classList.add('no');
+      const prev=list[k-1].l;say(`This lesson is locked. Finish ${prev.title} first.`);
+    });
+    return card;
   })));
 }
 
@@ -444,13 +497,14 @@ function lessonHome(l){
   screen.replaceChildren(el('div',{class:'hub'+(extra.length?'':' solo')},[
     extra.length?el('h2',{text:'English games'}):null,
     el('div',{class:'doors'},[
-      door('words','Words','Vocabulary','📖','Tap a card to hear it',wordsGame),
-      canQuiz?door('listen','Listen & Find','Listening','👂','Hear it, then tap it',listenGame):null,
-      canCount&&countables(L).length?door('count','Count with Me','Counting','👆','Tap each one and count',countGame):null,
-      canQuiz?door('say','Say It!','Speaking','🎤','Listen, then say it out loud',sayGame):null]),
+      step(door('words','1 · Words','Vocabulary','📖','Tap a card to hear it',wordsGame),prog(L.id).words?'✓':''),
+      canQuiz?step(door('listen','2 · Listen & Find','Listening','👂','Hear it, then tap it',listenGame),prog(L.id).listen?'✓':'to do'):null,
+      canQuiz?step(door('say','3 · Say It!','Speaking','🎤',`Say ${SAY_GOAL} words out loud`,sayGame),(prog(L.id).say||0)>=SAY_GOAL?'✓':`${prog(L.id).say||0} / ${SAY_GOAL}`):null,
+      canCount&&countables(L).length?door('count','Count with Me','Counting','👆','Tap each one and count',countGame):null]),
     extra.length?el('h2',{text:row2}):null,
     extra.length?el('div',{class:'doors n'+extra.length+(extra.length===3?' three':'')},extra):null]));
 }
+function step(d,t){if(t)d.append(el('span',{class:'tick'+(t==='✓'?' ok':''),text:t}));return d}
 function door(cls,name,skill,pic,sub,fn){
   return el('button',{class:'door '+cls,onclick:fn},[el('span',{class:'skill',text:skill}),el('span',{class:'pic',text:pic}),
     el('span',{},[el('strong',{text:name}),el('small',{text:sub})])]);
@@ -459,6 +513,7 @@ const back=()=>lessonHome();
 
 // ---------- 1. Words ----------
 function wordsGame(){
+  markProgress('words');
   setTitle(esc(L.title)+' · <span>Words</span>',back);
   const key='cs-tab-'+L.id;let cur=Math.min(parseInt(store(key)||'0',10)||0,L.tabs.length-1);
   const bar=el('div',{class:'tabs',role:'tablist'});const grid=el('div',{class:'cards'});
@@ -655,11 +710,13 @@ function sayGame(){
   const next=()=>{item=sayItem(level);render();setTimeout(()=>say(item.text),200)};
   function render(){
     const heard=el('p',{class:'heard'});const cheer=el('p',{class:'cheer'});
+    const dotsOf=()=>[...Array(SAY_GOAL)].map((_,j)=>el('i',{class:j<(prog(L.id).say||0)?'done':''}));
+    const sayDots=el('div',{class:'dots',title:'Words said'},dotsOf());
     const levelBar=el('div',{class:'level'},names.map((nm,i)=>el('button',{class:'tab','aria-selected':String(i===level),text:nm,onclick:()=>{level=i;store(key,String(i));next()}})));
     const cardEl=el('div',{class:'saycard'},[el('div',{class:'emo',text:item.pic}),el('div',{class:'line'})]);
     cardEl.querySelector('.line').innerHTML=item.html;
     const g=glossEl(item.text.replace(/[.?!]$/,''));if(g)cardEl.append(g);
-    const view=VIEW;const success=async()=>{cheer.textContent=pick(PRAISE);addStar();await say(cheer.textContent);setTimeout(()=>{if(view===VIEW)next()},600)};
+    const view=VIEW;const success=async()=>{cheer.textContent=pick(PRAISE);addStar();const fin=markProgress('say');sayDots.replaceChildren(...dotsOf());await say(cheer.textContent);setTimeout(()=>{if(view===VIEW)fin?lessonComplete():next()},600)};
     const grown=el('div',{class:'grownup'},[el('p',{text:'Grown-up: did they say it clearly?'}),
       el('div',{class:'row'},[el('button',{class:'pill good',text:'✓ Yes',onclick:success}),
         el('button',{class:'pill',text:'Again',onclick:()=>{cheer.textContent='Listen and try again!';say('Listen. '+item.text,0.75)}})])]);
@@ -681,7 +738,7 @@ function sayGame(){
         rec.start();
       }catch(err){micBroken=true;mic.classList.remove('on');heard.textContent='The microphone is off, so a grown-up can check instead.'}
     });
-    screen.replaceChildren(el('div',{class:'q'},[levelBar,cardEl,
+    screen.replaceChildren(el('div',{class:'q'},[levelBar,sayDots,cardEl,
       el('div',{class:'row'},[el('button',{class:'speaker','aria-label':'Listen',text:'🔊',style:'width:88px;height:88px;font-size:40px',onclick:()=>say(item.text,0.75)}),mic,
         el('button',{class:'pill',text:'Next ›',onclick:next})]),
       heard,cheer,grown]));
@@ -803,6 +860,7 @@ function buildStage(m){
 }
 
 function finish(again){
+  if(again===listenGame&&markProgress('listen')){addStar(2);return lessonComplete()}
   say('Fantastic! You finished! Here is a big star.');addStar(2);
   screen.replaceChildren(el('div',{class:'q'},[el('div',{style:'font-size:120px;line-height:1',text:'⭐'}),
     el('p',{class:'bubble',text:'You finished!'}),

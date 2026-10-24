@@ -20,6 +20,10 @@ Do not edit `index.html` just to add content. Change it only when the owner asks
 
 `dictionary.json` maps each lower-case word or phrase to `{"ipa", "vi"}`. The app shows them under the word on Words cards, under each picture in Listen & Find after the first tap, and on the Say It! card. Two-word labels such as "three cats" are built from the two entries.
 
+## Learning path
+
+Inside each book, lessons open one at a time in file order. A lesson is finished when the child completes Listen & Find once (5 rounds) and gets 5 correct answers in Say It! (`SAY_GOAL`); a lesson with too few pictures for those games is finished by opening Words. Finishing a lesson opens the next one automatically. Progress is saved per device in localStorage key `cs-progress`, keyed by lesson `id`, so never rename an existing lesson's `id`. A new lesson added after the last finished one opens straight away.
+
 ## Books
 
 The home screen is a bookshelf. `lessons.json` has a `books` array (Mathematics `maths`, Science `science`, Global English `english`); each lesson's `book` field puts it on one shelf. A book with no lessons shows "Coming soon". Add a new book only if the owner asks.
