@@ -24,6 +24,10 @@ Do not edit `index.html` just to add content. Change it only when the owner asks
 
 Inside each book, lessons open one at a time in file order. A lesson is finished when the child completes Listen & Find once (5 rounds) and gets 5 correct answers in Say It! (`SAY_GOAL`); a lesson with too few pictures for those games is finished by opening Words. Finishing a lesson opens the next one automatically. Progress is saved per device in localStorage key `cs-progress`, keyed by lesson `id`, so never rename an existing lesson's `id`. A new lesson added after the last finished one opens straight away.
 
+## Players, accounts and the Parents page
+
+Each child signs in once per device with a 6-character code; the parent creates codes on the Parents page (button on the start screen, password protected). Progress, stars and play time are kept per player in localStorage (`cs-progress:<code>`, `cs-stars:<code>`, `cs-log:<code>`) and synced to the online service in `netlify/functions/api.mjs` (logic in `netlify/lib/api-core.mjs`, storage in Netlify Blobs store `count-and-say`). Progress only ever merges forward, except a reset. Test accounts (`tester`) can reset themselves from the player menu. If the service cannot be reached the app offers "Play without saving online".
+
 ## Books
 
 The home screen is a bookshelf. `lessons.json` has a `books` array (Mathematics `maths`, Science `science`, Global English `english`); each lesson's `book` field puts it on one shelf. A book with no lessons shows "Coming soon". Add a new book only if the owner asks.

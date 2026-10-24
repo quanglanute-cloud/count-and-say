@@ -45,6 +45,49 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
 .start .big{font-family:var(--display);font-size:clamp(40px,8vw,72px);font-weight:700;margin:0;line-height:1.05}
 .start .big em{font-style:normal;color:var(--tomato)}
 .start p{color:var(--ink-soft);max-width:30ch;margin:12px auto 28px}
+#startBody{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:14px}
+#startBody p{margin:0}
+.start .hi{font-family:var(--display);font-size:clamp(22px,4vw,30px);font-weight:600;color:var(--ink)}
+.codein{font-family:var(--display);font-size:40px;font-weight:700;letter-spacing:.25em;text-align:center;text-transform:uppercase;width:min(320px,80vw);padding:12px 8px;border:3px solid var(--frame);border-radius:20px;background:var(--card);color:var(--ink)}
+.codein:focus{outline:4px solid var(--sun);outline-offset:2px}
+.err{color:#b3372f !important;font-weight:700;min-height:22px}
+.swap{color:var(--frame);font-weight:700;text-decoration:underline;font-size:17px;padding:6px}
+.parentlink{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));color:var(--ink-soft);font-size:15px;font-weight:700;padding:8px 14px;border-radius:999px;background:var(--card);box-shadow:0 3px 0 var(--frame-soft)}
+.who{font-family:var(--display);font-size:18px;font-weight:600;background:var(--card);border-radius:999px;padding:10px 16px;box-shadow:0 3px 0 var(--frame-soft);flex:none;max-width:40vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pill.danger{background:var(--tomato);color:#fff;box-shadow:0 4px 0 #9e2c26}
+.pform{margin:auto;display:flex;flex-direction:column;align-items:center;gap:12px;width:min(420px,100%);text-align:center}
+.pform .pic{font-size:64px}.pform strong{font-family:var(--display);font-size:28px}.pform p{margin:0;color:var(--ink-soft)}
+.field{font:inherit;font-size:20px;width:100%;padding:12px 16px;border:2px solid var(--frame-soft);border-radius:14px;background:var(--card);color:var(--ink)}
+.field:focus{outline:3px solid var(--sun);outline-offset:1px}
+.dash{display:flex;flex-direction:column;gap:16px;max-width:1100px;margin:0 auto;width:100%;user-select:text;-webkit-user-select:text}
+.dtop{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between}
+.addbox{background:var(--card);border-radius:20px;padding:14px 16px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;box-shadow:0 4px 0 var(--frame-soft);flex:1;min-width:0}
+.addbox strong{font-family:var(--display);font-size:20px}
+.addbox .field{flex:1;min-width:160px;width:auto}
+.addbox .err{flex-basis:100%;margin:0;min-height:0}
+.chk{display:flex;gap:6px;align-items:center;font-size:16px;color:var(--ink-soft)}
+.chk input{width:22px;height:22px}
+.newcode{background:#e3f4e3;border-radius:18px;padding:14px 18px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:17px}
+.newcode b{font-family:var(--display);font-size:34px;letter-spacing:.15em;user-select:all;-webkit-user-select:all}
+.kids{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.kid{background:var(--card);border-radius:22px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;box-shadow:0 5px 0 var(--frame-soft);min-width:0}
+.kid.tester{background:#fbf6e8}
+.kh{display:flex;gap:10px;align-items:center}.kh strong{font-family:var(--display);font-size:24px}
+.chip{background:var(--sun);color:var(--ink);font-size:12px;font-weight:700;letter-spacing:.08em;padding:2px 8px;border-radius:999px}
+.kcode{display:flex;gap:8px;align-items:center;color:var(--ink-soft)}
+.kcode b{font-family:var(--display);font-size:20px;letter-spacing:.12em;color:var(--ink);user-select:all;-webkit-user-select:all}
+.copy{font-size:14px;font-weight:700;color:var(--frame);padding:4px 10px;border-radius:999px;background:var(--paper)}
+.kstats{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:15px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.bk{display:flex;flex-direction:column;gap:4px}
+.bkh{display:flex;justify-content:space-between;font-size:16px;font-weight:700}
+.bk small{color:var(--ink-soft);font-size:14px}
+.bar{height:10px;border-radius:999px;background:var(--paper);overflow:hidden}.bar i{display:block;height:100%;border-radius:999px}
+.kid details summary{cursor:pointer;font-weight:700;color:var(--frame)}
+.dl{display:flex;flex-direction:column;gap:2px;margin-top:8px;font-size:14px}
+.dlr{display:flex;justify-content:space-between;gap:10px;color:var(--ink-soft);border-bottom:1px solid var(--paper);padding:3px 0}
+.dlr.ok{color:#2e7d32}
+.kact{justify-content:flex-start}.kact .pill{font-size:16px;padding:8px 16px}.kact .err{flex-basis:100%;margin:0}
+@media (max-width:560px){.who{max-width:28vw;font-size:15px;padding:8px 12px}}
 .go{font-family:var(--display);font-weight:600;font-size:32px;background:var(--tomato);color:#fff;border-radius:999px;padding:18px 54px;box-shadow:0 6px 0 #9e2c26}
 .go:active{transform:translateY(4px);box-shadow:0 2px 0 #9e2c26}
 .strip{display:flex;gap:6px;justify-content:center;margin-bottom:22px;flex-wrap:wrap}
@@ -308,8 +351,8 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
   <div>
     <div class="strip" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span></div>
     <h2 class="big">Count <em>and</em> Say</h2>
-    <p>Turn the sound on, then tap Start.</p>
-    <button class="go" id="goBtn">Start</button>
+    <div id="startBody"><p>Loading…</p></div>
+    <button class="parentlink" id="parentBtn">Parents</button>
   </div>
 </div>
 
@@ -317,6 +360,7 @@ button:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
   <header class="top">
     <button class="back" id="backBtn" aria-label="Back" hidden>‹</button>
     <h1 id="title">Count <span>and</span> Say</h1>
+    <button class="who" id="whoBtn" hidden></button>
     <div class="stars" aria-label="Stars"><b>★</b><span id="starCount">0</span></div>
   </header>
   <main class="screen" id="screen"></main>
@@ -387,9 +431,20 @@ const sentenceOf=i=>i.sentence||`I can see ${art(i.word)} ${i.word}.`;
 const findOf=i=>i.find||`Find the ${i.word}.`;
 
 // ---------- Stars ----------
-let stars=parseInt(store('cs-stars')||'0',10)||0;
-function addStar(n=1){stars+=n;$('#starCount').textContent=stars;store('cs-stars',String(stars))}
-$('#starCount').textContent=stars;
+// ---------- Player (each child has a code; progress is kept per player and synced online) ----------
+const API='api';
+let ME=null;try{ME=JSON.parse(store('cs-me')||'null')}catch(e){ME=null}
+const pk=k=>ME?k+':'+ME.code:k;   // storage key for the current player
+async function api(body){
+  let r;try{r=await fetch(API,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)})}
+  catch(e){throw Object.assign(new Error("The app can't reach the internet right now."),{noServer:true})}
+  let j=null;try{j=await r.json()}catch(e){}
+  if(!j)throw Object.assign(new Error('Online saving is not set up for this link.'),{noServer:true});
+  if(!r.ok||j.error)throw Object.assign(new Error(j.error||'Something went wrong.'),{status:r.status});
+  return j;
+}
+let stars=0,LOG={};
+function addStar(n=1){stars+=n;$('#starCount').textContent=stars;store(pk('cs-stars'),String(stars));queueSync()}
 
 // ---------- Voice ----------
 let voice=null;
@@ -415,7 +470,151 @@ function say(text,rate=0.82){
 let backTo=null,VIEW=0;
 function setTitle(html,back){VIEW++;$('#title').innerHTML=html;backTo=back||null;$('#backBtn').hidden=!back}
 $('#backBtn').addEventListener('click',()=>{stopListening();if('speechSynthesis' in window)speechSynthesis.cancel();backTo&&backTo()});
-$('#goBtn').addEventListener('click',()=>{$('#start').hidden=true;say("Hello! Let's learn English!");loading.then(bookshelf)});
+function showStart(){
+  $('#start').hidden=false;stopListening();VIEW++;
+  const body=$('#startBody');
+  if(ME||store('cs-guest')==='1'){
+    const name=ME?ME.name:'';
+    const go=el('button',{class:'go',text:'Start'});
+    go.addEventListener('click',()=>{$('#start').hidden=true;say(name?`Hello, ${name}! Let's learn English!`:"Hello! Let's learn English!");loading.then(bookshelf)});
+    body.replaceChildren(el('p',{class:'hi',text:name?`Hi, ${name}! 👋`:'Turn the sound on, then tap Start.'}),go,
+      el('button',{class:'swap',text:ME?`Not ${name}? Change player`:'Sign in with a code',onclick:()=>{ME=null;store('cs-me','null');store('cs-guest','0');loadPlayer();showStart()}}));
+    return;
+  }
+  const inp=el('input',{id:'codeIn',class:'codein',maxlength:'8',autocomplete:'off',autocapitalize:'characters',spellcheck:'false',placeholder:'······','aria-label':'Your code'});
+  const msg=el('p',{class:'err'});
+  const btn=el('button',{class:'go',text:"Let's go"});
+  const tryCode=async()=>{
+    const code=inp.value.toUpperCase().replace(/[^A-Z0-9]/g,'');
+    if(code.length<4){msg.textContent='Type the code your parent gave you.';return}
+    btn.disabled=true;msg.textContent='Checking…';
+    try{
+      const j=await api({action:'login',code});
+      ME={code,name:j.name,tester:!!j.tester,resetAt:j.resetAt||null};store('cs-me',JSON.stringify(ME));store('cs-guest','0');
+      loadPlayer();
+      // first sign-in on this device: keep anything played before accounts existed
+      if(store('cs-legacy-moved')!=='1'){try{PROG=mergeProg(PROG,JSON.parse(store('cs-progress')||'{}'));stars=Math.max(stars,parseInt(store('cs-stars')||'0',10)||0)}catch(e){}store('cs-legacy-moved','1')}
+      applyServer(j);queueSync();msg.textContent='';showStart();
+    }catch(e){
+      btn.disabled=false;msg.textContent=e.message;
+      if(e.noServer&&!body.querySelector('.swap'))body.append(el('button',{class:'swap',text:'Play without saving online',onclick:()=>{store('cs-guest','1');loadPlayer();showStart()}}));
+    }
+  };
+  btn.addEventListener('click',tryCode);inp.addEventListener('keydown',e=>{if(e.key==='Enter')tryCode()});
+  body.replaceChildren(el('p',{class:'hi',text:'Who is playing? Type your code.'}),inp,msg,btn);
+  setTimeout(()=>{try{inp.focus()}catch(e){}},50);
+}
+$('#parentBtn').addEventListener('click',()=>{$('#start').hidden=true;loading.then(parentScreen)});
+$('#whoBtn').addEventListener('click',playerMenu);
+// ---------- Parents: password, players and progress report ----------
+let PTOKEN=store('cs-parent')||'';
+function parentScreen(){
+  setTitle('Parents',showStart);
+  if(!PTOKEN)return parentLogin();
+  loadDashboard();
+}
+async function parentLogin(){
+  const view=VIEW;
+  screen.replaceChildren(el('p',{class:'note',text:'Loading…'}));
+  let has=true;
+  try{has=(await api({action:'adminStatus'})).hasPassword}catch(e){if(view===VIEW)screen.replaceChildren(el('div',{class:'empty'},[el('span',{class:'pic',text:'📡'}),el('strong',{text:'Online saving is not available'}),el('p',{text:e.message+' Open the app from its Netlify link to use the Parents page.'})]));return}
+  if(view!==VIEW)return;
+  const pw=el('input',{id:'pw1',type:'password',class:'field',placeholder:'Password (6+ characters)',autocomplete:has?'current-password':'new-password'});
+  const pw2=has?null:el('input',{id:'pw2',type:'password',class:'field',placeholder:'Type it again',autocomplete:'new-password'});
+  const msg=el('p',{class:'err'});
+  const btn=el('button',{class:'pill good',text:has?'Log in':'Create password'});
+  const go=async()=>{
+    if(!has&&pw.value!==pw2.value){msg.textContent='The two passwords are different.';return}
+    btn.disabled=true;msg.textContent='';
+    try{const j=await api({action:has?'adminLogin':'adminSetup',password:pw.value});PTOKEN=j.token;store('cs-parent',PTOKEN);loadDashboard()}
+    catch(e){btn.disabled=false;msg.textContent=e.message}
+  };
+  screen.replaceChildren(el('form',{class:'pform',onsubmit:e=>{e.preventDefault();go()}},[
+    el('span',{class:'pic',text:'🔐'}),
+    el('strong',{text:has?'Parent log in':'Create a parent password'}),
+    el('p',{text:has?'See every child’s progress and add players.':'You will use this password to see the children’s progress. Keep it to yourself.'}),
+    pw,pw2,msg,btn]));
+  setTimeout(()=>{try{pw.focus()}catch(e){}},50);
+}
+const ago=iso=>{if(!iso)return 'Not played yet';const d=(Date.now()-new Date(iso))/864e5;
+  if(d<1/24)return 'Just now';if(d<1)return `${Math.round(d*24)} h ago`;if(d<2)return 'Yesterday';return `${Math.floor(d)} days ago`};
+const weekMinutes=log=>{let t=0;for(let k=0;k<7;k++){const d=new Date(Date.now()-k*864e5).toLocaleDateString('en-CA');t+=(log||{})[d]||0}return Math.round(t/60)};
+async function loadDashboard(newCode){
+  const view=VIEW;
+  screen.replaceChildren(el('p',{class:'note',text:'Loading progress…'}));
+  let j;try{j=await api({action:'list',token:PTOKEN})}
+  catch(e){if(view!==VIEW)return;if(e.status===401){PTOKEN='';store('cs-parent','');return parentLogin()}
+    screen.replaceChildren(el('div',{class:'empty'},[el('strong',{text:'Could not load'}),el('p',{text:e.message}),el('button',{class:'pill',text:'Try again',onclick:()=>loadDashboard()})]));return}
+  if(view!==VIEW)return;
+  renderDashboard(j.children,newCode);
+}
+function renderDashboard(kids,newCode){
+  const name=el('input',{id:'newName',class:'field',placeholder:'Child’s name',maxlength:'30'});
+  const test=el('input',{id:'newTest',type:'checkbox'});
+  const msg=el('p',{class:'err'});
+  const add=async()=>{
+    if(!name.value.trim()){msg.textContent='Type a name first.';return}
+    try{const j=await api({action:'addChild',token:PTOKEN,name:name.value,tester:test.checked});loadDashboard(j)}catch(e){msg.textContent=e.message}
+  };
+  const addBox=el('form',{class:'addbox',onsubmit:e=>{e.preventDefault();add()}},[
+    el('strong',{text:'Add a player'}),name,
+    el('label',{class:'chk'},[test,el('span',{text:'Test account (for me)'})]),
+    el('button',{class:'pill good',type:'submit',text:'Add'}),msg]);
+  const top=el('div',{class:'dtop'},[addBox,el('div',{class:'row'},[
+    el('button',{class:'pill',text:'↻ Refresh',onclick:()=>loadDashboard()}),
+    el('button',{class:'pill',text:'Log out',onclick:()=>{PTOKEN='';store('cs-parent','');parentLogin()}})])]);
+  const parts=[top];
+  if(newCode)parts.push(el('div',{class:'newcode'},[el('span',{text:`Code for ${newCode.name}:`}),el('b',{text:newCode.code}),
+    el('span',{text:`Open the app on ${newCode.name}’s iPad and type this code once. It stays signed in after that.`})]));
+  if(!kids.length)parts.push(el('div',{class:'empty'},[el('span',{class:'pic',text:'🧒'}),el('strong',{text:'No players yet'}),el('p',{text:'Add your son, each cousin, and a test account for yourself. Each one gets a code.'})]));
+  parts.push(el('div',{class:'kids'},kids.map(kidCard)));
+  screen.replaceChildren(el('div',{class:'dash'},parts));
+}
+function kidCard(k){
+  const P=k.progress||{};
+  const books=BOOKS.map(b=>{const ls=bookList(b.id);if(!ls.length)return null;
+    const done=ls.filter(l=>doneIn(P,l)).length;const now=ls.find(l=>openIn(P,l)&&!doneIn(P,l));
+    return el('div',{class:'bk'},[el('div',{class:'bkh'},[el('span',{text:`${b.icon} ${b.title}`}),el('b',{text:`${done} / ${ls.length}`})]),
+      el('div',{class:'bar'},[el('i',{style:`width:${Math.round(done/ls.length*100)}%;background:${b.color}`})]),
+      el('small',{text:now?`Now on: ${now.title}`:'All lessons finished ✓'})])});
+  const detail=el('details',{},[el('summary',{text:'Lesson details'}),...BOOKS.map(b=>{const ls=bookList(b.id);if(!ls.length)return null;
+    return el('div',{class:'dl'},[el('b',{text:b.title}),...ls.map((l,i)=>{const p=P[l.id]||{};
+      const st=doneIn(P,l)?`✓ Finished${p.doneAt?' '+p.doneAt:''}`:!openIn(P,l)?'🔒 Locked':needsQuiz(l)?`Listen ${p.listen?'✓':'–'} · Say ${Math.min(p.say||0,SAY_GOAL)}/${SAY_GOAL}`:'Open';
+      return el('div',{class:'dlr'+(doneIn(P,l)?' ok':'')},[el('span',{text:`${i+1}. ${l.title}`}),el('span',{text:st})])})])})]);
+  const actions=el('div',{class:'row kact'});
+  const confirmRow=(label,action,warn)=>()=>{actions.replaceChildren(el('p',{class:'err',text:warn}),
+    el('button',{class:'pill danger',text:label,onclick:async e=>{e.target.disabled=true;try{await api({action,token:PTOKEN,code:k.code});loadDashboard()}catch(err){e.target.disabled=false;e.target.textContent=err.message}}}),
+    el('button',{class:'pill',text:'Cancel',onclick:()=>actions.replaceChildren(...baseActions())}))};
+  const baseActions=()=>[el('button',{class:'pill',text:'Reset progress',onclick:confirmRow('Yes, reset','resetChild',`Clear all of ${k.name}’s lessons and stars?`)}),
+    el('button',{class:'pill',text:'Remove',onclick:confirmRow('Yes, remove','removeChild',`Remove ${k.name} and their progress?`)})];
+  actions.replaceChildren(...baseActions());
+  const copy=el('button',{class:'copy',text:'Copy',onclick:async e=>{try{await navigator.clipboard.writeText(k.code);e.target.textContent='Copied'}catch(_){e.target.textContent='Select the code to copy'}}});
+  return el('div',{class:'kid'+(k.tester?' tester':'')},[
+    el('div',{class:'kh'},[el('strong',{text:k.name}),k.tester?el('span',{class:'chip',text:'TEST'}):null]),
+    el('div',{class:'kcode'},[el('span',{text:'Code '}),el('b',{class:'sel',text:k.code}),copy]),
+    el('div',{class:'kstats'},[el('span',{text:`⭐ ${k.stars}`}),el('span',{text:`⏱ ${weekMinutes(k.log)} min this week`}),el('span',{text:`🕒 ${ago(k.lastSeen)}`})]),
+    ...books,detail,actions]);
+}
+
+function playerMenu(){
+  if(!ME)return;stopListening();
+  setTitle('Player',bookshelf);
+  const box=el('div',{class:'empty'},[el('span',{class:'pic',text:ME.tester?'🧪':'🙂'}),el('strong',{text:ME.name}),
+    el('p',{text:ME.tester?'This is a test account. It starts at lesson 1 like a child.':`${stars} stars · ${Object.values(PROG).filter(p=>p.doneAt).length} lessons finished`})]);
+  const row=el('div',{class:'row'});
+  row.append(el('button',{class:'pill',text:'Change player',onclick:()=>{ME=null;store('cs-me','null');loadPlayer();showStart()}}));
+  if(ME.tester){
+    const rb=el('button',{class:'pill',text:'Start my test again'});
+    rb.addEventListener('click',()=>{
+      row.replaceChildren(el('p',{class:'err',text:'All progress and stars for this test account will be cleared.'}),
+        el('button',{class:'pill danger',text:'Yes, start again',onclick:async e=>{e.target.disabled=true;
+          try{const j=await api({action:'reset',code:ME.code});PROG={};stars=0;LOG={};ME.resetAt=j.resetAt;store('cs-me',JSON.stringify(ME));savePlayer();loadPlayer();say('Your test starts again from lesson one.');bookshelf()}
+          catch(err){e.target.disabled=false;e.target.textContent=err.message}}}),
+        el('button',{class:'pill',text:'Cancel',onclick:playerMenu}))});
+    row.append(rb);
+  }
+  box.append(row);screen.replaceChildren(box);
+}
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 function bookshelf(){
@@ -434,20 +633,50 @@ function bookshelf(){
 // ---------- Learning path: each lesson opens when the one before it is finished ----------
 // A lesson is finished when Listen & Find has been completed once and Say It! has SAY_GOAL correct answers.
 const SAY_GOAL=5;
-let PROG={};try{PROG=JSON.parse(store('cs-progress')||'{}')||{}}catch(e){PROG={}}
+let PROG={};
 const prog=id=>PROG[id]||{listen:false,say:0,words:false};
 const needsQuiz=l=>l.mode==='numbers'||quizItems(l).length>=3;
-const isDone=l=>{const p=prog(l.id);return needsQuiz(l)?(p.listen&&p.say>=SAY_GOAL):!!p.words};
+const doneIn=(P,l)=>{const p=P[l.id]||{};return needsQuiz(l)?!!(p.listen&&(p.say||0)>=SAY_GOAL):!!p.words};
+const isDone=l=>doneIn(PROG,l);
 const bookList=bid=>LESSONS.map((l,i)=>({l,i})).filter(x=>bookOf(x.l)===bid).sort((a,b)=>(a.l.order??a.i)-(b.l.order??b.i)).map(x=>x.l);
-const isOpen=l=>{const list=bookList(bookOf(l));const k=list.indexOf(l);return k<=0||isDone(list[k-1])};
+const openIn=(P,l)=>{const list=bookList(bookOf(l));const k=list.indexOf(l);return k<=0||doneIn(P,list[k-1])};
+const isOpen=l=>openIn(PROG,l);
+function mergeProg(a={},b={}){const o={...a};for(const[id,p]of Object.entries(b||{})){const q=o[id]||{};
+  o[id]={listen:!!(q.listen||p.listen),say:Math.max(q.say||0,p.say||0),words:!!(q.words||p.words)};
+  const d=[q.doneAt,p.doneAt].filter(Boolean).sort()[0];if(d)o[id].doneAt=d}return o}
+const today=()=>new Date().toLocaleDateString('en-CA');
+function loadPlayer(){
+  try{PROG=JSON.parse(store(pk('cs-progress'))||'{}')||{}}catch(e){PROG={}}
+  try{LOG=JSON.parse(store(pk('cs-log'))||'{}')||{}}catch(e){LOG={}}
+  stars=parseInt(store(pk('cs-stars'))||'0',10)||0;
+  $('#starCount').textContent=stars;
+  const w=$('#whoBtn');w.hidden=!ME;if(ME)w.textContent=(ME.tester?'🧪 ':'🙂 ')+ME.name;
+}
+function savePlayer(){store(pk('cs-progress'),JSON.stringify(PROG));store(pk('cs-stars'),String(stars));store(pk('cs-log'),JSON.stringify(LOG))}
+let syncT=null;
+function queueSync(){if(!ME)return;clearTimeout(syncT);syncT=setTimeout(syncNow,1500)}
+async function syncNow(){
+  if(!ME)return;
+  try{applyServer(await api({action:'save',code:ME.code,progress:PROG,stars,log:LOG,current:L?L.title:'',knownReset:ME.resetAt||null}))}catch(e){}
+}
+function applyServer(j){
+  if(j.stale){PROG={};stars=0;ME.resetAt=j.resetAt;store('cs-me',JSON.stringify(ME))}
+  PROG=mergeProg(PROG,j.progress);stars=Math.max(stars,j.stars||0);
+  savePlayer();$('#starCount').textContent=stars;
+  if(j.stale)queueSync();
+}
+// play time: count while the app is open and visible
+setInterval(()=>{if(document.visibilityState!=='visible'||!$('#start').hidden)return;const d=today();LOG[d]=(LOG[d]||0)+20;store(pk('cs-log'),JSON.stringify(LOG));if(((LOG[d]/20)|0)%3===0)queueSync()},20000);
 const nextLesson=l=>{const list=bookList(bookOf(l));return list[list.indexOf(l)+1]||null};
 function markProgress(kind){ // returns true when this action finished the lesson
   const was=isDone(L);const p=Object.assign(prog(L.id));
   if(kind==='listen')p.listen=true;
   if(kind==='say')p.say=Math.min(SAY_GOAL,(p.say||0)+1);
   if(kind==='words')p.words=true;
-  PROG[L.id]=p;store('cs-progress',JSON.stringify(PROG));
-  return !was&&isDone(L);
+  PROG[L.id]=p;
+  const fin=!was&&isDone(L);if(fin)p.doneAt=today();
+  store(pk('cs-progress'),JSON.stringify(PROG));queueSync();
+  return fin;
 }
 function lessonComplete(){
   const nx=nextLesson(L);addStar(3);
@@ -868,6 +1097,7 @@ function finish(again){
 }
 
 var loading=loadLessons();
+loadPlayer();showStart();if(ME)api({action:'login',code:ME.code}).then(j=>{ME.name=j.name;ME.tester=!!j.tester;store('cs-me',JSON.stringify(ME));applyServer(j);loadPlayer();if(!$('#start').hidden)showStart()}).catch(e=>{if(e.status===404){ME=null;store('cs-me','null');loadPlayer();showStart()}});
 </script>
 </body>
 </html>
